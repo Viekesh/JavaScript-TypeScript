@@ -1,7 +1,6 @@
 // Insert Element In Array
 
 // Here we can do :
-    // Understanding solution with whiteboard
     // Make array, define the solution
     // Use loop to insert new element
     // Insert element with text input and button
