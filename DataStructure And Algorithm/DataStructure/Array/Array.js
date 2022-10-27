@@ -41,3 +41,12 @@ for(const item of arr) {
 
 // accessing an element is constant time complexity as fetching the first element is no
 // different from fetching an element at position 100 thousand
+
+// searching an element is linear time complexity as element can be the last one in the array
+
+// now given these time complexities following is a list of common array methods with their
+// time complexity
+// push and pop are constant
+// shift, unshift, concat, slice and splice are linear
+// for each, map, filter and reduce are also linear
+
