@@ -18,9 +18,21 @@ for(i=0; i<=data1.length; i++) {
 
 console.warn(data3);
 
-for(i=0; i<=data2.length; i++) {
+for(i=0; i<=data2.length - 1; i++) {
     // console.warn(data1.length + i);
     data3[data1.length + i] = data2[i];
 }
 
 console.warn(data3);
+
+
+
+// Merge two array using while loop
+
+// Here we can see
+    // Make three arrays
+    // Make while loop to merge elements
+        // Compare this logic with last one
+
+
+        
