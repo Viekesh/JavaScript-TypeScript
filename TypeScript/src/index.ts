@@ -5,7 +5,7 @@
 // It not give you anything new, even all code you write in TypeScript is finally compile into
 // the JavaScript.
 
-// TypeScrip is a TypeSefety or nothig else...
+// TypeScrip is a TypeSafety or nothig else...
 
 // Now lets move on to the documentation, starts with the basics
 
