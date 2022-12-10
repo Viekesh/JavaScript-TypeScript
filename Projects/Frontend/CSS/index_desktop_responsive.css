@@ -1,0 +1,31 @@
+@media only screen and (min-width: 900px) {
+    .mobile_responsive {
+        padding: 3px 9px;
+    }
+    
+    .desktop_responsive {
+        width: 60%;
+    }
+
+    .nav_elements {
+        width: 15%;
+    }
+
+    aside {
+        width: 18vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .desktop_responsive {
+        width: 60%;
+    }
+
+    .nav_elements {
+        width: 15%;
+    }
+
+    aside {
+        width: 18vw;
+    }
+}

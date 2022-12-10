@@ -5,19 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../CSS//CommonStyle.css" />
-    <link rel="stylesheet" href="../CSS/index.css" />
+    <link rel="stylesheet" href="../CSS/index_mobile_responsive.css" />
+    <link rel="stylesheet" href="../CSS/index_ipad_responsive.css" />
+    <link rel="stylesheet" href="../CSS//index_desktop_responsive.css" />
     <title>JavaScript-TypeScript</title>
   </head>
   <body>
     <header class="header">
-      <nav class="mobile_responsive x_axis_center">
-        <a href="./index.htm" class="logo x_axis_center">
-          <img src="../../../Images/logo2.png" alt="logo" />
-        </a>
+      <nav class="mobile_responsive desktop_responsive x_axis_center">
 
         <div class="nav_elements x_axis_center">
-          <a href="https://github.com/Viekesh" class="github_icon x_axis_center">
-            <img src="../../../Images/github.svg" alt="" />
+          <a
+            href="https://github.com/Viekesh"
+            class="github_icon x_axis_center"
+          >
+            <img src="../Images/github.svg" alt="" />
           </a>
 
           <div class="container" id="menuBtn">
@@ -27,15 +29,17 @@
           </div>
         </div>
 
-        
-    </nav>
-    <div class="backdrop"></div>
-    <aside>
-      <nav class="nav_links">
-        <button class="close" onClick=closeMenu()>&times;</button>
-        <a href="#" class="link link_1">link 1</a>
+        <a href="./index.htm" class="logo x_axis_center">
+          <img src="../Images/logo2.png" alt="logo" />
+        </a>
       </nav>
-    </aside>
+      <div class="backdrop"></div>
+      <aside>
+        <nav class="nav_links">
+          <button class="close" onClick="closeMenu()">&times;</button>
+          <a href="#" class="link link_1">link 1</a>
+        </nav>
+      </aside>
     </header>
 
     <main></main>

@@ -1,0 +1,17 @@
+@media only screen and (min-width: 680px) {
+    .mobile_responsive {
+        padding: 9px 15px;
+    }
+
+    .nav_elements {
+        width: 15%;
+    }
+
+    aside {
+        width: 39vw;
+    }
+
+    main {
+        background-image: url(../Images/desktop_background2.jpg);
+    }
+}

@@ -1,4 +1,4 @@
-/* for mobile responsive */
+/* For Mobile Responsive */
 
 header {
     position: fixed;
@@ -8,13 +8,13 @@ header {
 .mobile_responsive {
     margin: 9px auto;
     padding: 3px 9px;
-    width: 98%;
+    width: 96%;
     position: relative;
     justify-content: space-between;
 
-    background: rgba(255, 255, 255, 0.65);
+    background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 8px 9px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 12px;
@@ -26,7 +26,7 @@ header {
     padding: 3px;
 }
 
-.mobile_responsive>.logo>img {
+.mobile_responsive .logo img {
     border-radius: 50%;
     width: 30px;
 }
@@ -110,13 +110,14 @@ aside button.close {
 /* Main Start */
 
 main {
-    border: 2px solid blue;
     width: 99.5vw;
     height: 100vh;
-    background-image: url(../../../Images/background.jpg);
+    background-image: url(../Images/background.jpg);
     background-size: cover;
 }
+
 /* Main End */
+/* For Mobile Responsive Complete */
 
 
 
