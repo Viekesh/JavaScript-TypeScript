@@ -8,32 +8,34 @@
 
 // Ex :
 
-const arr = [1, 2, 3, "string"];
+const arr = [11, 22, 33, "string"];
 
 console.log(arr);
-
-// add element at the ending of an array :
-arr.push(6);
-console.log(arr);
-
 
 // add element at the beginning of an array :
-arr.unshift(0);
+arr.unshift(1);
+console.warn(arr);
+
+
+// add element at the ending of an array :
+arr.push(44);
+console.log(arr);
+
+
+// remove an element at the beginning :
+arr.shift(1);
 console.warn(arr);
 
 
 // remove an element at the ending :
-arr.pop();
+arr.pop(44);
 console.warn(arr);
 
-
-// remove an element at the beginning :
-arr.shift();
 
 
 for(const item of arr) {
     console.log(item);
-}
+};
 
 // If you insert or remove an element at the end of an array the time complexity is constant
 // If you insert or remove an element at the beginning the time complexity is linear
