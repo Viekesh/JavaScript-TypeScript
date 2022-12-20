@@ -1,0 +1,5 @@
+.bottom_navigation {
+    position: fixed;
+    min-width: 99.5vw;
+    bottom: 0vh;
+}

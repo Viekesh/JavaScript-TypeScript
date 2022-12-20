@@ -65,7 +65,7 @@ aside {
     position: fixed;
     top: 0;
     right: -61vw;
-    transition: right .3s ease;
+    transition: right .1s ease;
 }
 
 .backdrop {
