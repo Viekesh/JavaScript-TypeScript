@@ -88,21 +88,23 @@ aside .nav_links {
     border-radius: 12px;
     margin: 21vw auto;
     width: 96%;
-    padding: 0.3vw 2vw;
-    background-color: rgb(0, 0, 90);
-    box-shadow: 0px 0px 9px 0px rgb(0, 102, 197);
 }
 
-aside a {
+aside .nav_links a {
+    border: 0px solid snow;
+    border-radius: 9px;
+    padding: 6px;
     display: block;
     color: inherit;
-    margin: 6px 0;
+    margin: 15px auto;
     padding: 5px 0;
     color: snow;
     font-family: "Roboto", sans-serif;
     font-style: italic;
     font-weight: 900;
     text-transform: capitalize;
+    background-color: rgb(0, 0, 90);
+    box-shadow: 0px 0px 9px 0px rgb(0, 102, 197);
 }
 
 aside button.close {

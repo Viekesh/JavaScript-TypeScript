@@ -1,74 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../StyleSheets/CommonStyle.css" />
-    <link rel="stylesheet" href="../StyleSheets/Index/index_mobile_responsive.css" />
-    <link rel="stylesheet" href="../StyleSheets/Index/bottom_nav.css" />
-    <link rel="stylesheet" href="../StyleSheets/Index/index_desktop_responsive.css" />
-    <link rel="stylesheet" href="../StyleSheets/Index/index_ipad_responsive.css" />
 
-    <title>JavaScript-TypeScript</title>
-  </head>
-  <body>
-    <!-- Top Navigation -->
-    <header class="header">
-      <nav class="mobile_responsive desktop_responsive x_axis_center">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../StyleSheets/CommonStyle.css" />
+  <link rel="stylesheet" href="../StyleSheets/Index/index_mobile_responsive.css" />
+  <link rel="stylesheet" href="../StyleSheets/Index/bottom_nav.css" />
+  <link rel="stylesheet" href="../StyleSheets/Index/index_desktop_responsive.css" />
+  <link rel="stylesheet" href="../StyleSheets/Index/index_ipad_responsive.css" />
 
-        <div class="nav_elements x_axis_center">
-          <a
-            href="https://github.com/Viekesh"
-            class="github_icon x_axis_center"
-          >
-            <img src="../Images/github.svg" alt="" />
-          </a>
+  <title>JavaScript-TypeScript</title>
+</head>
 
-          <div class="container" id="menuBtn">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-          </div>
+<body>
+  <!-- Top Navigation -->
+  <header class="header">
+    <nav class="mobile_responsive desktop_responsive x_axis_center">
+
+      <div class="nav_elements x_axis_center">
+        <a href="https://github.com/Viekesh" class="github_icon x_axis_center">
+          <img src="../Images/github.svg" alt="" />
+        </a>
+
+        <div class="container" id="menuBtn">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
         </div>
+      </div>
 
-        <a href="./index.htm" class="logo x_axis_center">
-          <img src="../Images/logo2.png" alt="logo" />
-        </a>
+      <a href="./index.htm" class="logo x_axis_center">
+        <img src="../Images/logo2.png" alt="logo" />
+      </a>
+    </nav>
+
+    <div class="backdrop"></div>
+
+    <aside>
+      <nav class="nav_links">
+        <button class="close" onClick="closeMenu()">&times;</button>
+        <a href="./tictactoe.htm" class="link link_1">Tic Tac Toe</a>
+        <a href="./randomQuoteGenerator.htm" class="link link_1">RandomQuoteGenerator</a>
       </nav>
+    </aside>
+  </header>
 
-      <div class="backdrop"></div>
-      
-      <aside>
-        <nav class="nav_links">
-          <button class="close" onClick="closeMenu()">&times;</button>
-          <a href="./tictactoe.htm" class="link link_1">Tic Tac Toe</a>
-        </nav>
-      </aside>
-    </header>
+  <!-- Bottom Navigation -->
+  <section class="bottom_navigation">
+    <nav class="mobile_responsive desktop_responsive x_axis_center">
 
-    <!-- Bottom Navigation -->
-    <section class="bottom_navigation">
-      <nav class="mobile_responsive desktop_responsive x_axis_center">
+      <a href="#" class="bottom_nav_elements x_axis_center">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32zM96 144c0-26.5-21.5-48-48-48S0 117.5 0 144V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z" />
+        </svg>
+      </a>
 
-        <a href="#" class="bottom_nav_elements x_axis_center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M192 32c0 17.7 14.3 32 32 32c123.7 0 224 100.3 224 224c0 17.7 14.3 32 32 32s32-14.3 32-32C512 128.9 383.1 0 224 0c-17.7 0-32 14.3-32 32zm0 96c0 17.7 14.3 32 32 32c70.7 0 128 57.3 128 128c0 17.7 14.3 32 32 32s32-14.3 32-32c0-106-86-192-192-192c-17.7 0-32 14.3-32 32zM96 144c0-26.5-21.5-48-48-48S0 117.5 0 144V368c0 79.5 64.5 144 144 144s144-64.5 144-144s-64.5-144-144-144H128v96h16c26.5 0 48 21.5 48 48s-21.5 48-48 48s-48-21.5-48-48V144z"/></svg>
-        </a>
+      <a href="#" class="bottom_nav_elements x_axis_center">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z" />
+        </svg>
+      </a>
 
-        <a href="#" class="bottom_nav_elements x_axis_center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M0 80C0 53.5 21.5 32 48 32h96c26.5 0 48 21.5 48 48V96H384V80c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H432c-26.5 0-48-21.5-48-48V160H192v16c0 1.7-.1 3.4-.3 5L272 288h96c26.5 0 48 21.5 48 48v96c0 26.5-21.5 48-48 48H272c-26.5 0-48-21.5-48-48V336c0-1.7 .1-3.4 .3-5L144 224H48c-26.5 0-48-21.5-48-48V80z"/></svg>
-        </a>
+      <a href="#" class="bottom_nav_elements x_axis_center">
+        <svg xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+          <path
+            d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z" />
+        </svg>
+      </a>
+    </nav>
+  </section>
 
-        <a href="#" class="bottom_nav_elements x_axis_center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0S96 57.3 96 128s57.3 128 128 128zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
-        </a>
-      </nav>
-    </section>
+  <main></main>
 
-    <main></main>
+  <script src="../Scripts/index.js"></script>
+</body>
 
-    <script src="../Scripts/index.js"></script>
-  </body>
 </html>
-
-
