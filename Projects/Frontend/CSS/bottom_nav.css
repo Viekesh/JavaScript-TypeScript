@@ -3,3 +3,11 @@
     min-width: 99.5vw;
     bottom: 0vh;
 }
+
+.bottom_navigation>nav {
+    padding: 9px 12px;
+}
+
+.bottom_nav_elements>svg {
+    width: 24px;
+}
