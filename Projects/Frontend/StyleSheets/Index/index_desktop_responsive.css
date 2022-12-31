@@ -12,7 +12,8 @@
     }
 
     aside {
-        width: 18vw;
+        background-color: rgb(3, 0, 19);
+        width: 18vw !important;
     }
 }
 
@@ -23,9 +24,5 @@
 
     .nav_elements {
         width: 15%;
-    }
-
-    aside {
-        width: 18vw;
     }
 }

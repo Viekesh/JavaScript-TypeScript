@@ -11,7 +11,11 @@
         width: 39vw;
     }
 
+    aside .nav_links {
+        margin: 6vw auto;
+    }
+
     main {
-        background-image: url(../Images/desktop_background2.jpg);
+        background-image: url(../../Images/desktop_background2.jpg);
     }
 }
