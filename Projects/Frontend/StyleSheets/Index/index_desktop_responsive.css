@@ -25,4 +25,11 @@
     .nav_elements {
         width: 15%;
     }
+
+    aside .nav_links a {
+        padding: 6px 0;
+        font-size: 1vw;
+    }
 }
+
+

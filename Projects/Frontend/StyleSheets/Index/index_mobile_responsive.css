@@ -91,16 +91,17 @@ aside .nav_links {
 }
 
 aside .nav_links a {
-    border: 0px solid snow;
+    border: 3px solid rgb(0, 0, 90);
     border-radius: 9px;
     padding: 6px;
     display: block;
     color: inherit;
-    margin: 15px auto;
-    padding: 5px 0;
+    margin: 18px auto;
+    padding: 9px 3px;
     color: snow;
     font-family: "Roboto", sans-serif;
     font-style: italic;
+    font-size: 3.6vw;
     font-weight: 900;
     text-transform: capitalize;
     background-color: rgb(0, 0, 90);
