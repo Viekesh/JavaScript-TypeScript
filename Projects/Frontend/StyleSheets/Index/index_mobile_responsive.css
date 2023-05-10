@@ -129,8 +129,10 @@ aside button.close {
 main {
     width: 99.5vw;
     height: 100vh;
-    background-image: url(../../Images/background.jpg);
+    background-image: url(../../Images/desktop_background2.jpg);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Main End */
