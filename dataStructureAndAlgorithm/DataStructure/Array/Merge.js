@@ -102,3 +102,5 @@ while (d1 < data1.length) {
 }
 
 // The final while loop iterates as long as the current index in data1 is less than the length of data1. Inside the loop, the code copies the value at the current index in data1 to data3 and increments the indexes of d1 and d3. Finally, the code prints the contents of data3.
+
+// As you can see, the code first creates two arrays, data1 and data2. It then creates an empty array called data3. Next, it uses a while loop to iterate over both arrays and copy the smaller value to data3. Finally, it uses another while loop to copy any remaining values from data1 to data3. The final output of the code is an array containing the sorted contents of both data1 and data2.
