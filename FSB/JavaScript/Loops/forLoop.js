@@ -34,6 +34,9 @@ for (let i = 1; i <= 100; i++) {
 
 let myArray = [1, 2, 3, 4, 5];
 
+console.log('myArray :', myArray[3]);
+console.log('the length of my array :', myArray.length);
+
 for (let i = 0; i < myArray.length; i++) {
     console.log(myArray[i]);
 }
