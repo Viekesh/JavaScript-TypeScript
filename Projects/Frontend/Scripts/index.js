@@ -121,3 +121,18 @@ document.addEventListener("scroll", () => {
 // than zero so we can't scroll to section - 1 because it doesn't exist and same with
 // destination index needs to be smaller than the sections length because if we have five sections
 // we can't scroll to the tenth section 
+
+
+
+
+// const buttonA = document.querySelector('#button_A');
+
+// const headingA = document.querySelector('#heading_A');
+
+// buttonA.onclick = () => {
+//     const name = prompt('What is your name?');
+//     alert(`Hello! ${name}, nice to see you!`);
+//     headingA.textContent = `Welcome ${name}`;
+// }
+
+
