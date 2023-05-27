@@ -4,25 +4,143 @@
 
 // if-else statement
 
+// Perhaps the most basic and commonly found conditional statement across a wide array of languages is the if-else conditional statement.
+
+// This statement helps you implement conditional branching of control based on a simple true or false condition. If the condition is true, then the block following the if statement will execute, otherwise the block following the else will be executed.
+
+// Once again, do ensure that the keyword ‘if’ is written in lower-case.
+
 // We can handle multiple conditions using if-else if-else
 
 // We can have as many else-if blocks as we want
 
 // What will be the output of following?
 
-let season='monsoon'
+let season = 'monsoon'
 
-if(season === 'summer'){
+if (season === 'summer') {
     console.log('Carry hat')
-} else if(season === 'monsoon'){
+} else if (season === 'monsoon') {
     console.log('Carry umbrella')
-} else if(season==='winter'){
+} else if (season === 'winter') {
     console.log('Carry jacket')
 } else {
     console.log('Carry nothing')
 }
 
 // The condition in the first else-if block evaluates to true, hence carry umbrella is logged to the console.
+
+// ex : 
+
+const textNum = (a) => {
+    let result1;
+
+    if (a > 0) {
+        result1 = `${a} is positive`;
+    } else {
+        result1 = `${a} is not positive`;
+    }
+
+    return result1;
+}
+
+console.log(textNum(-5));
+
+// Syntax :
+
+// if (condition)
+//   statement1
+
+// With an else clause
+// if (condition)
+//   statement1
+// else
+//   statement2
+
+
+// "condition"
+// An expression that is considered to be either truthy or falsy.
+
+// "statement1"
+// Statement that is executed if condition is truthy. Can be any statement, including further nested if statements. To execute multiple statements, use a block statement ({ /* ... */ }) to group those statements. To execute no statements, use an empty statement.
+
+// "statement2"
+// Statement that is executed if condition is falsy and the else clause exists. Can be any statement, including block statements and further nested if statements.
+
+
+
+// else...if
+
+// The 'else if' is another "if" block that comes after "else". If you’re coming from languages like Python, the else-if conditional is usually a special keyword. Python has 'elif' which does the same thing.
+
+// Here in JavaScript, you’re just adding more if conditionals after else when you have to add more conditions and options.
+
+// Multiple if...else statements can be nested to create an "else if" clause. Note that there is no elseif (in one word) keyword in JavaScript.
+
+// if (condition1)
+//  statement1
+//   else if (condition2)
+//    statement2
+//  else if (condition3)
+//    statement3
+// …
+//  else
+//    statementN
+
+// if (currentHour >= 0 && currentHour < 12) {
+//     console.log("good morning");
+// } else if (currentHour >= 12 && currentHour < 16) {
+//     console.log("good afternoon");
+// } else if (currentHour >= 16 && currentHour < 20) {
+//     console.log("good evening");
+// } else {
+//     console.log("good night");
+// }
+
+// To see how this works, this is how it would look if the nesting were properly indented:
+
+// if (condition1)
+//  statement1
+//  else
+//    if (condition2)
+//      statement2
+//    else
+//      if (condition3)
+//        statement3
+
+// To execute multiple statements within a clause, use a block statement ({ /* ... */ }) to group those statements.
+
+// In general, it is a good practice to always use block statements, especially in code involving nested if statements.
+
+const checkValue = (aa, bb) => {
+    if (aa === 1) {
+        if (bb === 2) {
+            console.log("aa is 1 and bb is 2")
+        }
+    } else {
+        console.log("aa is not 1");
+    }
+}
+
+checkValue(1, 2);
+
+// using else...if
+
+//  if (x > 50) {
+
+/* do something */
+
+//  } else if (x > 5) {
+
+/* do something */
+
+//  } else {
+
+/* do something */
+
+//  }
+
+// Handling multiple conditions is something that you have to do quite often. And if-else and else-if aren’t the only options in JavaScript. We also have the switch statement.
 
 
 
@@ -78,7 +196,7 @@ if(season === 'summer'){
 //     case 2:
 //         a = "two";
 //         break;
-    
+
 //     default:
 //         a = "Not Found";
 //         break;
@@ -102,7 +220,7 @@ if(season === 'summer'){
 //     case "1":
 //         b = 1;
 //         break;
-    
+
 //     case 1:
 //         b = "one";
 //         break;
@@ -126,7 +244,7 @@ if(season === 'summer'){
 //     switch(operator) {
 //         case "+":
 //             return operand1 + operand2;
-        
+
 //         case "-":
 //             return operand1 - operand2;
 
@@ -184,4 +302,132 @@ if(season === 'summer'){
 
 
 
-//.
+
+
+
+// Ternary Operator
+
+// source : https://www.freecodecamp.org/news/the-ternary-operator-in-javascript/
+
+// What is the ternary operatior?
+
+// The ternary operator is a conditional operator which evaluates either of two expressions – a true expression and a false expression – based on a conditional expression that you provide.
+
+// JavaScript offers us a nifty shortcut to the if-else in the form of the ternary operator.
+
+// The ternary operator takes 3 operands, the only one in JavaScript to do so. These operands are:
+
+
+// Syntax :
+
+// "expression/condition ? operand if true : operand if false"
+
+// You have the expression/condition which returns a truthy or falsy value. Truthy values here include true ("operand if true"), and non-falsy values ("operand if false"). Falsy values here include false, null, 0, and so on.
+
+// After the expression/condition, you have the question mark (which you can think of as "questioning the condition"), followed by the trueExpression/operand if true. This expression is executed if the condition/ expression evaluates to true.
+
+// After the true expression, you have a colon, followed by the falseExpression/ operand if false. This expression is executed if the condition expression evaluates to false.
+
+
+
+// The ternary operator returns a value that you can assign to a variable. You cannot use the operator without assigning the returned value to a variable:
+
+// const result = condition ? trueExpression : falseExpression;
+
+// The returned value depends on the evaluation of the condition expression. If the condition is true, the returned value returned from trueExpression is assigned to the variable. Else, the returned value from falseExpression will be assigned to the variable.
+
+// ex :
+
+const score = 110;
+
+let scoreRating;
+
+if (score > 100) {
+    scoreRating = "score rating is excellent";
+} else {
+    scoreRating = "do more efforts";
+}
+
+console.log(scoreRating);
+
+// Now write above code in ternary operator
+
+const score1 = 120;
+
+const scoreRating1 = score1 > 90 ? "Excellent" : "Do more efforts";
+
+console.log(scoreRating1);
+
+
+// ex :
+
+const printPoor = () => {
+    console.log("poor result");
+    return "poor";
+}
+
+const printSuccess = () => {
+    console.log("nice result");
+    return "success";
+}
+
+const pass = true;
+
+const result3 = pass ? printSuccess() : printPoor();
+
+console.log(result3);
+
+
+// What if you wanted to achieve an if...else if...else statement with a ternary operator? Then you can use nested ternary operators. You should be careful how you use this, however, as it can make your code harder to read.
+
+// Let's see an example:
+
+const score4 = 60;
+
+let scoreRating4;
+
+if (score4 > 70) {
+    scoreRating4 = "Excellent"
+} else if (score4 > 50) {
+    scoreRating4 = "Average"
+} else {
+    scoreRating4 = "Do better"
+}
+
+console.log(scoreRating4);
+// "Average"
+
+
+// now write above code in ternary form
+
+
+const score5 = 60;
+
+const scoreRating5 = score5 > 70 ? "Excellent" : score5 > 50 ? "Average" : "Do Better";
+
+console.log(scoreRating5);
+
+
+
+
+
+
+// binary logical operatiors
+
+// Now in situations where you have to assign a value if the existing value is true, we can also use the logical AND assignment operator. This one assigns the value on the right to the variable on the left if the variable is not false.
+
+// Remember, false here does not strictly mean a Boolean false, but a null, undefined, 0, an empty string, and NaN or not a number also evaluate to false. The opposite amounts to true.
+
+// And just like the logical AND assignment, we have the logical OR assignment which only assigns the value if the operand on the left is false.
+
+// The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
+
+const fff = null ?? "default string";
+
+console.log(fff);
+
+const eee = 0 ?? 45;
+
+console.log(eee);
+
+
