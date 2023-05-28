@@ -420,6 +420,13 @@ console.log(scoreRating5);
 
 // And just like the logical AND assignment, we have the logical OR assignment which only assigns the value if the operand on the left is false.
 
+
+
+
+
+
+// Nullish Coalescing Operator (??)
+
 // The nullish coalescing (??) operator is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.
 
 const fff = null ?? "default string";
@@ -430,4 +437,105 @@ const eee = 0 ?? 45;
 
 console.log(eee);
 
+// One of the core uses of this operator is providing a mechanism to get default values in cases like these where we’re dependent on the value of the user variable and we want to provide a default value if the user is not defined.
+
+// But here’s an important caveat here. For the logical OR to work and provide the right-hand operand, the left-hand operand must be false. This means any of these values are construed as false and not particularly a Boolean false.
+
+
+
+
+
+
+// Optional Chanining Operator (?.)
+
+// The optional chaining (?.) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null, the expression short circuits and evaluates to undefined instead of throwing an error.
+
+const adventurer = {
+    name: "Alice",
+    cat: {
+        name: "Dinah"
+    }
+}
+
+const dogName = adventurer.dog?.name;
+// here the correct code is : "const dogName = adventurer.cat.name" but we use" adventurer.dog?.name" its a false code hence we can use "optional chaining operator (?" by using this method we doesn't get any error and the next code is executes smoothly.
+
+console.log(dogName);
+
+// take another ex. :
+
+// Here’s an object with some properties including nested properties. Accessing these properties involves using the dot syntax for instance.
+
+let user11 = {
+    name: "John Mockery",
+    age: 21,
+    phone: {
+        personal: 123456789,
+        official: 987654321
+    }
+}
+
+console.log(user11.phone.personal);
+
+// But one of the problems with this approach is that if an intermediate property is non-existent, then we straight away get an error and this can break things down.
+
+// It would be better if we could return an undefined if intermediate properties did not exist and as a result, we were unable to reach the property being accessed on the far right of this expression.
+
+// console.log(user11.city.official);
+// This throws an error "TypeError: Cannot read properties of undefined (reading 'official')"
+
+// This is because the optional chaining operator short-circuits the expression which means that the part on the right-hand side is not executed at all, thus preventing the error.
+
+// And the optional chaining operator can also be used when accessing elements from arrays.
+
+//  Let us see an example of this.
+
+// Here we an array featuring two objects which represent restaurants and we will display the location coordinates of the restaurants.
+
+// To do this access the location.lat and location.long properties of the first object from the array.
+
+let restaurants = [
+    {
+        name: "the bao boat",
+        category: "oriental",
+        city: "new york",
+        location: {
+            lat: 23.42,
+            long: 67.32,
+        },
+    },
+    {
+        name: "Imperial Dinner",
+        category: "Continental",
+        city: "Los Angeloas",
+    }
+];
+
+console.log(
+    `Location: ${restaurants[0].location.lat}, ${restaurants[0].location.long}`
+);
+
+// Now let’s try to access the second restaurant’s location and we get an error ‘cannot read property ‘lat’ of undefined. So, what we’re being told is that there is no property named ‘lat’ on an undefined property which basically points to the missing location property in the middle.
+
+// The location property represents a sub-object, which itself is missing for the second object in our array.
+
+// console.log(
+//     `Location: ${restaurants[1].location.lat}, ${restaurants[1].location.long}`
+// );
+
+// Here you will get an error "TypeError: Cannot read properties of undefined (reading 'lat'), TypeError: Cannot read properties of undefined (reading 'long')".
+
+// To circumvent this error, we can use the optional chaining operator "?.". The question mark here will first check for the presence of the location property before it evaluates the rest of the expression. If the location property is found, then it proceeds to the rest of the expression, otherwise, it returns undefined here itself.
+
+console.log(
+    `Location: ${restaurants[1].location?.lat}, ${restaurants[1].location?.long}`
+);
+
+// Running this now displays undefined, undefined. This is a great opportunity to use the nullish coalescing operator to display the words NA which stand for Not Available.
+
+// 
+
+console.log(
+    `Location: ${restaurants[1].location?.lat ?? "N/A"}, ${restaurants[1].location?.long ?? "N/A"}`
+);
 
