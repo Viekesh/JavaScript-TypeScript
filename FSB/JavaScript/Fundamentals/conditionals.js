@@ -539,3 +539,35 @@ console.log(
     `Location: ${restaurants[1].location?.lat ?? "N/A"}, ${restaurants[1].location?.long ?? "N/A"}`
 );
 
+
+
+
+
+
+// Summarize :
+
+// In our code we can use 6 types of conditionals these are "if...else", "switch", "ternary operator", "logical operator", "nullish coallescing operator", "optianal chaining operator".
+
+// if...else :
+// This statement helps you implements coditional branching of control based of simple true or false condition. The "else...if" is another block that comes after "else", it helps handling multiple conditions at once.
+
+// switch statement :
+// A switch statement evaluates an expression and uses the outcome of that expression to match against a set of given conditions known as cases.
+// If the match is found the statement following that case are executed.
+// If none are found, then an optional default case can be put to use.
+
+// ternary operator :
+// The "ternary operator" gives three operands. The operand after the question mark is outcome if the expression evaluates to true. The operand after the colon is executed if the outcome of the expression is false.
+
+// binary logical operatior
+// "logical or operator ("||")" and "logical and operator ("&&")"
+
+// nullish coalescing operator (??)
+// this operator works exactly like logical or ("||") except that its definition of falsy is restricted to null or undefined.
+
+// optional chaining operator :
+// The optional chaining operator lets you return an undefined if intermediate properties did not exist. The optional chaining operator can also be used when accessing elements from arrays.
+
+
+
+//.
