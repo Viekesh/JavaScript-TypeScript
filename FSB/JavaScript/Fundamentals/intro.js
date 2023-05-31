@@ -53,3 +53,6 @@
 // The most important of these is V8 which is used in Google’s Chrome browser. On the other hand, Firefox uses a compiler known as Spidermonkey while Microsoft uses ChakraCore. In fact, if you think of your web browser as a car then the JavaScript engine is akin to a car’s engine. And the host environment may differ, keeping the engine intact. For instance, Node.js works on the server and incorporates Chrome’s V8 engine letting developers write brilliant server-side code.
 
 // So, now that you know where JavaScript sits in the grand scheme of things, let’s go back in time to understand why and how JavaScript was created in the next topic.
+
+
+

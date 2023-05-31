@@ -1,5 +1,5 @@
 "use strict";
-// Sure. The JavaScript for...of loop is a new loop that was introduced in ES6. It is used to iterate over iterable objects, such as arrays, strings, and objects that have been defined with the iterable protocol. The syntax for a for...of loop is as follows:
+// The JavaScript for...of loop is a new loop that was introduced in ES6. It is used to iterate over iterable objects, such as arrays, strings, and objects that have been defined with the iterable protocol. The syntax for a for...of loop is as follows:
 
 // for (let variable-and-elements-of-iterable of iterable) {
 // code to be executed for each value in iterable

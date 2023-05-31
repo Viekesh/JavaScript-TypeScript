@@ -1,3 +1,10 @@
+"use strict";
+
+
+
+
+
+
 // A for loop in JavaScript is a programming construct that allows you to execute a block of code repeatedly until a specified condition is met. The syntax for a for loop is as follows.
 
 
