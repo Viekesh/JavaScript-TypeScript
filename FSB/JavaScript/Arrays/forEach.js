@@ -14,7 +14,7 @@ fruits.forEach(myFunction);
 
 console.log(text);
 
-// remember if you type here in the place of item an index keyword and in the place of index an item keyword then you will get confusing output type the function as it is given on the above.
+// remember if you type here in the place of item an index keyword and in the place of index an item keyword then you will get confusing output...type the function as it is given on the above.
 
 // The forEach() method calls a function for each element in an array.
 
@@ -28,7 +28,7 @@ console.log(text);
 
 // function() : Required. A function to run for each array element.
 
-// currentValue : Required. The value of the current element.
+// currentValue/item : Required. The value of the current element.
 
 // index : Optional. The index of the current element.
 
@@ -98,7 +98,7 @@ const books = [
 ];
 
 const flipTitles = function (element, index) {
-    console.log(element.split("").reverse().join(""));
+    console.log("ex 5 : ", element.split("").reverse().join(""));
 }
 
 books.forEach(flipTitles);
@@ -111,7 +111,64 @@ books.forEach(flipTitles);
 
 // ex 6 : display csv data in a tubular format.
 
-const users = 'id,first_name,last_name,email,gender' 
+const user = `id,first_name,last_name,email,gender
+1, Brigg, Kauscher, bkauscher@nsw.gov.au, Male
+2, Saudra, Madner, smadnerl@mac.com, Female
+3, Willy, Birchwood, wbirchwood2@typepad.com, Female
+4, Jaime, Abethell, jabethell3@amazonaws.com, Male
+5, Kristofer, Gunton, kgunton4@globo.com, Male`;
+
+const csvToArray = (csv) => {
+    let output = [];
+
+    // we use here for each loop
+    csv.split('\n').forEach((row) => output.push(row.split(" : ")));
+
+    // we use here "for of loop"
+    // for(const row of csv.split("\n")) {
+    //     output.push(row.split(" ::: "));
+    // }
+
+    return output;
+}
+
+console.log("ex 6 : ", csvToArray(user));
+
+const convertToObj = (array) => {
+
+    // we instantiate an array to produce the output
+    let outputObj = [];
+    arr.forEach((item, index) => {
+
+        // we use "for each" method to loop the input array and we shall access both the element/item and index like so. The reason we need index is because we can skip the entry at index zero because it contain the column names and not the actual data.
+        
+        // These column name is translated to property names in just a moment. The actual data is from index 1 onwards.
+
+        // So as long as index is not zero the value of the "elem" or element parameter will be an array.
+
+        // Therefore, we'll now iterate through this nested array which contain actual data which is include in the array. This is where we will contruct an object for every nested array. So, I'll instantiate an object like so. Then we'll loop through the nested array using another "for each" mehtod and in the callback we can programatically set the property name first by using the bracket notation as you can see.
+        if ( index !== 0) {
+
+            let obj = {};
+            elem.forEach((elem, index) => {
+                obj[array[]]
+            })
+        }
+        output.push(obj);
+    });
+    return output;
+};
+
+let csvToObj = convertToObj(csvToArray(users));
+console.table(csvToObj);
+
+
+
+
+
+// ex 7 :
+
+const users = `id,first_name,last_name,email,gender
 
 1, Brigg, Kauscher, bkauscher@nsw.gov.au, Male
 
@@ -121,46 +178,60 @@ const users = 'id,first_name,last_name,email,gender'
 
 4, Jaime, Abethell, jabethell3@amazonaws.com, Male
 
-5, Kristofer, Gunton, kgunton4@globo.com, Male’;
+5, Kristofer, Gunton, kgunton4@globo.com, Male`;
 
 
+const weapons = `1,Red Orbs,240
+2,Green Orbs,194
+3,Yellow Orbs,154
+4,Kill Machine,80`;
 
-const csvToArray = (csv) => {
+// We need to first break apart the string by line and then break each line by a comma to get access to individual elements.
 
-    let output = [];
+// Start by breaking apart the weapons string by line using the String.split() method, with the newline character as the delimiter.
 
-    csv.split('\n').forEach((row) => output.push(row.split(',')));
+// The breakByLine constant will now be an array with each item representing each row from the dataset. Next, let’s iterate through this array and for every item using the split method with the comma as the delimiter. Finally, we’ll render a string using the console.log method to output this data.
 
-    return output;
+// NOTE: Please ensure you implement the console.log statement exactly as shown in the code below.
 
-}
+const displayUsersAndWeapons = function(string) {
+    const breakByLine = string.split(" \n ");
 
-const convertToObj = (arr) => {
+    for (const weaponItems of breakByLine) {
+        let elements = weaponItems.split(" : ");
+        console.log(`${elements[0], elements[1], elements[2]}`);
+    }
 
-    let output = [];
-
-    arr.forEach((elem, index) => {
-
-        // Skip index 0 if ( index !== 0) { 
-
-        let obj { };
-
-        elem.forEach((elem, index) => {
-
-            obj[arr[0][index]] = elem;
-
-        });
-
-        output.push(obj);
-
-    });
-
-    return output;
+    for (const item of breakByLine) {
+        let elements = item;
+        // console.log(`${elements.split(" , ")}`);
+        console.log(`${elements.split(" : ")}`);
+    }
 
 };
 
-let csvToObj = convertToObj(csvToArray(users));
+console.log(displayUsersAndWeapons(users, "showing or not"));
 
-console.table(csvToObj);
+console.log(displayUsersAndWeapons(weapons));
+
+// That’s it. We’ve just parsed comma-separated data into arrays for consumption.
+
+
+
+
+
+const isPalindrome = word => {
+    let wordArray = [];
+    let reverseWord = [];
+
+    for(const w of word) {
+        wordArray.push(w);
+        reverseWord.push(w);
+    }
+
+    return wordArray.toString() === reverseWord.reverse().toString();
+}
+
+console.log(isPalindrome("Hello") ? "Palindrome" : "Not Palindrome");
 
 
