@@ -1,5 +1,8 @@
 "use strict";
 
+
+
+// ex 1 :
 const sensorData = [
 
     {
@@ -31,9 +34,16 @@ const sensorData = [
 
 for (const data of sensorData.reverse()) {
 
-    console.log(`${data.date} | MAX: ${data.maxTemp}, MIN: ${data.minTemp}`); 
+    console.log("ex 1 : ", `${data.date} | MAX: ${data.maxTemp}, MIN: ${data.minTemp}`);
     
 }
+
+
+// ex 2 :
+const another_users = ["u1", "u2", "u3", "u4"];
+console.log("another_users : ", another_users);
+const a_u_result = another_users.reverse();
+console.log("ex2 : ", a_u_result);
 
 
 // Here we have an array of objects with sensor data from internet of things devices. It stores the records of minimum temperature and maximum temperature and if you observe the dates, you can see this data is captured at every alternate day and is simply appended to this array.
@@ -43,6 +53,7 @@ for (const data of sensorData.reverse()) {
 // The reverse method on the Array prototype which is available to all arrays such as the sensorData array here reverses the data in place.
 
 
+// ex3 :
 const isPalindrome = word => {
     let wordArray = [];
     let reverseWord = [];

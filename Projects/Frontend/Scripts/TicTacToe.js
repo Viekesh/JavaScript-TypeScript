@@ -55,7 +55,7 @@ const checkWin = () => {
 
 // Game logic start
 
-// backgroundMusic.play();
+backgroundMusic.play();
 
 let boxes = document.getElementsByClassName("box");
 
