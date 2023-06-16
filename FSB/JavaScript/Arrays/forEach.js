@@ -165,12 +165,27 @@ const books = [
     console.log(`${index + 1}. ${elem.title}`)
   })
 
+// Array.forEach() is used to traverse the elements of array and hence it is an iteration method
+
+// Array.forEach() returns an error if no callback function or something other than callback function is supplied to it as argument.
+
+// Array.forEach() is an array iteration methods which traverse all elements of array. In this case, while traversing each element, it is pushing the square of the element to array squaredNumbers.
 
 
-    // let text = "";
 
-// const fruits = ["apple", "cherry", "mango"];
+// ex 4 :
 
+let text = "";
+
+const fruits = ["apple", "cherry", "mango"];
+
+const myFuntijon = (item, index) => {
+    text += index + " : " + item + "\n";
+}
+
+fruits.forEach(myFuntijon);
+
+console.log(text);
 // const myFunction = (item, index) => {
 //     text += index + " : " + item + "\n";
 // }
