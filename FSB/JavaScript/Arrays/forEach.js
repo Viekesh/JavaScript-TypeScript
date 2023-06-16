@@ -98,6 +98,75 @@ console.log(csvToObj);
 
 
 
+// ex 3: compute taxes
+
+const prices = [100, 200, 300, 400, 500];
+
+// here we can use contructor function
+
+const Tax = function(tax) {
+    this.tax = tax;
+
+    this.withTax = function(array) {
+        let output = [];
+
+        array.forEach(function(element) {
+            let withTax = (this.tax / 100) * element + element;
+            output.push(this.withTax);
+        }, this);
+
+        return output;
+    }
+}
+
+const gst5 = new Tax(5);
+
+console.log(gst5.withTax(prices));
+
+
+// There are a number of ways to iterate through arrays in JavaScript. The Array prototype offers built-in methods that can help you iterate through and process data stored in an array.
+
+// One such method is the Array.forEach() method which allows us to iterate through our array. At every iteration, the forEach() method executes a callback function providing access to the current element and the index number which can then be used within the callback function.
+
+// In this ex. you'll notice an array of objects representing books. Right below the books is a console.log statement that outputs ‘My Favourite Books’. Your job is to implement the forEach() method to iterate through the books array and produce the following output on the terminal:
+
+// My Favourite Books
+// 1. Freakonomics
+// 2. The Design of Everyday Things
+// 3. Shantaram
+// 4. Contact
+
+// To achieve this, we’ll implement the forEach() method as shown below and at every iteration use a console.log to render the name of a book title using the index (index + 1) as the item number. 
+// books.forEach((elem, index) => console.log(`${index + 1}. ${elem.title}`));
+// That’s it! You’ve just used learnt to use the Array.forEach() method!
+
+const books = [
+    {
+      id: 1,
+      title: 'Freakonomics',
+    },
+    {
+      id: 2,
+      title: 'The Design of Everyday Things',
+    },
+    {
+      id: 3,
+      title: 'Shantaram',
+    },
+    {
+      id: 4,
+      title: 'Contact',
+    },
+  ];
+  
+  console.log('My Favourite Books');
+
+  books.forEach((elem, index) => {
+    console.log(`${index + 1}. ${elem.title}`)
+  })
+
+
+
     // let text = "";
 
 // const fruits = ["apple", "cherry", "mango"];
