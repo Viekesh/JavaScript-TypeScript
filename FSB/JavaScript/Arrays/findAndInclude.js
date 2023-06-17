@@ -90,7 +90,6 @@ console.log(number.includes(4));
 
 
 
-
 // find() method :
 
 // ex 2 : find the value of the first element with the value over 18.
@@ -124,3 +123,5 @@ console.log("age : ", age.find(checkAge));
 // array is also optional. It is the array of the current element.
 
 // thisValue is also optional. The value passed to the function as its "this" value.
+
+
