@@ -186,19 +186,12 @@ const myFuntijon = (item, index) => {
 fruits.forEach(myFuntijon);
 
 console.log(text);
-// const myFunction = (item, index) => {
-//     text += index + " : " + item + "\n";
-// }
-
-// fruits.forEach(myFunction);
-
-// console.log(text);
 
 // remember if you type here in the place of item an index keyword and in the place of index an item keyword then you will get confusing output...type the function as it is given on the above.
 
 // The forEach() method calls a function for each element in an array.
 
-// // The forEach() method is not executed for empty elements.
+// The forEach() method is not executed for empty elements.
 
 
 
@@ -214,57 +207,57 @@ console.log(text);
 
 // // arr : Optional. The array of the current element.
 
-// // thisValue : Optional. Default "undefined". A value passed to the function as its this value.
+// thisValue : Optional. Default "undefined". A value passed to the function as its this value.
 
 
 
 
 
-// // more examples :
+// more examples :
 
-// // ex 1 : compute the sum
+// ex 1 : compute the sum
 
-// let sum = 0;
+let sum = 0;
 
-// const numbers = [2, 3, 4, 5];
+const num = [2, 3, 4, 5];
 
-// const myNumbers = (item) => {
-//     sum += item;
-// }
+const myNumbers = (item) => {
+    sum += item;
+}
 
-// numbers.forEach(myNumbers);
+num.forEach(myNumbers);
 
-// console.log(sum);
+console.log(sum);
 
 
 
 // // ex 3 : multiply each element with 10
 
-// const multNum = [2, 3, 4, 5];
+const mulNumbers = [200, 300, 400, 500];
 
-// const multNumbers = (item, index, array) => {
-//     array[index] = item * 10;
-// }
+const multNumbers = (item, index, array) => {
+    array[index] = item * 10;
+}
 
-// multNum.forEach(multNumbers);
+mulNumbers.forEach(multNumbers);
 
-// console.log(multNum);
+console.log(mulNumbers);
 
 
 
 // // ex 4 : multiply each element
 
-// let multp = 1;
+let multiplyFromHere = 1;
 
-// const multiply = [3, 4, 5, 6];
+const multiplyNumbers = [4, 6, 7, 9, 18];
 
-// const multiplyNum = (item, index, array) => {
-//     multp *= item;
-// }
+const multpEachNum = (item, index, array) => {
+    multiplyFromHere *= item;
+}
 
-// multiply.forEach(multiplyNum);
+multiplyNumbers.forEach(multpEachNum);
 
-// console.log(multp);
+console.log(multiplyFromHere);
 
 
 
