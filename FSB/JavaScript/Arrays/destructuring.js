@@ -266,17 +266,21 @@ const weapons = `1,Red Orbs,240
 4,Kill Machine,80`;
 
 const displayWeapons = function (str) {
-    
+
     const breakByLine = str.split("\n");
 
     for(const item of breakByLine) {
         const [id, weapon, cost] = item.split(",");
-        console.log(`${weapon} costs ${cost}`);
+        console.log(`${weapon} costs $${cost}`);
     }
 
 };
 
 displayWeapons(weapons);
+
+// Functions in JavaScript can only return a single value. In order to return multiple values, return values should be wither packed as elements of array or as properties of object.
+
+// Rest(…) operator stores rest of the variables in the form of an array.
 
 
 
