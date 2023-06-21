@@ -58,7 +58,7 @@ console.log(
     }`
 );
 
-// Array.find() must be provided a callback function as an argument to find if any element in the array satisfies the condition in the callback function
+// Array.find() must be provided a callback function as an argument to find if any element in the array satisfies the condition in the callback function.
 
 // Array.find() method is used to find if the element of the array satisfies the test function provided as argument.
 
@@ -66,15 +66,18 @@ console.log(
 
 // Array.findIndex() is used to find the index of the element that satisfies the test function
 
-const numbers = [1, 2, 3];
-const index = numbers.findIndex(n=>n===2);
-console.log(index);
+const ages = [10, 20, 30, 40, 50, 60];
 
+const checkAgeValue = (age) => age === 60;
+
+const agesOutput = ages.findIndex(checkAgeValue);
+
+console.log("findIndex output : ", agesOutput);
 
 // Array.includes() method is used to check if the element provided as argument exists in the array. It it exists, it returns true, otherwise false.
 
 const number = [1, 2, 3];
-console.log(number.includes(4));
+console.log("includes output : ", number.includes(1));
 
 // The includes() method returns true if an array contains a specified value.
 
@@ -94,15 +97,15 @@ console.log(number.includes(4));
 
 // ex 2 : find the value of the first element with the value over 18.
 
-const age = [11, 23, 30, 18, 20, 27];
+const age = [10, 20, 40, 50, 60];
 
 const checkAge = (age) => {
-    return age > 30;
+    return age > 20;
 };
 
-console.log("age : ", age.find(checkAge));
+console.log("return age greater than 20 : ", age.find(checkAge));
 
-// The find() method returns the value of the first element that passes a test.
+// The find() method returns the value which is passes in the first iteration.
 
 // The find() method executes a function for each array element.
 
