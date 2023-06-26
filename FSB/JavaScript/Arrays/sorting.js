@@ -77,6 +77,13 @@ console.log(`Most Expensive : ${mostExpensive.brand} at ${mostExpensive.cost}`);
 console.log(`cheapest : ${cheapest.brand} at ${cheapest.cost}`);
 
 
+// Array.sort() method can be used to sort arrays whose elements are of type string/number/other. However, we need additional logic for sort arrays whose data type is other than string. 
+
+// Array.sort() provides out of box functionality to sort arrays whose elements are of type string
+
+// Array.sort() expects a comparison function as an argument using which the numeric array can be sorted. Here b - a is provided, which means the array will be sorted in descending order.
+
+// Array.sort() sorts an array in place. This method mutates the array and returns a reference to the same array.
 
 
 
@@ -94,3 +101,29 @@ console.log("points : ", points);
 points.sort(function(a, b) {return a - b});
 
 console.log("after sorting points : ", points);
+
+
+
+// ex 4 :
+
+const months = ["Dec", "Feb", "Jan", "Apr"];
+
+console.log("months : ", months);
+
+months.sort();
+
+console.log("months after sort", months);
+
+
+
+// ex 5 :
+
+const num1 = [3, 44, 29, 89, 100, 23];
+
+console.log("num 1 : ", num1);
+
+num1.sort();
+
+console.log("after sorted", num1);
+
+
