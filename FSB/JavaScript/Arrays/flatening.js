@@ -56,5 +56,13 @@ console.log(flattenedArray)
 // Array.flat() flattens the array and by default the depth is 1. Hence it returns the flattened array till depth 1
 
 
+// Fill up the blank to get the flattenedArray as [1,2,3,4,5,6,7,8]
+const numbers1 = [1,[2,3],[4,[5,[6,[7,8]]]]]
+const flattenedArray2 = ________
+console.log(flattenedArray)
+
+// Array.flat() flattens the array till 1st level of depth by default. To flatten the array such as given array, the depth should be calculated and provided as argument to flat() method. Here, depth is 4.
+
+
 
 // .
