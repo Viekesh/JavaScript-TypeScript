@@ -135,6 +135,20 @@ console.log(`Hollywood Masterclass featuring ${directors}`);
 
 // When you now run your app, you can see the result of using the splice and slice on the array.
 
+// Array.slice() extracts a portion of array and  returns a shallow copy of it without modifying the original array. Hence, it is an accessor method.
+
+// Array.splice() is used to insert, remove or replace elements in an array. Hence it is a mutator method.
+
+
+
+// ex 5 :
+
+const languages = ['go', 'js', 'python', 'c', 'python'];
+languages.splice(2,1,'java');
+console.log(languages);
+
+// Array.splice() method removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements. It takes three arguments - start index, delete count and elements to insert
+
 
 
 // .
