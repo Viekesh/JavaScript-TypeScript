@@ -146,6 +146,24 @@ console.log("ex 4 : ", titl, type)
 
 
 
+// What will be the output of following?
+const person = {
+    firstName: 'John',
+    lastName: 'Dempsey',
+    age: 35
+}
+const {firstName, lastName} = person
+
+console.log("ex 5 : ", firstName, lastName);
+
+
+
+// Rest operator is denoted by three dots followed by any variable name.
+
+
+
+
+
 
 
 
