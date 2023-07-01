@@ -146,17 +146,31 @@ console.log("ex 4 : ", titl, type)
 
 
 
+// ex 5:
+
 // What will be the output of following?
+// const person = {
+//     firstName: 'John',
+//     lastName: 'Dempsey',
+//     age: 35
+// }
+// const {firstName, lastName} = person
+
+// console.log("ex 5 : ", firstName, lastName);
+
+
+
+// ex 6: What will be the output of the following :
+
 const person = {
     firstName: 'John',
-    lastName: 'Dempsey',
+    lastName: 'Doe',
     age: 35
 }
-const {firstName, lastName} = person
+const {firstName, ...rest} = person
+console.log(rest)
 
-console.log("ex 5 : ", firstName, lastName);
-
-
+// rest(…) operator stores all the properties of the object which were not destructured. Here, lastName and age were not destructured. Hence, rest will be object that contains lastName and age.
 
 // Rest operator is denoted by three dots followed by any variable name.
 
