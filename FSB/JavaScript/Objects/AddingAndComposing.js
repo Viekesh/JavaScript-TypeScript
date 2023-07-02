@@ -122,3 +122,4 @@ console.log("ex 3 : ", configureUsers);
 // Spread operator can be used to compose objects.
 
 // Object.assign() creates a shallow copy of objects.
+

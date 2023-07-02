@@ -220,3 +220,6 @@ Object.defineProperty(obj1, 'property1', {
 });
 obj1.property1 = 44;
 console.log(obj1.property1);
+
+
+// 
