@@ -7,13 +7,13 @@
 
 // ex 1:
 
-const user = {
+const usr = {
     id: 1,
     name: "Joe M",
     age: 20,
 }
 
-console.log("ex 1 : ", Object.getOwnPropertyDescriptor(user, "name"));
+console.log("ex 1 : ", Object.getOwnPropertyDescriptor(usr, "name"));
 
 // When we run this, we see the internal property descriptors for the ‘name’ property of our object. You can see the value that we have set, a setting called writable that specifies if we’re allowed to set and mutate this value or not.
 
@@ -62,7 +62,7 @@ const tsla = {
 
 // When an object are created all data descriptors are set to true whcih means we can add remove mutate and enumerate them when we iterate over an object. This also means we can overwrite the property value. We deliberately setting the stIdx property to zero this might be harmful for your data because we are damaging a record by overriding it's value which in a real world situation might have come from a database or a remote service.
 
-tesla.stIndx = 0;
+tsla.stIdx = 0;
 
 // To prevent this we can use "Object.defineProperty()" on the "tesla" object and configure the stIndx property as shown below :
 
@@ -73,13 +73,17 @@ Object.defineProperty(tsla, 'stIdx', {
 
 // The third parameter here excepts an object where I can configure our data descriptors 
 
-Object.defineProperty(tesla, "stExch", {
+Object.defineProperty(tsla, "stExch", {
     value: "NASDAQ",
-    writable: true,
-    enumerable: false,
+    writable: true, // property can be changed
+    enumerable: false, // //property cannot be enumerated
+    configurable: false, //property cannot be deleted
 });
 
-for (let i in tesla) {
+
+//iterate through the property names
+
+for (let i in tsla) {
     console.log(i);
 }
 
@@ -87,12 +91,12 @@ for (let i in tesla) {
 // we unable to delete this because a property name configurable is set to false by default when using Object.define property 
 
 let {
-    stIndx: id,
+    stIdx: id,
     stName: stock,
     stCurrPrc: value,
     stExch: exchange,
     stDetails: { name: company, ceo, hq },
-} = tesla;
+} = tsla;
 
 console.log(`ex 2: ID : ${id}`);
 
@@ -102,56 +106,94 @@ console.log(`${company} is headquartered in ${hq} and headed by ceo ${ceo}`);
 
 
 
-// ex 3:
 
-// const usr = function() {
 
-//     let name = "";
 
-//     age, changes = [];
+// ex 3 :
 
-//     Object.defineProperties(this, {
-//         id: {
-//             enumerable: true,
-//             value: `UID - ${parseInt(Math.random() * 30000 )} - XZ`,
-//         },
-//         name: {
-//             enumerable: true,
-//             get() {
-//                 return name;
-//             },
-//             set(val) {
-//                 changes.push(`name set to ${val}`);
-//                 name = val.toUpperCase();
-//             }
-//         },
+// constructor function to create instances of user objects with properties pre-configured.
 
-//         age: {
-//             enumerable: true,
-//             get() {
-//                 return age;
-//             },
-//             set(val) {
-//                 changes.push(`age set to ${val}`),
-//                 age = val;
-//             },
-//         },
-//         changes: {
-//             enumerable: false,
-//             get() {
-//                 return changes.toString();
-//             }
-//         }
-//     });
-// };
+const User = function () {
 
-// let joe = new usr();
+    //create a local variable inside the constructor function
+    let name = "",
+        age,
+        changes = [];     // log of changes
 
-// joe.name = "Joe Mockery";
+    //set and configure multiple properties on the ‘this’ context object
+    Object.defineProperties(this, {
+        id: {
+            enumerable: true,   // generate a unique id which is read only
+            value: `UID ${parseInt(Math.random() * 30000)} - XZ`,
+        },
 
-// joe.age = 20;
+        name: {
+            enumerable: true,
 
-// console.log(joe.id, joe.name, joe.age);
+            // set value to name
+            set(val) {
+                changes.push(`name set to ${val}`); //record log
+                name = val.toUpperCase();
+            },
+
+            // get name
+            get() {
+                return name;
+            },
+        },
+
+        age: {
+            enumerable: true,
+
+            // set value to age
+            set(val) {
+                changes.push(`age set to ${val}`); //record log
+                age = val;
+            },
+
+            //get age
+            get() {
+                return age;
+            },
+        },
+
+        changes: {
+            configurable: false,
+
+            // get log of changes
+
+            get() {
+                return changes;
+            },
+        },
+    });
+};
+
+const joe = new User();
+
+//set the properties
+joe.name = 'Joe Mockery';
+joe.name = 'Perry';
+joe.age = 25;
+joe.age = 27;
+
+//console.log(joe.id, joe.name, joe.age);
+
+for (const i in joe) {
+    console.log(joe[i]);
+}
+console.log(joe.changes); //to see a log of changes that were applied
+
+
+
+// The set function accepts a single argument which I can then set to the local ‘name’ variable like so.  This now allows us to set a value to the name property as we’ve always done by typing object.property or joe.name in this case and setting it to a value. 
+
+// The combination of get and set functions are known as ‘accessor descriptors’ but the catch here is that you cannot use data descriptors and accessor descriptors at the same time.
+
+// So while enumerable and configurable are permitted, you cannot use writable or value properties if declaring custom getter and setter functions. 
+
+// The changes array can be used to create an undo mechanism, which allows us to roll back values or maintain a log of changes.
+
 
 
 
@@ -263,4 +305,4 @@ console.log(`${company} is headquartered in ${hq} and headed by ceo ${ceo}`);
 // console.log(obj1.property1);
 
 
-// 
+// The Object.defineProperty or properties are amazing methods that allow you to get a rock-solid control over your object and its properties.
