@@ -147,12 +147,13 @@ console.log("...");
 
 // Suppose we have a method in our object user called incrementAge:
 
+// ex : 5:
 const user33 = {
     name: "Kingsley",
     age: 28,
     job: "Web Developer",
-    incrementAge: function() {
-  	  this.age++
+    incrementAge: function () {
+        this.age++
     }
 }
 
@@ -160,18 +161,25 @@ const user33 = {
 
 
 
+
+
+
 // Copy an Object With Object.assign()
+
+// ex 6:
+
 // Before ES6, Object.assign() was the most popular way to deep copy an object.
 
 const user22 = {
     name: "Kingsley",
     age: 28,
     job: "Web Developer",
-    incrementAge: function() {
-  	  this.age++
+    incrementAge: function () {
+        this.age++
     }
-}
-let clone22 = Object.assign({}, user) // Copies user into clone
+};
+
+let clone22 = Object.assign({}, user); // Copies user into clone
 
 // Object.assign() will copy everything into the new object, including any functions. Mutating the copied object also doesn't affect the original object.
 
@@ -200,15 +208,32 @@ name: "Kingsley"
 // However, one thing to remember about Object.assign() is that the method only performs a partial deep copy on objects.
 // To understand what that means, let's consider the following:
 
-const user = {
+// ex 7:
+const user44 = {
     name: "Kingsley",
     age: 28,
     job: "Web Developer",
     location: {
-      city: "Lagos",
+        city: "Lagos",
     }
 }
-const clone = Object.assign({}, user)
+
+// As observed, we added the location property and passed an object as its value. Now we have a more complex structure that contains a nested object.
+
+// Whenever we mutate a property within the nested object (in clone), it will also mutate the same property in the original object (users). Let's take a look:
+
+const clone44 = Object.assign({}, user44);
+
+console.log("user44 : ", user44);
+clone44.age = 32;
+clone44.location.city = "New York";
+
+console.log(user44);
+console.log(clone44);
+
+// While the age property in the original object remained untouched, the city property was mutated by the reassignment operation.
+
+// Hence, the Object.assign() method should be used to deep copy objects that have no nested objects. 
 
 console.log("...");
 console.log("...");
@@ -218,6 +243,78 @@ console.log("...");
 console.log("...");
 
 
+// The Best Way to Deep Copy in JavaScript: The Spread Operator :
+
+// Another way to deep copy objects in JavaScript is with the ES6 spread operator. Using the three dots (...) collects all values on the original object into another object
+
+// ex 8:
+const user55 = {
+    name: "Kingsley",
+    age: 28,
+    job: "Web Developer"
+}
+
+const clone55 = { ...user55 }
+
+console.log("ex 8 : ", clone55);
+
+// However, much like with Object.assign(), the spread operator only makes a partial copy. So any object with a nested object will not be deep copied.
+
+// To make a complete deep copy with the spread operator, we'll have to write some additional code.
+
+// Consider the same user object but with a nested object:
+
+// ex 9:
+
+let user66 = {
+    name: "Kingsley",
+    age: 28,
+    job: "Web Developer",
+    location: {
+        city: "Lagos",
+    }
+};
+
+let clone66 = { ...user66 }
+
+console.log("ex 9 :", clone66);
+
+// To avoid mutating the original object, which is user, we must spread the copy object before making direct changes to any of its properties. For any nested object, we must also spread that sub-object before making changes to any of its properties:
+
+let clone77 = {
+    ...clone66,
+    age: 32,
+    location: {
+        ...clone66.location,
+        city: "New York"
+    }
+}
+
+console.log("clone77 : ", clone77);
+
+console.log("clone66 :", user66);
+
+// Here, we mutated age, which is a top-level property in clone, and city, which is a sub-property.
+
+// This time, the spread operation will give a complete deep copy wherein the original object will be unaffected by any mutation on the copy (user66).
+
+console.log("...");
+console.log("...");
+console.log("...");
+console.log("...");
+console.log("...");
+console.log("...");
+
+
+
+
+
+
+// Use Lodash cloneDeep() for Deep Copying :
+
+// Lodash also provides a utility method _.cloneDeep() for deep cloning of objects in JavaScript.
+
+// _.clone(value);
 
 
 
