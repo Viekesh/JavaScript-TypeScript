@@ -6,7 +6,7 @@
 
 // We saw how setting writable to false and configurable to false meant that mutations could be prevented and properties could be secured from deletion.   
 
-// JavaScript also offers two specialized methods that can help us secure objects. 
+// JavaScript also offers two specialized methods that can help us secure objects.
 
 
 // Object.seal()
@@ -73,12 +73,23 @@ console.log(user);
 
 // This object has been hacked!
 
+// undefined
+// {
+//   isbn: null,
+//   title: null,
+//   author: null,
+//   publisher: 'Hacked',
+//   intro: [Function (anonymous)]
+// }
+
 const book = {
     isbn: '0-671-00410-7',
     title: 'Contact',
     author: 'Carl Sagan',
     publisher: 'Pocket Books',
 };
+
+// Our job is to secure the book object. This is as easy as the following statement which should be put before the try block begins.
 
 Object.freeze(book);
 
@@ -98,6 +109,16 @@ try {
     console.log(book);
 }
 
-
-// If you now observe the output of the application, you should get something like this: 
+// If you now observe the output of the application, you should get something like this:
 // Cannot assign to read only property 'isbn' of object
+
+// '#<Object>'
+// {
+//     isbn: '0-671-00410-7',
+//     title: 'Contact',
+//     author: 'Carl Sagan',
+//     publisher: 'Pocket Books'
+// }
+
+
+// The key thing to observe after the Object.freeze() is that our object is intact, no properties were mutated, and no new properties were entertained. This is critical when working with object-based data that must be preserved.
