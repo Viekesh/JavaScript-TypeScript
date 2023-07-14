@@ -18,17 +18,17 @@
 
 // here forward slash is only used for separating things
 
-    // backward slash w character
+// backward slash w character
 
-    // It is known as the word character class and its job is simply select a word which includes alphanumeric and underscore.
+// It is known as the word character class and its job is simply select a word which includes alphanumeric and underscore.
 
-    // The digit 2 in a pair of curly braces is known as quantifier. Together we are looking for a combination of two alphanumeric characters that are followed by a pair of ELLs. The character class and quantifier will match the WA of wall and FE of fell.
+// The digit 2 in a pair of curly braces is known as quantifier. Together we are looking for a combination of two alphanumeric characters that are followed by a pair of ELLs. The character class and quantifier will match the WA of wall and FE of fell.
 
-    // The gi that you see after the ending forward slash are flags which help you configure the search.
+// The gi that you see after the ending forward slash are flags which help you configure the search.
 
-    // For instance here we want more than one match throughout the text which is why both wall and fell get detected
+// For instance here we want more than one match throughout the text which is why both wall and fell get detected
 
-    // The l flag is simply means that the search is case sensitive so it doesn't matter the words appear in upper or lower case. They will get selected.
+// The l flag is simply means that the search is case sensitive so it doesn't matter the words appear in upper or lower case. They will get selected.
 
 
 
@@ -89,3 +89,34 @@
 // /colou?r/gi
 
 // This final one selects both the American and British spellings of the word color by using the optional quantifier denoted by a question mark, which will match 0 or 1 of the preceding character which is, in this case, is the character ‘u’ which is missing in the American spelling but is present in the British version.
+
+
+
+
+// ex 1 :
+
+// Defining and processing text based on patterns is needed quite frequently in modern web applications. Pattern matching enables developers to incorporate faux intelligence in apps as they’re able to recognize portions of text and extracts data automatically.
+
+// Without relying on artificial intelligence or natural language processing, developers can implement pattern matching and data extraction using regular expressions, a language agnostic syntax that allows developers to describe patterns in text using tokens, quantifiers and other pieces of the syntax.
+
+
+
+
+const post =
+    'This waffle is brilliant! #foodie #waffles #instafood #nutella #chocolate #hazelnut #icecream';
+
+// You can implement the getTags() function as shown below.
+
+const getTags = (post) => {
+    const pattern = /(?<=#)\w+/gi;
+    const detectTags = post.match(pattern);
+    return detectTags && detectTags.length > 1 ? detectTags : detectTags[0];
+};
+
+console.log(getTags(post));
+
+
+
+// The const named 'pattern' contains a regular expression which allows us to detect words that begin with a '#' character. We then use the match method to extract such words in an Array which we then return back to the user.
+ 
+// If you run the app now, you’ll notice an array full of hashtags.
