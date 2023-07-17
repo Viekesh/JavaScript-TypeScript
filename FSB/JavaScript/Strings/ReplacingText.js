@@ -86,3 +86,50 @@ const str2 = 'the captain of this ship - a dangerous man, captain roger was know
 compareStrings(str1, str2);// returns true
 
 
+
+
+// The str.replace() and replaceAll() methods allow you to find and replace text with an alternate. Let’s build an isPalindrome() function which accepts a string, removes whitespace, special characters, sets characters to lowercase and then compare it with the reversed version of the same thing.
+
+// We’ll use replaceAll() to remove special characters and whitespace from the string.
+
+const words = ['Civic:', 'Seltos', 'Car', 'Noon', 'Refer', 'Tenet', 'Design'];
+
+const isPalindrome = (str) => {
+    const strAProc = str
+        .toLowerCase()
+        .replaceAll(/\s/g, '')
+        .replaceAll(/[:;'"!@#$%^&*]/g, '');
+
+    const strBProc = str
+        .toLowerCase()
+        .replaceAll(/\s/g, '')
+        .replaceAll(/[:;'"!@#$%^&*]/g, '')
+        .split('')
+        .reverse()
+        .join('');
+
+    return strAProc === strBProc;
+};
+
+words.forEach((w) => {
+    console.log(`${w} ${isPalindrome(w) ? 'is' : 'is not'} a palindrome`);
+});
+
+
+
+
+// When you now run the app, your app tells you which word is a palindrome and which one’s not.
+
+
+// How many parameters do we need to pass to String.replace() in order to replace a string?
+// String.replace() accepts 2 parameters - searchValue(string/regExp) and replace value(string)
+
+
+// What will be the output of following?
+// const str1 = "No pain, No gain";
+// console.log(str1.replace(’N’, ’n’));
+const str11 = "No pain, No gain";
+console.log(str11.replace('N', 'n'));
+console.log(str11.replaceAll('N', 'n'));
+// String.replace() replaces only the first occurrence of search value with replace value.
+// String.replaceAll() replaces all occurrences of search value with replace value.
