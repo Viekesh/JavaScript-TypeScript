@@ -62,6 +62,9 @@ export default IntroToReact;
 
 
 
+
+// Why React?
+
 // Apart from React Fiber, React also gives you the ability to break down a large interface into reusable and composable components, the true building blocks of a React application. These components can be individually maintained as well as developed without hurting the rest of the interface. 
 
 // Other than building interfaces, one can build applications by utilizing an ecosystem that includes a router such as Reach Router, a state management solution such as Redux and any flavor for the backend.
@@ -82,16 +85,20 @@ export default IntroToReact;
 
 
 
+// Create React App
 
 // What are Module Bundlers?
 
-// A module bundler is an essential weapon in a modern JavaScript developer’s arsenal. A module bundler, at its very core, scans through your files and creates bundles of code by combining together multiple files.
+// A module bundler is an essential weapon in a modern JavaScript developer’s arsenal. A module bundler, at its very core, scans through your files and creates bundles of code by combining together multiple files. This allows the break down of code into modules during development. Towards the end of the process, the module bundler combines together multiple JavaScript files into compact bundles that can then be deployed on the server.
 
-// This allows the break down of code into modules during development. Towards the end of the process, the module bundler combines together multiple JavaScript files into compact bundles that can then be deployed on the server.
+
+
 
 // A modern JavaScript development pipeline typically consists of a module bundler like Parcel or Webpack.
 
-// These module bundlers also employ the services of the Babel compiler which allows you to use cutting edge and often unreleased JavaScript features in your apps.
+// These module bundlers also employ the services of the Babel compiler which allows you to use cutting edge and often unreleased JavaScript features in your apps. Along with Babel, several other add-on compilers may be used to compile stylesheets and other files. 
+
+// Webpack is one of the most popular module bundlers and is used extensively by the JavaScript developer community. It features easy configuration and offers an array of plugins that extend the base capabilities of the module bundler to compile all kinds of files, formats and language specifications.
 
 
 
@@ -108,14 +115,37 @@ export default IntroToReact;
 // after intallation of all files type : cd my-app
 // then type : npm start
 
-
 // Congrats your initial phase to start a new project is now ready.
+
+
+
+
+
+// What is the name of react reconcilation algorithm?
+
+// React Fiber is the reconciliation algorithm that is used to generate a tree of virtual DOM nodes internally when the app starts.
+
+
+
+// The data model that drives the interface is known as "state".
+// React uses the concept of state which describes the data that drives changes to the user interface.
+
+
+
+// When data in the state changes, React compares the newly generated Virtual DOM tree with the previous version in a process known as ______________
+// Diffing compares the newly generated Virtual DOM tree with the previous version and computes optimistic updates which are then applied to the real DOM.
+
+
+// "props"  are like inlets, allowing you to pass data from parent to child components.
 
 
 
 // Why do we use module bundlers like webpack?
 
 // Modern JavaScript apps are built with modular and often reusable code and module bundlers allow us to compile these modules into compacted deployable bundles.
+
+
+// Babel allows you to use cutting edge JavaScript features in your code, even before they make it to the official standard.
 
 
 // Which compiler is used reactjs library and why

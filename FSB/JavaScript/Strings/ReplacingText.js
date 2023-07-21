@@ -133,3 +133,8 @@ console.log(str11.replace('N', 'n'));
 console.log(str11.replaceAll('N', 'n'));
 // String.replace() replaces only the first occurrence of search value with replace value.
 // String.replaceAll() replaces all occurrences of search value with replace value.
+
+
+
+
+//.

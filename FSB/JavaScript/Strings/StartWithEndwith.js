@@ -121,16 +121,16 @@ console.log(language.split(' ', 2));
 
 
 // What will be the output of the following?
-const language = 'Javascript is good’;
-console.log(language.endsWith(‘d'));
+// const language = 'Javascript is good’;
+// console.log(language.endsWith(‘d'));
 
 // String.endsWith() accepts two parameters - the search string and the end position. End position is optional. It is used to check if the search string is same as the ending string. Here the language ends with d and hence true is logged to the console.
 
 
 
 // What will be the output of the following?
-const language22 = 'Javascript is good’;
-console.log(language22.endsWith(‘d’, 5));
+// const language22 = 'Javascript is good’;
+// console.log(language22.endsWith(‘d’, 5));
 
 // String.endsWith() accepts two parameters - the search string and the end position. End position is optional. It is used to check if the search string is same as the ending string. Here, at position 5, the character is c which does not match with d and hence false is logged to the console.
 
