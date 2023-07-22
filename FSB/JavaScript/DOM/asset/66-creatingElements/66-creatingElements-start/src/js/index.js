@@ -99,7 +99,7 @@ createPost(
 
 // Is not it's fun. If you have an array of post here you can also use the "forEach" method to look through the posts and dynamically generate social cards. This is fundamentally and conceptually how modern web appliation like facebook work, though there is a whole lot more going on in there.
 
-// So, congratulation we've just used the DOM interface to create, manipulate and insert elements into the HTML document
+// So, congratulation we've just used the DOM interface to create, manipulate and insert elements into the HTML document. 
 
 
 
