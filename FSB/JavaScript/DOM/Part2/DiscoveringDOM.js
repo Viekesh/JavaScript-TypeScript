@@ -47,3 +47,20 @@ document.querySelectorAll('element name or css selectors');
 //  Repaint or redraw the page 
 // We’ll dig into all these things as we go along.
 
+
+
+
+
+
+// The script tag also takes an optional type property, which can be set to text/javascript, which essentially tells the browser that the contents are JavaScript. This used to be a requirement however since HTML5 is no longer needed as such so we can avoid it. 
+
+// Buidling the script tag in the head section of the page is quite a popular and widely used convention. Another place is right before the closing body tag.
+
+// The logic behind the placement of the script block here is simple. Your browser reads and parses the page from top to bottom. By the time it reaches the script block here, it has all the HTML elements in place which you might’ve targeted in your JavaScript code. This naturally ensures that all elements are present before your JavaScript takes over for manipulation. 
+
+// There are however other ways to circumvent this issue but as a general convention, we’ll always keep our script tags here, right before the closing body tag. Now, JS inside your HTML page is fine, but isn’t the recommended practice because of several reasons.
+
+// Your code cannot be shared if it sits in an HTML page, so you cannot write code which multiple web pages might want to use.
+
+// Separation of concerns is a critical development practice. Just like a css file is used to store stylesheets, away from the HTML document, a javascript file is used to store all JavaScript code.
+

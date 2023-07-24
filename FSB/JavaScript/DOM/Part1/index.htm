@@ -13,6 +13,39 @@
 </html> -->
 
 
+
+<!-- Referencing to an External JavaScript File
+
+So, we can create a file named main.js right besides the HTML and CSS files and use a script tag, only this time, we’ll use the src or source property to refer to this external file. This brings in the JS file and you can tuck away all your code in one or more JS files.  
+
+So, let us create a function that returns the time. And we’ll create another one, which renders a console.log and displays the time. -->
+
+<!-- Back in the HTML file, we'll create a unique property on a button called onclick. We’re telling the browser that if someone clicks on the button, we need to execute the greetMe function which would be available to the webpage to execute though it comes from an external file. The onclick property creates an event listener in the browser.  -->
+
+<!-- Later on, we’ll delegate this work to JavaScript, but for now, let’s stick to this code. We’ll refresh the page in the browser and now if we hit the button on the page, we get the time here in the console.  
+
+This is running within the HTML file which we’ve loaded using the file protocol directly from disk. This has limitations and should never be used as a standard practice during web development. 
+
+Instead, you should serve your web pages using a web server. In the first module, we talked about installing Node.js. Because now, you can open the console and type npx http-serve and this will download and execute a simple HTTP server right in this folder. 
+
+You get these URLs of which we can use the topmost URL which uses the localhost IP address on port 8080 to access the site which is being served using the HTTP protocol. 
+
+This would never cause any problems.But again, for our purposes, we don’t need to do all this because we have a complete toolchain and kit-built right for now and we briefly discussed this in the first module. 
+
+So to create a complete end-to-end toolchain, you have to type this on the terminal where hello-js is the name of the folder which contains the setup. 
+
+Once setup, we can go into the folder and type npm run dev and press enter and this kicks up a complete end-to-end server with a local URL as seen here. 
+
+Just open this in your browser. We get an HTML page where you can see the use of a script tag with its type set to module which we’ll come back to later. For now, there is one thing you should know here that if build the same example as we did before, it wouldn’t work under this arrangement because of the way our toolchain handles the JavaScript code here.  -->
+
+
+
+
+
+
+
+
+
 <!-- The code which you have seen on the screen is running within this HTML file which we have loaded using the file protocol directly from the disk -->
 
 <!-- type this to create js application "npx @knowledgehut/create-js-app hello-js" -->

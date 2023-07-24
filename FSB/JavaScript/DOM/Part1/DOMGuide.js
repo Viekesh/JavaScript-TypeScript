@@ -12,10 +12,11 @@
 
 
 
-
 // To start accessing any element in HTML page, you need to access document object because all methods begin with  document.methodName(). Eg, document.getElementById()
 
 // document.createElement() is used to create new HTML element.
 
 // element.setAttribute() is used to set some attribute on element.
+
+
 

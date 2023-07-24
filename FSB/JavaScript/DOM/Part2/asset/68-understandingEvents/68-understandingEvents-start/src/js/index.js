@@ -1,3 +1,53 @@
+"use strict";
+
+
+
+// The addEventListener() method attaches an event handler to the specified element without overwriting existing event handlers.
+
+// You can add many event handlers to one element.
+
+// You can add many event handlers of the same type to one element, i.e two "click" events.
+
+// You can add event listeners to any DOM object not only HTML elements. i.e the window object.
+
+// The addEventListener() method makes it easier to control how the event reacts to bubbling.
+
+// You can easily remove an event listener by using the removeEventListener() method.
+
+// Syntax :
+
+// element.addEventListener(event, function, useCapture);
+
+// The first parameter is the type of the event (like "click" or "mousedown" or any other HTML DOM Event.)
+
+// The second parameter is the function we want to call when the event occurs.
+
+// The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
+
+// Note that you don't use the "on" prefix for the event; use "click" instead of "onclick".
+
+
+// ex 1:
+
+const myButton = document.getElementById('myBtn1');
+
+const ForMyButton = () => {
+    alert("Hello, JavaScript!!!");
+};
+
+myButton.addEventListener(
+    "click",
+    ForMyButton
+);
+
+
+
+
+
+
+
+// ex 1 :
+
 // const morningBtn = document.querySelector('#morning');
 // const dayBtn = document.querySelector('#day');
 // const afternoonBtn = document.querySelector('#afternoon');
@@ -36,7 +86,7 @@
 
 
 
-// Anothr Example (id = main2) :
+// ex 2 : (id = main2) :
 
 // The web is all about interaction. And interaction is made possible by way of the event system. In a nutshell, an event is an occurrence like the click of a button, the user typing in an input field, scrolling the page, moving the mouse pointer and several others. As a developer you can assign specialized asynchronous functions which are set to execute every time a given event occurs. This is made possible using an event listener, a special method that watches for an event on a given element and executes an attached callback function when the event occurs.
 
@@ -92,11 +142,15 @@ anneFBtn.addEventListener(
 
 // And that’s it. Try clicking all the buttons and read interesting quotes by these iconic figures from our world’s history.
 
-
 // Not all JavaScript statements are events but any user action/interaction can be treated as an event. E.g, clicking on a button, hovering over an element using mouse.
-
 
 // element.addEventListener() is used to attach a event listener to an element. Eg, document.getElementById(‘submitBtn’).addEventListener(‘click’, onClickFunc) is used for calling onClickFun whenever user clicks the element whose id is submitBtn
 
-
 // element.innerText is used to change the text inside the tags. Hence, document.getElementById(‘greet’).innerText = ‘good night’ is the correct answer.
+
+
+
+
+
+
+// .
