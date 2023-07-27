@@ -1,12 +1,48 @@
-import React from 'react'
+// In this hands-on exercise, we will create a class component that lets you type text in a <textarea> field while it displays word and character counts that update as you type. These kinds of components are usually seen on social media platforms like Twitter or blogging platforms where character and word counts are important.
 
-const Components = () => {
-  return (
-    <div>Components</div>
-  )
+// 1. Open App.js. You will notice we’ve already imported React and the Component class from the React library along with the App.css stylesheet which contains pre-built styles for this exercise.
+
+// 2. Begin by creating a class component named App as shown below:
+
+import { Component } from "react";
+import "./Components.css";
+
+class Components extends Component {
+  state = {
+    text: "",
+  };
+  render() {
+    return (
+      <div className="app">
+        <textarea
+          id="text-area"
+          onChange={(e) => this.setState({ text: e.target.value })}
+        ></textarea>
+
+        <div id="char-count">{this.state.text.length} Character(s)</div>
+
+        <div id="word-count">
+          {this.state.text ? this.state.text.match(/\w+/gim).length : 0} word(s)
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Components;
+
+//  Let’s now create a state variable called ‘text’ which will be used to hold the text that the user types in the <textarea> field. Add a state object as highlighted below using the class field declaration syntax.
+
+// We now need to populate the ‘text’ state variable whenever the user types in the <textarea> field. For this purpose, we’ll add an onChange event listener function to the <textarea> element as highlighted below.
+
+// Finally, to compute the number of words, we will use a regular expression to match words using the standard JavaScript match method which produces an Array of matched elements. The number of words is then equal to the length of this dynamically produced array.
+
+// We will also use a ternary expression to check for the presence of characters in the ‘text’ variable. If the <textarea> is blank, then we’ll render ‘0’ as the value or else we’ll compute the number of words to display.
+
+// Note that the regular expression has been deliberately kept simple for brevity. Modify the contents of the <div> with the id “word-count” as highlighted below.
+
+//  That’s it! You’ve just built a dynamic class component. Try to type something in the field and watch the character and word counts update automatically!
+
 
 
 
@@ -33,11 +69,6 @@ export default Components;
 
 // Reusability allows you to design components that can be used across multiple projects, saving you tons of time.
 
-
-
-
-
-
 // Anatomy Of Component :
 
 // class Components extends Component {
@@ -62,8 +93,6 @@ export default Components;
 //     }
 // }
 
-
-
 // render :
 
 // A component must implement a render method which means that it must produce visual content that it would render on the page.
@@ -74,15 +103,13 @@ export default Components;
 
 // But unlike HTML, JSX allows you to use JavaScript expressions directly in the layout.
 
-
-
 // state :
 
 // Stateful components describe visual elements with data.
 
 // As you change and modify this data, the component automatically re-renders to reflect the change.
 
-// If your component features a """visual element""" that the user can interact with, such as buttons or other elements, then you can implement """event listeners""" to capture user interaction. 
+// If your component features a """visual element""" that the user can interact with, such as buttons or other elements, then you can implement """event listeners""" to capture user interaction.
 
 // Such event listeners can then be used to trigger methods. A method is a function that is private to a component and can be used for all sorts of things, from manipulating state, to side effects such as fetching data from an API.
 
@@ -90,22 +117,15 @@ export default Components;
 
 // The interesting thing about React is that it is much more than a library to build interfaces for the web. React by itself is not limited to web pages and the DOM. It is a way to design composable components and functionality that can be used with a wide range of mediums.
 
-// For instance, the React Native project lets you use React for designing mobile apps for iOS and Android. 
+// For instance, the React Native project lets you use React for designing mobile apps for iOS and Android.
 
 // And you can write custom renderers as well. This separation of core logic and the renderer makes React an excellent library to work with.
 
 // Now since we’re talking about components, let’s investigate the different types of components that React offers, in the next topic.
 
-
-
-
-
-
 // Types Of Components :
 
 // Components encapsulate visual elements and may also contain logic and state. This way they allow you to create reusable and composable features.
-
-
 
 // There are two types of components :
 
@@ -113,19 +133,13 @@ export default Components;
 
 // Class Component
 
-
-
 // Class Component :
 
 // A react component written with a javascript class comes with the method class contructor which is primarily used in react to set initial state or to bind methods and the mandatory render mehtod to return JSX as output.
 
-
-
 // Functional Component :
 
 // A functional component is just a plain javascript function which excepts props as an argument and returns a react element. A class component is requires you to extend from react component and create a render function which returns a react element.
-
-
 
 // Class Component
 
@@ -134,8 +148,6 @@ export default Components;
 // A class component offers several out of the box features. For instance, class components let you store local state.
 
 // They also allow you to create lifecycle hooks, which we’ll examine later in the course.
-
-
 
 // Function Component
 
@@ -167,20 +179,11 @@ export default Components;
 
 // This means you can upgrade a function component to include state management and other advanced features, without converting it to a class component.
 
-
-
 // So how do you pick from class and function component?
-
-
 
 // While class components, as a syntax isn’t going anywhere, it is safe to say that, function components coupled with the super-powerful Hooks API offer a cleaner and simpler syntax in the long run and are probably a better bet.
 
 // Your code is more readable and is also easier to test. Having said that, there is nothing wrong with using class components as well.
-
-
-
-
-
 
 // What is JSX?
 
@@ -197,8 +200,6 @@ export default Components;
 // But the real power behind JSX is that it lets you use JavaScript all the way.
 
 // React encourages the use of standard JavaScript instead of forcing you to use, library or framework-specific methods and directives.
-
-
 
 // JSX is not HTML.
 
@@ -217,9 +218,6 @@ export default Components;
 //     )
 //   }
 // }
-
-
-
 
 // How does JSX work?
 
@@ -241,7 +239,6 @@ export default Components;
 //   );
 // }
 
-
 // The createElement() function takes in 3 arguments
 
 // 1. The first is the type of element or the reference to a component.
@@ -250,16 +247,18 @@ export default Components;
 
 // 3. The third argument is for child components or content that needs to go between the opening and closing tags of an element or a component.
 
-
-
 // Why use JSX?
 
-// JSX is one way by which React makes it easy for developers to express visual elements and layouts and still retain the expressiveness of JavaScript. 
+// JSX is one way by which React makes it easy for developers to express visual elements and layouts and still retain the expressiveness of JavaScript.
 
+// React features a unidirectional data flow architecture which means that data flows down like a waterfall from parent to child components using features such as props among other ways. We can also say that react’s one-way data flow (also called one-way binding) keeps everything modular and fast.
 
+// React unidirectional and one way data flow is simply means that the parent component can pass data to the nested child component typically using props which acts like inlets into a component.
 
+// Event listeners in JSX allow you to capture user events such as mouse clicks, keyboard events and more.
 
-
+// What may component implement to describe visual changess with data?
+// State is used to declaratively describe changes to the UI with data. Whenever data in the state changes, the component re-renders to reflect the change.
 
 // Summarize :
 
@@ -269,11 +268,8 @@ export default Components;
 
 // State Component :
 
-// State is used to describe visual elements using data. Updates to the states causes the component to re-render using the visual updates. 
+// State is used to describe visual elements using data. Updates to the states causes the component to re-render using the visual updates.
 
 // Render Method :
 
 // Render method describe the visual elements of a component typically using JSX.
-
-
-

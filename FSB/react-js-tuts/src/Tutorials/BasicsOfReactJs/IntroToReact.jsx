@@ -144,14 +144,13 @@ export default IntroToReact;
 
 // Modern JavaScript apps are built with modular and often reusable code and module bundlers allow us to compile these modules into compacted deployable bundles.
 
-
 // Babel allows you to use cutting edge JavaScript features in your code, even before they make it to the official standard.
 
 
-// Which compiler is used reactjs library and why
+
+// Which compiler is used reactjs library and why?
 
 // reactjs uses babel compiler because it is an indispensable tool in your developer arsenal. It allows you to write language features that haven’t yet made it to the standard, providing a great developer experience.
-
 
 // The create-react-app utility, internally uses which of the following utilities/tools?
 

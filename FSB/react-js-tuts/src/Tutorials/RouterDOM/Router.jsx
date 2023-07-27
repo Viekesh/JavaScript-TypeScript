@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import EL from '../EventListener/EL';
+import Components from '../BasicsOfReactJs/Components';
+
 
 
 const Router = () => {
@@ -8,7 +9,7 @@ const Router = () => {
         <div>
             <BrowserRouter>
                 <Routes>
-                    <Route exact path='/EL' element={<EL />}></Route>
+                    <Route exact path="/Components" element={<Components />}></Route>
                 </Routes>
             </BrowserRouter>
         </div>
@@ -16,3 +17,5 @@ const Router = () => {
 }
 
 export default Router;
+
+
