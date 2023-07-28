@@ -90,7 +90,7 @@ import ReactDOM from 'react-dom/client';
 
 //             .join("")
 //     }
-  
+
 //   </span >
 
 
@@ -111,47 +111,32 @@ class MyApp extends React.Component {
     }
 
     render() {
-
         return (
-
             <div>
-
                 <div className="top">
 
                     <input
-
                         type="text"
-
                         id="inputFld"
-
                         onChange={e => this.setState({ txt: e.target.value })}
-
                     />
 
                 </div>
 
                 <div className="bottom">
-
                     <span className="output">
-
-                        {this.state.txt
-
-                            .split("")
-
-                            .reverse()
-
-                            .join("")}
-
+                        {
+                            this.state.txt
+                                .split("")
+                                .reverse()
+                                .join("")
+                        }
                     </span>
-
                 </div>
 
             </div>
-
         );
-
     }
-
 }
 
 

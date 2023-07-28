@@ -122,3 +122,10 @@ const ChildComponent1 = ({ }) => {
 // What if we wish to pass a string to a prop that expects the value to be a number?
 // Such instances can introduce unwanted bumps in development and call for type checking props so that one can be absolutely sure that the right type of data is being passed to a prop.
 // So, let’s look into type checking for props in the next module.
+
+
+
+
+
+
+// 

@@ -216,7 +216,6 @@ export default IntroToReact;
 
 
 // Why did we rename ‘class’ to ‘className’ on all elements?
-
 // JavaScript forbids the use of certain keywords which are reserved in the language. Since ‘class’ is reserved, we cannot use it in JSX. Instead, we use className.
 
 

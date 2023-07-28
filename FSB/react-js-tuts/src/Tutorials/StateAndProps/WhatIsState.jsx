@@ -198,3 +198,10 @@ export default Counter;
     // class component is less reusabel and functional component is more usable.
 
     // functional component has not any lifecycle mehtods but class component has made it possible to use lifecycle methods.
+
+
+
+
+
+
+// 
