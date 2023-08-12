@@ -6,7 +6,7 @@
 
 // What is an array?
 
-// In JavaScript, an array is a single variable that stores multiple elements. It is a collection of data. We can declare an array in two different ways, which are:
+// An array is a single variable that stores multiple elements. We can declare an array in two different ways, which are:
 
 const firstArray = ["JavaScript", "Python", "C++"];
 console.log("firstArray : ", firstArray);
@@ -140,7 +140,6 @@ console.log(positionOne, positionTwo);
 
 
 // ex 4: 
-
 const edibles1 = ["food", "fruits"];
 
 let [position1, position2] = edibles1;
