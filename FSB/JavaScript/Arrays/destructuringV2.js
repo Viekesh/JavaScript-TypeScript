@@ -10,16 +10,18 @@
 // Let's say we have an object that represents a user, with properties like name, age, and email. We can use 
 // destructuring assignment to access these properties in a single line of code:
 
-const user = {
-    name: "Ronaldinho",
-    profession: "Footballer",
-    age: 43,
-    email: "ron@football.com"
-};
+    const user = {
+        name: "Ronaldinho",
+        profession: "Footballer",
+        age: 43,
+        email: "ron@football.com"
+    };
+    const { name, profession, email } = user;
+    console.log(name, profession, email);
 
-const { name, profession, email } = user;
+    // Output :
+    // Ronaldinho Footballer ron@football.com
 
-console.log(name, profession, email);
 
 
 
@@ -28,22 +30,20 @@ console.log(name, profession, email);
 
 // Let's say we have an array of numbers, and we want to create a new array with all the even numbers. We can use destructuring assignment to create the new array in a single line of code:
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    const evenNumbers = () => {
+        const en = [];
+        numbers.forEach((e) => {
+            if (e % 2 == 0) {
+                en.push(e);
+            }
+        });
+        console.log(en);
+    };
+    evenNumbers();
 
-const evenNumbers = () => {
-
-    const en = [];
-
-    numbers.forEach((e) => {
-        if (e % 2 == 0) {
-            en.push(e);
-        }
-    });
-
-    console.log(en);
-};
-
-evenNumbers();
+    // Output :
+    // [ 2, 4, 6, 8, 10 ]
 
 
 
@@ -53,26 +53,30 @@ evenNumbers();
 // An array is a single variable that stores multiple elements. We can declare an array in two different ways, which 
 // are:
 
-const tutorials1 = ["JavaScript", "Python", "C++"];
-console.log("Here We Learn :", tutorials1);
+    const tutorials1 = ["JavaScript", "Python", "C++"];
+    console.log("Here We Learn :", tutorials1);
 
-// and
+    // and
 
-const tutorials2 = [];
-tutorials2[0] = "MySql";
-tutorials2[1] = "MongoDB";
-tutorials2[2] = "PostgreSQL";
-console.log("After that :", tutorials2);
+    const tutorials2 = [];
+    tutorials2[0] = "MySql";
+    tutorials2[1] = "MongoDB";
+    tutorials2[2] = "PostgreSQL";
+    console.log("After that :", tutorials2);
 
 // Now we can see how destructuring works with arrays :
 
-let firstLanguage, SecLanguage, afterWeCome;
-[firstLanguage, SecLanguage] = ["JavaScript", "Python", "C++", "MySQL", "MongoDB", "PostgreSQL"];
-console.log(firstLanguage);
-console.log(SecLanguage);
+    let firstLanguage, SecLanguage, afterWeCome;
+    [firstLanguage, SecLanguage] = ["JavaScript", "Python", "C++", "MySQL", "MongoDB", "PostgreSQL"];
+    console.log(firstLanguage);
+    console.log(SecLanguage);
 
-[firstLanguage, SecLanguage, ...afterWeCome] = ["JavaScript", "Python", "C++", "MySQL", "MongoDB", "PostgreSQL"];
-console.log("After We Come On To :", afterWeCome);
+    [firstLanguage, SecLanguage, ...afterWeCome] = ["JavaScript", "Python", "C++", "MySQL", "MongoDB", "PostgreSQL"];
+    console.log("After We Come On To :", afterWeCome);
+
+    // Output :
+    // Here We Learn : [ 'JavaScript', 'Python', 'C++' ]
+    // After that : [ 'MySql', 'MongoDB', 'PostgreSQL' ]
 
 
 
@@ -219,7 +223,8 @@ let [name1, category, city ] = findDetails("Radison Blue");
 
 console.log(`Name : ${name1}, Category : ${category}, City : ${city}`);
 
-// Here we have two restaurant objects in an array. We want to get the category and city details given the name of the restaurant but we want them as separate variables from the get-go. 
+// Here we have two restaurant objects in an array. We want to get the category and city details given the name of the 
+// restaurant but we want them as separate variables from the get-go. 
 
 // So, we create the function findDetails that accepts the name of a restaurant. Then we can use find to fetch the 
 // restaurant from the array. 
@@ -239,9 +244,11 @@ console.log(`Name : ${name1}, Category : ${category}, City : ${city}`);
 
 
 
-// Functions in JavaScript can only return a single value. In order to return multiple values, return values should be wither packed as elements of array or as properties of object.
+// Functions in JavaScript can only return a single value. In order to return multiple values, return values should
+// be wither packed as elements of array or as properties of object.
 
 // Rest(…) operator stores rest of the variables in the form of an array.
+
 
 
 // .

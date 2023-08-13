@@ -180,9 +180,12 @@ console.log(edibles3);
 
 // Destructuring in Objects
 
-// When destructuring objects, we use curly braces with the exact name of what we have in the object. Unlike in arrays where we can use any variable name to unpack the element, objects allow just the use of the name of the stored data.
+// When destructuring objects, we use curly braces with the exact name of what we have in the object. 
+// Unlike in arrays where we can use any variable name to unpack the element, objects allow just the 
+// use of the name of the stored data.
 
-// Interestingly, we can manipulate and assign a variable name to the data we want to get from the object. Let's see all of that now in code.
+// Interestingly, we can manipulate and assign a variable name to the data we want to get from the object.
+// Let's see all of that now in code.
 
 // ex 5:
 const freeCodeCamp = {

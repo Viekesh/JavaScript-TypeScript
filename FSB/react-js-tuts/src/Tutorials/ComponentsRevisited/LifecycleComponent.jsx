@@ -182,9 +182,18 @@ export default MyConstructor;
 // Upon implementation, the getDerivedStateFromProps() method allows us to decide whether we want the state to be updated or not based on the changes made to the data in the props. In simple words, when getDerivedStateFromProps() method is called in the ‘Mounting’ phase, it can be used to set state variables based on the data in the props.
 
 // The next time the getDerivedStateFromProps() method is called in the ‘Updating’ phase, we can compare the data in the state with that in the props and we can update the state if needed.
+
 // This helps in the implementation of the state changes that will occur only if the data in the props differs from what it was earlier.
 
 // This is important to understand because every update to the parent component brings about an update to the child components, even if the data in the props continue to be the same.
+
 // If the data in the props continue to be the same as before, we may not want to update the state in a child component.
 
 // Mounting Phase => getDerivedStateFromProps() => state variables are set
+
+
+
+
+
+
+// 
