@@ -28,7 +28,8 @@
 
 
 
-// Let's say we have an array of numbers, and we want to create a new array with all the even numbers. We can use destructuring assignment to create the new array in a single line of code:
+// Let's say we have an array of numbers, and we want to create a new array with all the even numbers.
+// We can use destructuring assignment to create the new array in a single line of code:
 
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const evenNumbers = () => {

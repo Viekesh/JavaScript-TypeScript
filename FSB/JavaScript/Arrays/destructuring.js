@@ -200,7 +200,8 @@ console.log("objects example 1 : ", frontend, backend);
 
 
 
-// Logging what we have to the console shows the value of frontend and backend. Let's now see how to assign a variable name to the object we want to unpack.
+// Logging what we have to the console shows the value of frontend and backend. Let's now see how to assign a variable
+// name to the object we want to unpack.
 
 const freeCodeCamp1 = {
     frontend1 : "ReactJs",
@@ -215,7 +216,8 @@ console.log(courseOne, courseTwo);
 
 // As you can see, we have courseOne and courseTwo as the names of the data we want to unpack.
 
-// Assigning a variable name will always help us keep our code clean, especially when it comes to working with external data when we want to unpack and reuse it across our code.
+// Assigning a variable name will always help us keep our code clean, especially when it comes to working
+// with external data when we want to unpack and reuse it across our code.
 
 
 
@@ -280,7 +282,8 @@ const displayWeapons = function (str) {
 
 displayWeapons(weapons);
 
-// Functions in JavaScript can only return a single value. In order to return multiple values, return values should be wither packed as elements of array or as properties of object.
+// Functions in JavaScript can only return a single value. In order to return multiple values, return values
+// should be wither packed as elements of array or as properties of object.
 
 // Rest(…) operator stores rest of the variables in the form of an array.
 
