@@ -10,27 +10,36 @@
 
 
 
-// How do we choose data structures?In data structures, you work with data in the most efficient and effective manner.
-// You shouldbe able to manipulate the input as quickly and efficiently as possible. If youcan't work with the data 
-// efficiently, youwill never be able to solve the problem efficiently because the problem is based on the data, so we 
-// mustbe able to extract data and work with it.•In suchsituations, it's important to pick out a data structure that is 
-// going to work best andthe main questions that you shouldask while picking a data structure is:i.How quickly the data 
-// can  be access? ii.How quickly the data can be modified?
-// Reasons to consider different types of data structures :i.Maybe an algorithm can go through the data sequentiallyii.
-// Maybe the algorithm is constantly searching through the data•The main idea of data structures is very simple and 
-// straightforward. You are storing data in a way that they can be efficiently worked with. But you'll find that 
-// there's a lot of depth behind data structures, and it's going to be a very core idea to algorithms as youcontinue on 
-// with solving these different computer problems.
+// How do we choose data structures?
+    // In data structures, you work with data in the most efficient and effective manner.
+    // You should be able to manipulate the input as quickly and efficiently as possible. If youcan't work with the data 
+    // efficiently, you will never be able to solve the problem efficiently because the problem is based on the data, 
+    // so we must be able to extract data and work with it
+    // In such situations, it's important to pick out a data structure that is going to work best and the main
+    // questions that you should ask while picking a data structure is:
+
+        // i. How quickly the data can  be access?
+        // ii. How quickly the data can be modified?
+
+
+        
+    // Reasons to consider different types of data structures :
+        // i. May be an algorithm can go through the data sequentially
+        // ii. May be the algorithm is constantly searching through the data
+        // The main idea of data structures is very simple and straight forward. You are storing data in a way
+        // that they can be efficiently worked with. But you'll find that there's a lot of depth behind
+        // data structures, and it's going to be a very core idea to algorithms as you continue on 
+        // with solving these different computer problems.
 
 
 
 
 
 
-// WhyShould You Learn Data Structure and Algorithm?
-// The  main  objective  is  to  understand  the  reasons  to  study  data  structures  and  algorithms. Data   
-// structures   and   algorithms   is   going   to   build   up   an   immense   understanding   in programming  and  
-// problem solving  for  you. It's  probably one of the most  important  topics that's discussed in computer science.
+// Why Should You Learn Data Structure and Algorithm?
+    // The  main  objective  is  to  understand  the  reasons  to  study  data  structures  and  algorithms. Data   
+    // structures   and   algorithms   is   going   to   build   up   an   immense   understanding   in programming  and  
+    // problem solving  for  you. It's  probably one of the most  important  topics that's discussed in computer science.
 
 
 
