@@ -74,3 +74,48 @@ const sumAll = (total, value, index, array) => {
 let sumNums = nums.reduce(sumAll);
 
 console.log(sumNums);
+
+
+
+
+
+
+// we will discuss the process of removing duplicate data from an array that is in sorted order. Before we start 
+// discussing a solution, let’s create a problem statement and look at an example.
+
+// Problem Statement : Removing duplicatesd from sorted arrays
+
+// Input : An array of values that is in sorted order
+
+// Output: A new array that contains all elements from the original array except the duplicates
+
+// As an example, suppose you have the array [1,2,2,3,3,4] as an input. The expected output of the program would be
+// [1,2,3,4].
+
+// The main idea of the solution for this program is to take advantage of the fact that the array is in sorted order. 
+// When an array is in sorted order, duplicate elements appear next to each other. So, we can iterate our array, 
+// checking each value to see if the one directly next to it is the same. If it is not the same, we can add the value 
+// to our output array. Otherwise, we ignore the value and move to the next one.
+// The complicated code is shown below.
+
+const arr1 = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+
+const removeDup = [];
+
+for (let i = 0; i < arr1.length; i++) {
+    if (i < arr1.length - 1) {
+        if (arr1[i] != arr1[i + 1]) {
+            removeDup.push(arr1[i]);
+        }
+    } else {
+        removeDup.push(arr1[i]);
+    }
+}
+
+console.log(arr1);
+
+console.log(removeDup);
+
+
+
+// .
