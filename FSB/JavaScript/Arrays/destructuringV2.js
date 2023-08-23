@@ -86,18 +86,25 @@
 
 // How to Assign Variables With Destructuring
 
-// Now, let's say we have an array of 6 colors but we want to get just the first 2 colors in the array. We can use 
-// destructuring to get what we want.
+// Now, let's take another example here we have an array of rainbow colors but we want to get just the first 2 colors
+// in the array. We can use destructuring to get what we want.
 
 // Let's take a look at it now:
 
-const arrayColor = ["red", "green", "blue", "white", "yellow", "black"];
+const rainbowColors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Voilet"];
 
-const [first, second] = arrayColor;
+const [first, second] = rainbowColors;
 
 console.log("first element : ", first);
 
 console.log("second element : ", second);
+
+console.log("Original Array :", rainbowColors);
+
+// Output :
+// first element :  Red
+// second element :  Orange
+// Original Array
 
 
 
