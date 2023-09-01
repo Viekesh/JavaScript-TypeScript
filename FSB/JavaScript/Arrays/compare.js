@@ -13,18 +13,23 @@
 // The best method to use will depend on the specific application and the data types of the arrays being compared. Here 
 // are a few of the most common method :
 
-// Using the equality operator (== or ===). This method compares the values of the elements in the two arrays, and 
-// returns true if all the elements are equal, and false otherwise.
+// Using the equality operator (== or ===) :
+// This method compares the values of the elements in the two arrays, and returns true if all the elements are equal, 
+// and false otherwise.
 
-// Using the JSON.stringify() method. This method converts an array to a string, and then compares the two strings. 
-// This method is useful if the arrays contain objects or other complex data types.
+// Using the JSON.stringify() method :
+// This method converts an array to a string, and then compares the two strings. This method is useful if the arrays 
+// contain objects or other complex data types.
 
-// Using a for loop. This method iterates through the elements of both arrays, and compares each element to the 
-// corresponding element in the other array.
+// Using a for loop :
+// This method iterates through the elements of both arrays, and compares each element to the corresponding element in 
+// the other array.
 
-// Using the Array.prototype.every() method. This method takes a function as an argument, and iterates through the 
-// elements of the array, calling the function for each element. The function returns true if all the elements pass 
-// the test, and false otherwise.
+// Using the Array.prototype.every() method : 
+// This method takes a function as an argument, and iterates through the elements of the array, calling the function 
+// for each element. The function returns true if all the elements pass the test, and false otherwise.
+
+
 
 // So, now you get an idea of how and when we might need to compare arrays. The most fundamental way to compare arrays 
 // is to turn the arrays into strings and then do an equality comparison. But this doesn’t work if the order of 
@@ -38,6 +43,8 @@
 // In this example, we are comparing two arrays where not only the content is the same, but the position of each 
 // element within the array is also the same.
 
+
+
 // ex 1:
 
 //Both arrays are identical
@@ -45,12 +52,12 @@ const arrA = [1, 2, 3, 1, 23, 10, { id: 1 }, { id: 2 }, 'Hello'];
 const arrB = [1, 2, 3, 1, 23, 10, { id: 1 }, { id: 2 }, 'Hello'];
 
 // compare arrays
-const isIdentical = (arrA, arrB) => 
-JSON.stringify(arrA) === JSON.stringify(arrB);
+const isIdentical = (arrA, arrB) => JSON.stringify(arrA) === JSON.stringify(arrB);
+
 
 // ternary operator to display ‘Array A is equal to Array B’ if the arrays are identical or otherwise.
 console.log(
-`Array A ${isIdentical(arrA, arrB) ? 'is' : 'is not'} equal to Array B`
+`ex 1 : Array A ${isIdentical(arrA, arrB) ? 'is' : 'is not'} equal to Array B`
 );
 
 // Since we cannot just use the equality operator to compare two arrays directly, we’ll build a function named 
@@ -65,6 +72,9 @@ console.log(
 
 
 
+
+
+
 // ex 2 :
 
 const array1 = [1, 2, 3, "position"];
@@ -72,7 +82,10 @@ const array2 = [1, 2, 3, "position"];
 
 const compare = (arr1, arr2) => JSON.stringify(arr1) === JSON.stringify(arr2);
 
-console.log(`Array 1 ${compare(array1, array2) ? 'is' : 'is not'} equal to Array 2`);
+console.log(`ex 2 : Array 1 ${compare(array1, array2) ? 'is' : 'is not'} equal to Array 2`);
+
+
+
 
 
 
@@ -80,30 +93,6 @@ console.log(`Array 1 ${compare(array1, array2) ? 'is' : 'is not'} equal to Array
 
 
 // ex 3:
-
-const arr3 = [1, 2, 3, 5];
-const arr4 = [1, 2, 5, 3];
-
-const sameContent = (arr1, arr2) => {
-    const strA = arr1.map((a1el) => JSON.stringify(a1el));
-
-    const strB = arr2.map((a2el) => JSON.stringify(a2el));
-
-    return [
-        arr1.length === arr2.length,
-        ...strA.map((el) => JSON.stringify(el)),
-        ...strB.map((el) => JSON.stringify(el))
-    ].every((el) => el);
-};
-
-console.log(sameContent(arr3, arr4) ? "Both arrays have the same contents" : "Do not have the same content");
-
-
-
-
-
-
-// ex 4:
 
 const arr11 = [1, 2, 3];
 const arr22 = [1, 2, 3];
@@ -114,7 +103,10 @@ const is_same = arr11.length == arr22.length && arr11.every((currEl) => {
     }
 });
 
-console.log(is_same);
+console.log("ex 3 :", is_same);
+
+
+
 
 
 
@@ -123,7 +115,7 @@ console.log(is_same);
 
 // In this example, we are comparing two arrays that have identical content, but the position of elements vary.
 
-// ex 5:
+// ex 4:
 
 // Both arrays have the same contents
 const arrC = [1, 2, 3, 1, 23, 10, { id: 1 }, { id: 2 }, 'Hello'];
@@ -146,10 +138,34 @@ const hasSameContents = (arrA, arrB) => {
 };
 
 console.log(
+    "ex 4 :",
     hasSameContents(arrC, arrD)
     ? 'Both arrays have the same elements'
     : 'Both arrays do not have the same elements'
 );
+
+
+
+
+
+
+// ex 5 :
+const arr3 = [1, 2, 3, 5];
+const arr4 = [5, 2, 3, 1];
+
+const sameContent = (arr1, arr2) => {
+    const strA = arr1.map((a1el) => JSON.stringify(a1el));
+
+    const strB = arr2.map((a2el) => JSON.stringify(a2el));
+
+    return [
+        arr1.length === arr2.length,
+        ...strA.map((el) => strB.includes(el)),
+        ...strB.map((el) => strA.includes(el))
+    ].every((el) => el);
+};
+
+console.log("ex 5 :", sameContent(arr3, arr4) ? "Both arrays have the same contents" : "Do not have the same content");
 
 
 
@@ -195,6 +211,7 @@ console.log(
 //         }
 //     }));
 // }
+
 
 
 
