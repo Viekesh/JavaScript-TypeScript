@@ -2,11 +2,13 @@
 
 
 
-// The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables.
+// The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, 
+// or properties from objects, into distinct variables.
 
 // What is an array?
 
-// An array is a single variable that stores multiple elements. We can declare an array in two different ways, which are:
+// An array is a single variable that stores multiple elements. We can declare an array in two different ways, which 
+// are:
 
 const firstArray = ["JavaScript", "Python", "C++"];
 console.log("firstArray : ", firstArray);
@@ -29,9 +31,9 @@ let a, b, rest;
 
 [a, b] = [10, 20];
 
-console.log("output of a : ", a);
+console.log("ex 1 : output of a : ", a);
 
-console.log("output of b : ", b);
+console.log("ex 1 : output of b : ", b);
 
 [a, b, ...rest] = [10, 20, 30, 40, 50, 60, 70, 80, 90];
 

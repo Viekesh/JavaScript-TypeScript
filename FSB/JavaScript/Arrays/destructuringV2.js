@@ -10,18 +10,19 @@
 // Let's say we have an object that represents a user, with properties like name, age, and email. We can use 
 // destructuring assignment to access these properties in a single line of code:
 
-    const user = {
-        name: "Ronaldinho",
-        profession: "Footballer",
-        age: 43,
-        email: "ron@football.com"
-    };
-    const { name, profession, email } = user;
-    console.log(name, profession, email);
+// ex 1 :
 
-    // Output :
-    // Ronaldinho Footballer ron@football.com
+const user = {
+    name: "Ronaldinho",
+    profession: "Footballer",
+    age: 43,
+    email: "ron@football.com"
+};
+const { name, profession, email, age } = user;
+console.log("ex 1 :", name, profession, email, age);
 
+// Output :
+// Ronaldinho Footballer ron@football.com
 
 
 
@@ -31,20 +32,22 @@
 // Let's say we have an array of numbers, and we want to create a new array with all the even numbers.
 // We can use destructuring assignment to create the new array in a single line of code:
 
-    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    const evenNumbers = () => {
-        const en = [];
-        numbers.forEach((e) => {
-            if (e % 2 == 0) {
-                en.push(e);
-            }
-        });
-        console.log(en);
-    };
-    evenNumbers();
+// ex 2 :
 
-    // Output :
-    // [ 2, 4, 6, 8, 10 ]
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const evenNumbers = () => {
+    const en = [];
+    numbers.forEach((e) => {
+        if (e % 2 == 0) {
+            en.push(e);
+        }
+    });
+    console.log("ex 2:", en);
+};
+evenNumbers();
+
+// Output :
+// [ 2, 4, 6, 8, 10 ]
 
 
 
@@ -54,30 +57,32 @@
 // An array is a single variable that stores multiple elements. We can declare an array in two different ways, which 
 // are:
 
-    const tutorials1 = ["JavaScript", "Python", "C++"];
-    console.log("Here We Learn :", tutorials1);
+// ex 3:
 
-    // and
+const tutorials1 = ["JavaScript", "Python", "C++"];
+console.log("Here We Learn :", tutorials1);
 
-    const tutorials2 = [];
-    tutorials2[0] = "MySql";
-    tutorials2[1] = "MongoDB";
-    tutorials2[2] = "PostgreSQL";
-    console.log("After that :", tutorials2);
+// and
+
+const tutorials2 = [];
+tutorials2[0] = "MySql";
+tutorials2[1] = "MongoDB";
+tutorials2[2] = "PostgreSQL";
+console.log("After that :", tutorials2);
 
 // Now we can see how destructuring works with arrays :
 
-    let firstLanguage, SecLanguage, afterWeCome;
-    [firstLanguage, SecLanguage] = ["JavaScript", "Python", "C++", "MySQL", "MongoDB", "PostgreSQL"];
-    console.log(firstLanguage);
-    console.log(SecLanguage);
+let firstLanguage, SecLanguage, afterWeCome;
+[firstLanguage, SecLanguage] = ["JavaScript", "Python", "C++", "MySQL", "MongoDB", "PostgreSQL"];
+console.log("ex 3:", firstLanguage);
+console.log("ex 3:", SecLanguage);
 
-    [firstLanguage, SecLanguage, ...afterWeCome] = ["JavaScript", "Python", "C++", "MySQL", "MongoDB", "PostgreSQL"];
-    console.log("After We Come On To :", afterWeCome);
+[firstLanguage, SecLanguage, ...afterWeCome] = ["JavaScript", "Python", "C++", "MySQL", "MongoDB", "PostgreSQL"];
+console.log("ex 3:", "After We Come On To :", afterWeCome);
 
-    // Output :
-    // Here We Learn : [ 'JavaScript', 'Python', 'C++' ]
-    // After that : [ 'MySql', 'MongoDB', 'PostgreSQL' ]
+// Output :
+// Here We Learn : [ 'JavaScript', 'Python', 'C++' ]
+// After that : [ 'MySql', 'MongoDB', 'PostgreSQL' ]
 
 
 
@@ -91,15 +96,17 @@
 
 // Let's take a look at it now:
 
+// ex 4 :
+
 const rainbowColors = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Voilet"];
 
 const [first, second] = rainbowColors;
 
-console.log("first element : ", first);
+console.log("ex 4 :", "first element : ", first);
 
-console.log("second element : ", second);
+console.log("ex 4:", "second element : ", second);
 
-console.log("Original Array :", rainbowColors);
+console.log("ex 4:", "Original Array :", rainbowColors);
 
 // Output :
 // first element :  Red

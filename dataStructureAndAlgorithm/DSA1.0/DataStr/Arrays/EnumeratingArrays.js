@@ -20,19 +20,32 @@ console.log(products);
 
 
 
+
+
+
 // Here we created a function called "printProducts". This function takes three arguments: the value of the current 
 // element in the array, the index of the current element, and the array itself. The function simply logs the value of 
 // the current element to the console.
 const printProducts = (value, index, array) => {
-    console.log(value);
+    console.log(`The position of ${value} is ${index}`);
 };
 
 // "products.forEach(printProducts);", calls the printProducts function on each element of the products array. This 
 // will log the contents of the array to the console, one element per line.
 products.forEach(printProducts);
 
+// In the example above, each of the elements are printed to the log when printProductsruns with the forEachmethod. 
+// Notice that the printProductshas three arguments, value,index, and array.•The value argument is the current value, 
+// the indexargument is the index that the value is found at, and the arrayargument contains the full array of values. 
+// This lets you to complete operations based on the value, index, or full array if required.
 
 
+
+
+
+
+// The next type of enumeration is a map, which allows you to perform an operation on an array of numbers, returning a 
+// new array with the operation applied to it. For example, the code below adds one to every element in the target array.
 const nums = [1, 2, 3, 4];
 
 // Here we define a function "addOne". The addOne function takes three arguments: the value of the current element in 
@@ -47,9 +60,15 @@ const addOne = (value, index, array) => {
 // each element of the nums array.
 const newNums = nums.map(addOne);
 
-console.log(newNums);
+console.log("Map Mehthod : ", newNums);
 
 
+
+
+
+
+// Another method for performing operations on an array is an iterative filter. A filter will return elements of an 
+// array that match a certain condition. For example, the code below gets allthe values less than 3.
 
 // The lessThree function takes three arguments: the value of the current element in the array, the index of the 
 // current element, and the array itself. The function returns a boolean value indicating whether the value of the 
@@ -63,9 +82,14 @@ const lessThree = (value, index, array) => {
 // elements of the nums array that are less than 3.
 const filteredNums = nums.filter(lessThree);
 
-console.log(filteredNums);
+console.log("filter mehtod :", filteredNums);
 
 
+
+
+
+
+// Finally,  we  have  a  reduce,  which  can  apply  an  operation  to  each element  in  an array  and return  a  single  value  as  a  result.  This  is  commonly  used  for operations that sum values in an array. In the example given below, note that total is added as a running total of the array value.
 
 const sumAll = (total, value, index, array) => {
     return total + value;
@@ -73,7 +97,7 @@ const sumAll = (total, value, index, array) => {
 
 let sumNums = nums.reduce(sumAll);
 
-console.log(sumNums);
+console.log("reduce method : ", sumNums);
 
 
 
@@ -119,3 +143,36 @@ console.log(removeDup);
 
 
 // .
+
+
+
+
+
+
+// Complete the code so that a new array is generated and returned:
+const numVals = [2,4,6,8];
+const newVals = numVals.map(doubleVals);
+
+function doubleVals(value,index,array){
+    return value * 2;
+}
+
+
+
+// What is the result of the code below?
+const programs = ["Word","Excel","Notepad"];
+programs.forEach(printPrograms);
+
+function printPrograms(value,index,array){
+    console.log(value);
+}
+
+// Each value in the program's array is printed to the console.
+
+
+
+// The map enumerator will apply an operation to return an array as a result.
+
+// To return an array of values, you must use the map enumerator.
+
+// The filter will return values that meet a certain condition.
