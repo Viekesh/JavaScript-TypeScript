@@ -29,6 +29,9 @@ console.log("ex 1 :", name, profession, email, age);
 
 
 
+
+
+
 // Let's say we have an array of numbers, and we want to create a new array with all the even numbers.
 // We can use destructuring assignment to create the new array in a single line of code:
 
@@ -48,6 +51,9 @@ evenNumbers();
 
 // Output :
 // [ 2, 4, 6, 8, 10 ]
+
+
+
 
 
 
@@ -89,6 +95,9 @@ console.log("ex 3:", "After We Come On To :", afterWeCome);
 
 
 
+
+
+
 // How to Assign Variables With Destructuring
 
 // Now, let's take another example here we have an array of rainbow colors but we want to get just the first 2 colors
@@ -118,12 +127,14 @@ console.log("ex 4:", "Original Array :", rainbowColors);
 
 
 
-// We have an array of two elements, "food" and "fruits", and we use destructuring to assign those values to the 
-// variables positionOne and positionTwo:
+
+
+
+// ex 5:
 
 const colorsOfRainbow1 = ["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Voilet"];
 let [positionOne, positionTwo] = colorsOfRainbow1;
-console.log(positionOne, positionTwo);
+console.log("ex 5:", positionOne, positionTwo);
 
 // let's take another example :
 
@@ -162,10 +173,15 @@ console.log(colorsOfRainbow4);
 
 
 
+
+
+
 // The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from 
 // arrays, or properties from objects, into distinct variables. We’re once again working with the example where we 
 // parsed comma separated text data. Let’s implement destructuring assignment to extract the id, weapon name and the
 // cost directly.
+
+// ex 6:
 
 const weapons = `1,Red Orbs,240
 2,Green Orbs,194
@@ -176,11 +192,14 @@ const displayWeapons = function (str) {
     const breakByLine = str.split('\n');
     for (const item of breakByLine) {
         const [id, weapon, cost] = item.split(',');
-        console.log(`${weapon} costs $${cost}`);
+        console.log("ex 6:", `${id} ${weapon} costs $${cost}`);
     }
 };
 
 displayWeapons(weapons);
+
+
+
 
 
 

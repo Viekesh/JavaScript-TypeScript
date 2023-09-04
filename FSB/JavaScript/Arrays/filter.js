@@ -19,6 +19,9 @@ console.log("ex 1 :", "age is : ", ages.filter(checkAge));
 
 
 
+
+
+
 // Filtering arrays couldn’t have been easier. You use the Array.filter() method which provides with a function to 
 // implement the filtering logic. The outcome is a new array with the filtered elements.
 
@@ -71,21 +74,28 @@ console.log(`Not Varified : ${notVerified}`);
 
 
 
+
+
+
+
+
+
 // Array.filter() filters out the element from the original array based on if the element is satisfying the test function. It does not modify the original array. Hence it is an array accessor method.
 
 // Array.filter() results to a type error if no callback function is supplied to it.
 
 // ex 3:
 
-const languages = ['go', 'js', 'python'];
-const result = filter(languages);
-console.log(result);
+// const languages = ['go', 'js', 'python'];
+
+// console.log(filter(languages));
 
 // Array.filter() method filters out the elements according to the callback function supplied to it and returns the elements into a new array. However, since it is an accessor method, it does not modify the original array
 
 const numbers = [1,2,3,4,5]
 const numbersGreaterThan2 = numbers.filter(number => number > 2)
-console.log(numbers)
+console.log("ex 3:", numbers);
+console.log("ex 3:", numbersGreaterThan2);
 
 
 

@@ -9,12 +9,18 @@ const numbers = [1, 2, 3, 4, 5];
 // Using the traditional "for loop" to loop through the array would be like this:
 
 for (let i = 0; i<=numbers.length - 1; i++) {
-    console.log("by using for loop : ", numbers[i]);
+    console.log("ex 1:", "by using for loop : ", numbers[i]);
 }
 
-// What makes the for each method different?
 
-// The forEach method is also used to loop through arrays, but it uses a function differently than the classic "for loop".
+
+
+
+
+// What makes the "for each" method different?
+
+// The forEach method is also used to loop through arrays, but it uses a function differently than the classic "for 
+// loop".
 
 // The forEach method passes a callback function for each element of an array together with the following parameters:
 
@@ -30,30 +36,37 @@ numbers.forEach(function() {
 
 // The function will be executed for every single element of the array. It must take at least one parameter which represents the elements of an array:
 
-numbers.forEach(function(number) {
-    console.log("by using forEach :", number);
+// ex 2:
+numbers.forEach(function(number, index) {
+    console.log("ex 2:", "by using forEach :","index", index, ":", number);
 });
 
 // Optional Parameters
+
 // Index :
 // Alright now let's continue with the optional parameters. The first one is the "index" parameter, which represents the index number of each element.
 
 // Basically, we can see the index number of an element if we include it as a second parameter:
 
 numbers.forEach((number, index) => {
-    console.log("Index : " + index + " Value : " + number);
+    console.log("ex 2:", "Index : " + index + " Value : " + number);
 });
+
+
 
 // Array
 // The array parameter is the array itself. It is also optional and can be used if necessary in various operations. Otherwise, if we call it, it will just get printed as many times as the number of elements of the array:
 
 numbers.forEach((number, index, array) => {
-    console.log("by using array para : ", array);
-})
+    console.log("ex 2:", "by using array para : ", array);
+});
 
 
 
-// ex 2: display csv data in tubular format.
+
+
+
+// ex 3: display csv data in tubular format.
 
 const user = `id,first_name,last_name,email,gender
 1, Brigg, Kauscher, bkauscher@nsw.gov.au, Male
@@ -70,8 +83,11 @@ const csvToArray = (csv) => {
     return output;
 }
 
-console.log(csvToArray(user));
+console.log("ex 3:", csvToArray(user));
 
+
+
+// Converting above data into object
 
 const convertToObj = (arr) => {
     let output = [];
@@ -94,41 +110,63 @@ const convertToObj = (arr) => {
 
 let csvToObj = convertToObj(csvToArray(user));
 
-console.log(csvToObj);
+console.log("ex 3:", csvToObj);
 
 
 
-// ex 3: compute taxes
+
+
+
+// ex 4: compute taxes
 
 const prices = [100, 200, 300, 400, 500];
 
 // here we can use contructor function
 
-const Tax = function(tax) {
-    this.tax = tax;
+// const Tax = function(tax) {
+//     this.tax = tax;
 
-    this.withTax = function(array) {
-        let output = [];
+//     this.withTax = function(array) {
+//         let output = [];
 
-        array.forEach(function(element) {
-            let withTax = (this.tax / 100) * element + element;
-            output.push(this.withTax);
-        }, this);
+//         array.forEach(function(element) {
+//             let withTax = (this.tax / 100) * element + element;
+//             output.push(this.withTax);
+//         }, this);
 
-        return output;
-    }
-}
+//         return output;
+//     }
+// }
+// const Tax = (tax) => {
+//     this.tax = tax;
 
-const gst5 = new Tax(5);
+//     this.withTax = function(array) {
+//         let output = [];
 
-console.log(gst5.withTax(prices));
+//         array.forEach(function(element) {
+//             let withTax = (this.tax / 100) * element + element;
+//             output.push(this.withTax);
+//         }, this);
+
+//         return output;
+//     }
+// };
+
+// const gst5 = Tax(5);
+
+// console.log("ex 4:", gst5.withTax(prices));
 
 
-// There are a number of ways to iterate through arrays in JavaScript. The Array prototype offers built-in methods that can help you iterate through and process data stored in an array.
+// There are a number of ways to iterate through arrays in JavaScript. The Array prototype offers built-in methods that 
+// can help you iterate through and process data stored in an array.
 
-// One such method is the Array.forEach() method which allows us to iterate through our array. At every iteration, the forEach() method executes a callback function providing access to the current element and the index number which can then be used within the callback function.
+// One such method is the Array.forEach() method which allows us to iterate through our array. At every iteration, the 
+// forEach() method executes a callback function providing access to the current element and the index number which can 
+// then be used within the callback function.
 
-// In this ex. you'll notice an array of objects representing books. Right below the books is a console.log statement that outputs ‘My Favourite Books’. Your job is to implement the forEach() method to iterate through the books array and produce the following output on the terminal:
+// In this ex. you'll notice an array of objects representing books. Right below the books is a console.log statement 
+// that outputs ‘My Favourite Books’. Your job is to implement the forEach() method to iterate through the books array 
+// and produce the following output on the terminal:
 
 // My Favourite Books
 // 1. Freakonomics

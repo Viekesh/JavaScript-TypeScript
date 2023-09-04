@@ -1,8 +1,11 @@
 "use strict";
 
-// Flattening the array refers to the process of concatenating together contents from all sub-arrays at one common level. This can be achieved using the Array.flat() method. There is also the Array.flatMap() method which runs a filter function before flattening the resultant array.
+// Flattening the array refers to the process of concatenating together contents from all sub-arrays at one common 
+// level. This can be achieved using the Array.flat() method. There is also the Array.flatMap() method which runs a 
+// filter function before flattening the resultant array.
 
-// notice an array of nested arrays containing x and y coordinates. We need to compute the distance between the pairs of x and y coordinates and we also need to display coordinates which are even numbers.
+// notice an array of nested arrays containing x and y coordinates. We need to compute the distance between the pairs 
+// of x and y coordinates and we also need to display coordinates which are even numbers.
 
 const coords = [
     [
@@ -31,7 +34,9 @@ const findEven = coords.flat(2).filter((elem) => elem % 2 === 0);
 
 // First up, let’s find the even numbers.
 
-// Next up, let’s compute the distance between the pairs of Arrays and produce a single array of resulting values. This calls for using the Array.flatMap() method as shown below. Modify the contents of the computeDistance constant as shown.
+// Next up, let’s compute the distance between the pairs of Arrays and produce a single array of resulting values. This 
+// calls for using the Array.flatMap() method as shown below. Modify the contents of the computeDistance constant as 
+// shown.
 
 const computeDistance = coords.flatMap(([p1, p2]) => calcDistance(p1, p2));
 
