@@ -2,6 +2,20 @@
 
 
 
+// The usual way to access the property is dot or bracket notation.
+
+    // console.log(books.title);
+    // console.log(books["publisher"]);
+
+// But we can also use destructuring assignment like this.
+// Here we create four variables {title, publisher, authors and cost} and this will allows you to access object 
+// property directly.
+// It's not this super quick and simple?
+// yes offcourse...
+// We can then use the values like so...
+
+
+
 // ex 1:
 
 const { title, publisher, authors, cost } = {
@@ -22,24 +36,62 @@ const { title, publisher, authors, cost } = {
     cost: 7.99,
 };
 
+console.log(`ex 1 : ${title} is published by ${publisher} and its written by ${authors.map((el) => el.name.split(" "))}. Its costs is ${cost}`);
 
-// The usual way to access the property is dot or bracket notation.
+// Since we used destructuring assignment while creating the object, we can access its property values directly.
 
-// console.log(books.title);
 
-// console.log(books["publisher"]);
 
-// But we can also use destructuring assignment like this.
 
-// Here we create four variables {title, publisher, authors and cost} and this will allows you to access object property directly.
 
-// It's not this super quick and simple?
 
-// yes offcourse...
 
-// We can then use the values like so...
 
-console.log(`${title} is published by ${publisher} and its written by ${authors.map((el) => el.name)}. Its costs is ${cost}`);
+
+// object that represents stock details for Tesla with custom variable names
+const tsla = {
+    stIdx: 2013234,
+    stName: 'TSLA',
+    stCurrPrc: 836.16,
+    stExc: 'NASDAQ',
+    
+    //nested object
+    stDetails: {
+        name: 'TESLA, Inc',
+        eo: 'Elon Musk',
+        hq: 'Paolo Alto, California, United States',
+    },
+};
+
+//assign properties to custom variable names
+let {
+    stName: stock,
+    stCurrPrc: value,
+    stExc: exchange,
+    
+    //Destructuring assignment also allows you to extract values from nested objects.
+    stDetails: { 
+        name: company,
+        ceo, hq 
+    },
+    
+    //rest operator to collect all remaining properties as an object under one variable name
+    ...rest
+} = tsla;
+
+//display the data
+console.log(`${stock} is trading for $${value} on ${exchange}`);
+console.log(`${company} is headquartered in ${hq} and headed by ${ceo}`);
+
+// Notice the property names in tsla object. You will get such property names at times from third-party services and 
+// APIs and while we can destructure these, as usual, using vendor/service specific variable names isn’t a good idea at 
+// all.
+
+
+
+
+
+
 
 
 
@@ -89,17 +141,17 @@ console.log(`${title} is published by ${publisher} and its written by ${authors.
 
 // ex 3:
 
-const apple = {
-    id: 209891,
-    company: 'Apple Inc',
-    exchange: 'NASDAQ',
-    symbol: 'AAPL',
-    currPrice: 120.07,
-    details: {
-        ceo: 'Tim Cook',
-        hq: 'Cupertino, California, US',
-    },
-};
+// const apple = {
+//     id: 209891,
+//     company: 'Apple Inc',
+//     exchange: 'NASDAQ',
+//     symbol: 'AAPL',
+//     currPrice: 120.07,
+//     details: {
+//         ceo: 'Tim Cook',
+//         hq: 'Cupertino, California, US',
+//     },
+// };
 
 
 // Your task is to use Destructuring assignment to fetch these properties directly from the object.
@@ -107,32 +159,32 @@ const apple = {
 // To achieve this, type in the following code.
 
 
-const {
-    company: company,
-    exchange: exchange,
-    currPrice: currPrice,
-    details: { ceo },
-} = apple;
+// const {
+//     company: company,
+//     exchange: exchange,
+//     currPrice: currPrice,
+//     details: { ceo },
+// } = apple;
 
-try {
-    console.log(
-        `${company} headed by ${ceo} was trading for $${currPrice} on ${exchange}`
-    );
-} catch (error) {
-    console.log('Stock data could not be accessed...');
-}
+// try {
+//     console.log(
+//         `${company} headed by ${ceo} was trading for $${currPrice} on ${exchange}`
+//     );
+// } catch (error) {
+//     console.log('Stock data could not be accessed...');
+// }
 
 
 
 // ex 4:
 
 // What will be the output of following?
-const obj = {
-    titl: 'javascript',
-    type: 'language'
-}
-const { titl, type } = obj
-console.log("ex 4 : ", titl, type)
+// const obj = {
+//     titl: 'javascript',
+//     type: 'language'
+// }
+// const { titl, type } = obj
+// console.log("ex 4 : ", titl, type)
 
 // Destructuring assignment is used to unpack objects into bunch of variables. While unpacking objects, the name of the variables should match the keys in the object
 
@@ -162,13 +214,13 @@ console.log("ex 4 : ", titl, type)
 
 // ex 6: What will be the output of the following :
 
-const person = {
-    firstName: 'John',
-    lastName: 'Doe',
-    age: 35
-}
-const {firstName, ...rest} = person
-console.log(rest)
+// const person = {
+//     firstName: 'John',
+//     lastName: 'Doe',
+//     age: 35
+// }
+// const {firstName, ...rest} = person
+// console.log(rest)
 
 // rest(…) operator stores all the properties of the object which were not destructured. Here, lastName and age were not destructured. Hence, rest will be object that contains lastName and age.
 
