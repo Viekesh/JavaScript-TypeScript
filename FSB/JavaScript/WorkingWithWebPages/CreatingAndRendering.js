@@ -70,30 +70,43 @@ document.body.append(title);
 // getElementsByClassName() method and use Array.from() to convert it into an iterable and use forEach() to update 
 // the text ‘RedDot Technologies’ with ‘RedDOT Cloud Engineers’. We’ll also set all text to upper-case.
 
-const contentText = document.getElementsByClassName('content-text');
+// const contentText = document.getElementsByClassName('content-text');
  
-Array.from(contentText).forEach((el) => {
-  el.innerText = el.innerText.replace(
-    'RedDot Technologies',
-    'RedDOT Cloud Engineers'
-  );
-  el.innerText = el.innerText.toUpperCase();
-});
+// Array.from(contentText).forEach((el) => {
+//   el.innerText = el.innerText.replace(
+//     'RedDot Technologies',
+//     'RedDOT Cloud Engineers'
+//   );
+//   el.innerText = el.innerText.toUpperCase();
+// });
 
 // Next, update the h3 tag with the id ‘site-description’ with the text ‘Your trusted partner in the Cloud!’. We’ll use the document.querySelector() method for this purpose.
 
-const siteDesc = document.querySelector('#site-description');
+// const siteDesc = document.querySelector('#site-description');
 
-siteDesc.innerText = 'Your trusted partner in the Cloud!';
+// siteDesc.innerText = 'Your trusted partner in the Cloud!';
 
 // Next, let’s set the ‘text-align’ CSS property of the div with the class ‘content’ to ‘justify’. 
 
-const contentDiv = document.querySelector('.content');
-contentDiv.style.textAlign = 'justify';
+// const contentDiv = document.querySelector('.content');
+// contentDiv.style.textAlign = 'justify';
 
 // Lastly, we want to set the background colour of odd list item elements in the #nav element to a light grey. For this, we’ll use the document.querySelectorAll() method and use forEach() to iterate through for manipulation.
 
-const altNavs = document.querySelectorAll('#nav > li:nth-of-type(odd)');
-altNavs.forEach((el) => (el.style.backgroundColor = 'rgba(0,0,0,0.5)'));
+// const altNavs = document.querySelectorAll('#nav > li:nth-of-type(odd)');
+// altNavs.forEach((el) => (el.style.backgroundColor = 'rgba(0,0,0,0.5)'));
 
 // That’s it. You’ve just worked with a vibrant array of DOM selectors.
+
+
+
+
+
+
+
+
+
+
+
+// To start accessing any element in HTML page, you need to access document object because all methods begin with  document.methodName().
+// Eg, document.getElementById()
