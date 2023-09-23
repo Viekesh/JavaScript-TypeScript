@@ -36,8 +36,9 @@
 
 
 
-// search() method :
+// ex 1:
 
+// search() method :
 // The search() method searches a string for a specified value and returns the position of the match:
 
 let text1 = "Visit W3Schools!";
@@ -50,13 +51,21 @@ console.log("search method : ", searchtext);
 
 // search() method with regular expression to do a case-insensitive search for "w3schools" in a string :
 
-let text2 = "Visit W3Schools";
+let text2 = "Visit WW3Schools";
 
 let searchtext2 = text2.search(/w3schools/i);
 
 console.log("search text 2 : ", searchtext2);
 
 
+
+
+
+
+
+
+
+// ex 2:
 
 // replace() method
 
@@ -65,6 +74,7 @@ let text3 = "Visit Microsoft";
 let result = text3.replace("Microsoft", "W3School");
 
 console.log("replace method : ", result);
+
 
 
 // replace method with regular expression
@@ -80,7 +90,15 @@ console.log("result 2 : ", result2)
 
 
 
+
+
+
+
+
+
 // Regular Expression modifiers :
+
+// ex 3:
 
 // i : perform case-insensitive matching
 
@@ -88,8 +106,17 @@ let text22 = "visit w3school";
 
 let result22 = text22.match(/w3school/i);
 
-console.log("case insensitive match : ", result22);
+// console.log("case insensitive match : ", result22);
+console.log(`ex 3: case insensitive matching: ${result22}`);
 
+
+
+
+
+
+
+
+// ex 4:
 
 // g : perform global match (find all matches rather than stopping after the first match)
 
@@ -97,8 +124,18 @@ let text33 = "Is this all there is?";
 
 let result33 = text33.match(/is/g);
 
-console.log("global match : ", result33);
+// console.log("global match : ", result33);
+console.log(`ex 4: global match: ${result33}`);
 
+
+
+
+
+
+
+
+
+// ex 5:
 
 // m : perform multiline matching
 
@@ -108,7 +145,10 @@ let text44 = "\nIs th\nis it?";
 
 let result44 = text44.match(/^is/m);
 
-console.log("multiline matching :", result44);
+// console.log("multiline matching :", result44);
+console.log(`ex 5: multiline matching: ${result44}`);
+
+
 
 
 
@@ -143,6 +183,9 @@ console.log("multiline matching :", result44);
 // For instance here we want more than one match throughout the text which is why both wall and fell get detected
 
 // The l flag is simply means that the search is case sensitive so it doesn't matter the words appear in upper or lower case. They will get selected.
+
+
+
 
 
 
@@ -207,15 +250,28 @@ console.log("multiline matching :", result44);
 
 
 
-// ex 1 :
 
-// Defining and processing text based on patterns is needed quite frequently in modern web applications. Pattern matching enables developers to incorporate faux intelligence in apps as they’re able to recognize portions of text and extracts data automatically.
 
-// Without relying on artificial intelligence or natural language processing, developers can implement pattern matching and data extraction using regular expressions, a language agnostic syntax that allows developers to describe patterns in text using tokens, quantifiers and other pieces of the syntax.
 
-// JavaScript enables you to work with RegEx using a number of methods, such as exec(), test(), search(), match() and matchAll(). In this exercise, we’ll work with the match() method to extract hashtags from a post. This is something that you will use if you’re building a social media application that accepts hashtags as a way of defining keywords to tag the post which enables easy categorization of content.
 
-// You’ll notice a string in the constant named 'post' with hashtags in them. We have a function named getTags which doesn’t do anything as yet but accepts a parameter named 'post'. 
+
+// ex 2:
+
+// Defining and processing text based on patterns is needed quite frequently in modern web applications. Pattern 
+// matching enables developers to incorporate faux intelligence in apps as they’re able to recognize portions of 
+// text and extracts data automatically.
+
+// Without relying on artificial intelligence or natural language processing, developers can implement pattern 
+// matching and data extraction using regular expressions, a language agnostic syntax that allows developers to 
+// describe patterns in text using tokens, quantifiers and other pieces of the syntax.
+
+// JavaScript enables you to work with RegEx using a number of methods, such as exec(), test(), search(), match() 
+// and matchAll(). In this exercise, we’ll work with the match() method to extract hashtags from a post. This is 
+// something that you will use if you’re building a social media application that accepts hashtags as a way of 
+// defining keywords to tag the post which enables easy categorization of content.
+
+// You’ll notice a string in the constant named 'post' with hashtags in them. We have a function named getTags 
+// which doesn’t do anything as yet but accepts a parameter named 'post'. 
 
 
 const post =
@@ -231,7 +287,8 @@ const getTags = (post) => {
 
 console.log(getTags(post));
 
-// The const named 'pattern' contains a regular expression which allows us to detect words that begin with a '#' character. We then use the match method to extract such words in an Array which we then return back to the user.
+// The const named 'pattern' contains a regular expression which allows us to detect words that begin with a '#' 
+// character. We then use the match method to extract such words in an Array which we then return back to the user.
  
 // If you run the app now, you’ll notice an array full of hashtags.
 
@@ -239,7 +296,8 @@ console.log(getTags(post));
 
 // RegExp.exec() and RegExp.test() accepts regular expressions as parameters
 
-// replace(), replaceAll(), match(), matchAll(), search() and split() methods can accept regular expressions as parameter
+// replace(), replaceAll(), match(), matchAll(), search() and split() methods can accept regular expressions as 
+// parameter
 
 
 // What will be the output of following?
@@ -256,20 +314,24 @@ const str1 = "I love js";
 const patt1 = new RegExp("z");
 const res1 = patt1.test(str1);
 console.log(res);
-// RegExp.test(str) is used to test if the regular expression matches the part of string. If it matches, it returns true, otherwise false.
+// RegExp.test(str) is used to test if the regular expression matches the part of string. If it matches, it 
+// returns true, otherwise false.
 
 // What will be the output of following?
 const str2 = "No pain, no gain"; 
 const res2 = str2.match(/ain/g);
 console.log(res2);
 
-// String.match(regex) matches a string  with the regex and returns an array containing the results of that search, or null if no matches are found.
+// String.match(regex) matches a string  with the regex and returns an array containing the results of that 
+// search, or null if no matches are found.
 
 
 
-// We talked about Regular Expressions in the previous topic and how they’re instrumental in helping you detect, extract and process text based on defined patterns. 
+// We talked about Regular Expressions in the previous topic and how they’re instrumental in helping you detect, 
+// extract and process text based on defined patterns. 
 
-// The first thing that we need to do is express a regular expression pattern in our code. This can be done in one of two ways.
+// The first thing that we need to do is express a regular expression pattern in our code. This can be done in one 
+//of two ways.
 
 // If you’re working with a static pattern that doesn’t need to be created programmatically, then you can simply express the pattern directly as shown below.
 

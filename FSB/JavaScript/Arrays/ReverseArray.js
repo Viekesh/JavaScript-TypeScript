@@ -2,6 +2,17 @@
 
 
 
+// Here we have an array of objects with sensor data from internet of things devices. It stores the records of minimum 
+// temperature and maximum temperature and if you observe the dates, you can see this data is captured at every 
+// alternate day and is simply appended to this array.
+
+// The for-of loop is used to output this data in a nicely formatted way. Now let's say we want to present this data 
+// with the most recent sensor reading on top. Since the data is sequentially stored, the task is as simple as 
+// reversing the elements of the array and when you run your code, you can see our most recent entry is on top.
+
+// The reverse method on the Array prototype which is available to all arrays such as the sensorData array here 
+// reverses the data in place.
+
 // ex 1 :
 const sensorData = [
 
@@ -39,21 +50,30 @@ for (const data of sensorData.reverse()) {
 }
 
 
+
+
+
+
+
+
+
 // ex 2 :
+
 const another_users = ["u1", "u2", "u3", "u4"];
-console.log("another_users : ", another_users);
+console.log("ex 2 : another_users : ", another_users);
 const a_u_result = another_users.reverse();
 console.log("ex2 : ", a_u_result);
 
 
-// Here we have an array of objects with sensor data from internet of things devices. It stores the records of minimum temperature and maximum temperature and if you observe the dates, you can see this data is captured at every alternate day and is simply appended to this array.
 
-// The for-of loop is used to output this data in a nicely formatted way. Now let's say we want to present this data with the most recent sensor reading on top. Since the data is sequentially stored, the task is as simple as reversing the elements of the array and when you run your code, you can see our most recent entry is on top.
 
-// The reverse method on the Array prototype which is available to all arrays such as the sensorData array here reverses the data in place.
+
+
+
 
 
 // ex3 :
+
 const isPalindrome = word => {
     let wordArray = [];
     let reverseWord = [];
@@ -66,17 +86,24 @@ const isPalindrome = word => {
     return wordArray.toString() === reverseWord.reverse().toString();
 }
 
-console.log(isPalindrome("oppo") ? "Palindrome" : "Not Palindrome");
+console.log(isPalindrome("opp") ? "Palindrome" : "Not a Palindrome");
 
-// The function isPalindrome takes a word and tells us if the word is a palindrome or not. A palindrome is a word that is spelled the same backward as forward.
+// The function isPalindrome takes a word and tells us if the word is a palindrome or not. A palindrome is a word that 
+// is spelled the same backward as forward.
 
 
 
-// ex 1: 
+
+
+
+
+
+
+// ex 4: 
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-console.log(fruits.reverse());
+console.log("ex 4:", fruits.reverse());
 
 // The reverse() method reverses the order of the elements in an array.
 
@@ -87,7 +114,10 @@ console.log(fruits.reverse());
 
 
 
-// ex 2:
+
+
+
+// ex 5:
 
 const weapons = [
     {
@@ -114,7 +144,10 @@ const displayWeapons = (array) => {
     }
 }
 
-console.log(displayWeapons(weapons.reverse()));
+console.log("ex 5:", displayWeapons(weapons.reverse()));
+
+
+
 
 
 
@@ -123,9 +156,13 @@ console.log(displayWeapons(weapons.reverse()));
 
 // Converting String to arrays and back
 
-// The split method isn’t an Array method but is found on the String prototype. The reason we’re learning it is that it lets us convert Strings to Arrays.
+// The split method isn’t an Array method but is found on the String prototype. The reason we’re learning it is that it 
+// lets us convert Strings to Arrays.
 
-// As you know strings do behave like arrays to some extent. You can check their length using the String.length property and you iterate on them like arrays. But you cannot mutate or process them like arrays unless you convert them to arrays and this is what the split method does. The method takes a delimiter which used to break apart the string into multiple array entries. You’ll see this in action, in just a moment.
+// As you know strings do behave like arrays to some extent. You can check their length using the String.length 
+// property and you iterate on them like arrays. But you cannot mutate or process them like arrays unless you convert 
+// them to arrays and this is what the split method does. The method takes a delimiter which used to break apart the 
+// string into multiple array entries. You’ll see this in action, in just a moment.
 
 // JavaScript String split() :
 
@@ -134,48 +171,47 @@ console.log(displayWeapons(weapons.reverse()));
 // The split() method does not change the original string.
 // If (" ") is used as separator, the string is split between words.
 
-
-
-// ex 1:
+// ex 6:
 
 let text = "How are you doing today?";
 const myArray = text.split();
 
-console.log(myArray);
+console.log("ex 6: split method", myArray);
 // document.getElementById("split").innerHTML = myArray;
 
 
 // Split the word and and return the second word.
 const myArray2 = text.split(" ");
-console.log(myArray2);
+console.log("ex 6 : split method", myArray2);
 // document.getElementById("split2").innerHTML = myArray2;
 // document.getElementById("split2SecondWord").innerHTML = myArray2[2];
 
 
 // Split a substring into an array of substring and returns an array.
 const myArray3 = text.split("");
-console.log(myArray3);
+console.log("split method", myArray3);
 // document.getElementById("split2SplitSubstring").innerHTML = myArray3;
 
 
 // Use the limit parameter:
 const myArray4 = text.split(" ", 3);
-console.log(myArray4);
+console.log("split method :", myArray4);
 
 
 
 
 
 
-// ex 2:
+
+
+
+// ex 7:
 
 const str = "plot no. 448, kharadi complex, Banglore, 221457";
 
-console.log(str.split(" "));
-console.log(str.split(""));
-console.log(str.split(" , "));
-
-
+console.log("ex 7:", str.split(" "));
+console.log("ex 7:", str.split(""));
+console.log("ex 7:", str.split(" , "));
 
 const greet = ["Hello", "How are you?", "It is nice to meet you again"];
 console.log(greet.join());
@@ -188,7 +224,10 @@ console.log(greet.join(", "));
 
 
 
-// ex 3 :
+
+
+
+// ex 8 :
 
 const isPalindromeOrNot = (character) => {
     return character.split("").reverse().join("") === character;

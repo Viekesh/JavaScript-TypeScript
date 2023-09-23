@@ -2,20 +2,6 @@
 
 
 
-// The usual way to access the property is dot or bracket notation.
-
-    // console.log(books.title);
-    // console.log(books["publisher"]);
-
-// But we can also use destructuring assignment like this.
-// Here we create four variables {title, publisher, authors and cost} and this will allows you to access object 
-// property directly.
-// It's not this super quick and simple?
-// yes offcourse...
-// We can then use the values like so...
-
-
-
 // ex 1:
 
 const { title, publisher, authors, cost } = {
@@ -38,6 +24,18 @@ const { title, publisher, authors, cost } = {
 
 console.log(`ex 1 : ${title} is published by ${publisher} and its written by ${authors.map((el) => el.name.split(" "))}. Its costs is ${cost}`);
 
+// The usual way to access the property is dot property accessor, bracket notation.
+
+    // console.log(books.title);
+    // console.log(books["publisher"]);
+
+// But we can also use destructuring assignment like this.
+// Here we create four variables {title, publisher, authors and cost} and this will allows you to access object 
+// property directly.
+// It's not this super quick and simple?
+// yes offcourse...
+// We can then use the values like so...
+
 // Since we used destructuring assignment while creating the object, we can access its property values directly.
 
 
@@ -49,13 +47,16 @@ console.log(`ex 1 : ${title} is published by ${publisher} and its written by ${a
 
 
 // object that represents stock details for Tesla with custom variable names
+
+// ex 2:
+
 const tsla = {
     stIdx: 2013234,
     stName: 'TSLA',
     stCurrPrc: 836.16,
     stExc: 'NASDAQ',
     
-    //nested object
+    // nested object
     stDetails: {
         name: 'TESLA, Inc',
         eo: 'Elon Musk',
@@ -63,7 +64,7 @@ const tsla = {
     },
 };
 
-//assign properties to custom variable names
+// assign properties to custom variable names
 let {
     stName: stock,
     stCurrPrc: value,
@@ -80,8 +81,9 @@ let {
 } = tsla;
 
 //display the data
-console.log(`${stock} is trading for $${value} on ${exchange}`);
-console.log(`${company} is headquartered in ${hq} and headed by ${ceo}`);
+console.log(`ex 2: ${stock} is trading for $${value} on ${exchange}`);
+console.log(`ex 2: ${company} is headquartered in ${hq} and headed by ${ceo}`);
+console.log(`ex 2: ${rest}`);
 
 // Notice the property names in tsla object. You will get such property names at times from third-party services and 
 // APIs and while we can destructure these, as usual, using vendor/service specific variable names isn’t a good idea at 
@@ -95,40 +97,40 @@ console.log(`${company} is headquartered in ${hq} and headed by ${ceo}`);
 
 
 
-// ex 2:
+// ex 3:
 
-// const tesla = {
-//     stIndx: 2013234,
-//     stName: "TSLA",
-//     stCurrPrc: 836.60,
-//     stExch: "NASDAQ",
-//     stDetails: {
-//         name: "Tesla, Inc",
-//         ceo: "Elon Musk",
-//         hq: "Paolo Alto, California, United States",
-//     },
-// }
+const tesla = {
+    stIndx: 2013234,
+    stName: "TSLA",
+    stCurrPrc: 836.60,
+    stExch: "NASDAQ",
+    stDetails: {
+        name: "Tesla, Inc",
+        ceo: "Elon Musk",
+        hq: "Paolo Alto, California, United States",
+    },
+}
 
-// let {
-//     stName: Stock,
-//     stCurrPrc: Value,
-//     stExch: Exchange,
-//     stDetails: {
-//         // name: company, ceo, hq
-//         name: company,
-//         ceo: CEO,
-//         hq: HeadQuatered
-//     },
-//     ...rest
-// } = tesla;
+let {
+    stName: Stock,
+    stCurrPrc: Value,
+    stExch: Exchange,
+    stDetails: {
+        // name: company, ceo, hq
+        name: company2,
+        ceo: CEO,
+        hq: HeadQuatered
+    },
+    ...rest2
+} = tesla;
 
-// console.log(`${Stock} is trading for $${Value} on ${Exchange}`);
+console.log(`ex 3: ${Stock} is trading for $${Value} on ${Exchange}`);
 
-// console.log(`${company} is headquartered in ${hq} and headed by ${ceo}`);
+console.log(`ex 3: ${company2} is headquartered in ${hq} and headed by ${ceo}`);
 
-// console.log(`${company} is headquartered in ${HeadQuatered} and headed by ${CEO}`);
+console.log(`ex 3: ${company2} is headquartered in ${HeadQuatered} and headed by ${CEO}`);
 
-// console.log("When use rest operator : ", rest);
+console.log("ex 3: When use rest operator : ", rest2);
 
 
 

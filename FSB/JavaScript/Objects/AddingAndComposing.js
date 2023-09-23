@@ -2,12 +2,14 @@
 
 
 
-// Ultimately it becomes a mess and you’re left wondering what happened and when. 
+// Mutations are dangerous
 
-// Mutations happen when you add new properties to existing objects, update property values or when you want to compose 
-// together multiple objects. 
+// In objects it can be difficult to trace where the mutations are coming from.
 
-// Thankfully, to save us from the dangers of mutation, we have the spread operator. 
+// Mutations happen when you add new properties to existing objects, update property values or when you want to 
+// compose together multiple objects.
+
+// Thankfully, to save us from the dangers of mutation, we have the spread operator.
 
 // Consider the following example for adding and modifying properties
 
@@ -26,16 +28,16 @@ const books = {
             name: "Steven J. Dubner"
         },
     ],
-    isbn10: "0-06-tsbn-jdkf",
+    isbn10: "0-06-124270-5",
     cost: 7.99,
 };
 
-// In the above code, we created a new object where we spread out the contents of the book object, and easily add on 
-// new properties. This syntax is so amazing to work with that you’ll forget all your concerns about object mutation or 
-// the reference nature of assignment to variables.
+// In the above code, we created a new object where we spread out the contents of the book object, and easily add
+// on new properties. This syntax is so amazing to work with that you’ll forget all your concerns about object 
+// mutation or  the reference nature of assignment to variables.
 
-// What’s more, if you want to update the value of an existing variable. For instance, let’s say we want to update the 
-// title to ‘Freakonomics 2021’, we can easily as follows.
+// What’s more, if you want to update the value of an existing variable. For instance, let’s say we want to update 
+// the title to ‘Freakonomics 2021’, we can easily as follows.
 
 let { title, authors, cost, publisher } = {
     ...books,
@@ -43,11 +45,16 @@ let { title, authors, cost, publisher } = {
     title: "Freakonomics 2021"
 };
 
-console.log(`ex 1 : ${title} published by ${publisher} is written by ${authors.map((el) => el.name).join(" and ")} it costs $${cost}`);
+console.log(
+    `ex 1 : 
+    ${title} published by 
+    ${publisher} is written by 
+    ${authors.map((el) => el.name).join(" and ")} it costs $${cost}`
+);
 
-// Here, because the updated property sits after the original object was spread out in the object, it is overridden, 
-// and you get the updated value. So, use the spread operator to create a new object that composes over the original in 
-// such a way that it doesn’t mutate the original.
+// Here, because the updated property sits after the original object was spread out in the object, it is  
+// overridden, and you get the updated value. So, use the spread operator to create a new object that composes 
+// over the original in such a way that it doesn’t mutate the original.
 
 
 
@@ -72,18 +79,18 @@ const banking2 = {
     accountNum: '01090110234897',
     bank: 'The Cloud Bank of Cayman Islands',
 };
-  
+
 // Mutating by looping over the object to add to the target and dynamically add the properties.
 // for (const obj in banking2) {
 //     user2[obj] = banking2[obj];
 // }
-    
+
 // console.log("ex 2:", user2);
-    
+
 // OLD METHOD
-//let userDetails = Object.assign({}, user, banking);
-//console.log(userDetails);
-    
+// let userDetails = Object.assign({}, user, banking);
+// console.log(userDetails);
+
 // NEW METHOD
 let userDetails2 = {
     ...user2,
@@ -131,18 +138,18 @@ console.log("ex 3:", userDetails);
 
 
 
-// Objects are stored by reference which means that if you have to update a property’s value, you have to keep in mind 
-// that the object may have been referenced elsewhere in your code and it might affect some other part of the 
+// Objects are stored by reference which means that if you have to update a property’s value, you have to keep in 
+// mind that the object may have been referenced elsewhere in your code and it might affect some other part of the 
 // application inadvertently.
 
 // Mutation is thus frowned upon especially when it comes to working with JavaScript libraries and frameworks like 
 // React. It is therefore important to prevent mutation when adding, updating or deleting properties from objects.
 
-// The traditional way to prevent object mutation is to use Object.assign() to combine two or more objects in such a 
-// way that they’re not mutated. The spread operator provides an even easier syntax.
+// The traditional way to prevent object mutation is to use Object.assign() to combine two or more objects in
+// such a way that they’re not mutated. The spread operator provides an even easier syntax.
 
-// Here you’ll see an array of objects named userDb where each object represents a freshly signed up user. We want to 
-// generate a password using the genPassword function and we want to add the contents of the userPriveleges.
+// Here you’ll see an array of objects named userDb where each object represents a freshly signed up user. We want
+// to generate a password using the genPassword function and we want to add the contents of the userPriveleges.
 
 
 

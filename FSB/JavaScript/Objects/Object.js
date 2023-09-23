@@ -56,7 +56,8 @@ const book = {
 // And because objects are referenced when assigned to properties and variables, accidentally mutating an object can 
 // have lasting consequences on all references.
 
-// Imagine a function that mutates an object. In a large application, there is no way to trace where the mutation came from. We’ll address this issue as we go along and find solutions to prevent mutation-related issues.
+// Imagine a function that mutates an object. In a large application, there is no way to trace where the mutation came 
+// from. We’ll address this issue as we go along and find solutions to prevent mutation-related issues.
 
 // JSON which stands for JavaScript Object Notation is closely related to objects.
 
@@ -91,4 +92,4 @@ myObject.greet(); // Greetings from Madrid
 
 // Properties in object can be accessed in three ways - objectName.property, objectName[‘property’], objectName[expression] where expression evaluates to property name
 
-// In JavaScript, almost everything is an object. Date and Array objects inherit from Date.prototype and Array.prototype respectively
+// In JavaScript, almost everything is an object. Date and Array objects inherit from Date.prototype and Array.prototype respectively.

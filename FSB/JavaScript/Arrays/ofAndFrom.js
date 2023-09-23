@@ -36,7 +36,7 @@
 
 const genStars = (count) => Array.from(Array(count), () => '*');
 
-for(let i = 1; i == 6; i++){
+for(let i = 1; i <= 6; i++){
     console.log(genStars(i));
 }
 

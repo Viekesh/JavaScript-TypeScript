@@ -1,8 +1,10 @@
 "use strict";
 
-// Reducing arrays refers to computing down an array full of data to a single value. The reducer function implements the logic while the Array.reduce() method iterates over an array full of data.
+// Reducing arrays refers to computing down an array full of data to a single value. The reducer function implements 
+// the logic while the Array.reduce() method iterates over an array full of data.
 
-// We’re once again going to use the perfumes array from a previous example where we’ve added the quantity of perfumes in stock as a property.
+// We’re once again going to use the perfumes array from a previous example where we’ve added the quantity of perfumes 
+// in stock as a property.
 
 // Let’s compute the total quantity of items in stock as well as the total worth of the stock using array reducers.
 

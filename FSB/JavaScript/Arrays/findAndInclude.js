@@ -129,6 +129,9 @@ console.log("includes output : ", number.includes(1));
 
 
 
+
+
+
 // find() method :
 
 // ex 3 : find the value of the first element with the value over 18.
@@ -139,7 +142,7 @@ const checkAge = (age) => {
     return age > 20;
 };
 
-console.log("return age greater than 20 : ", age.find(checkAge));
+console.log("ex 3:", "return age greater than 20 : ", age.find(checkAge));
 
 // The find() method returns the value which is passes in the first iteration.
 // The find() method executes a function for each array element.

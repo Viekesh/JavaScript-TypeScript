@@ -17,6 +17,9 @@ for (let i = 0; i<=numbers.length - 1; i++) {
 
 
 
+
+
+
 // What makes the "for each" method different?
 
 // The forEach method is also used to loop through arrays, but it uses a function differently than the classic "for 
@@ -44,7 +47,8 @@ numbers.forEach(function(number, index) {
 // Optional Parameters
 
 // Index :
-// Alright now let's continue with the optional parameters. The first one is the "index" parameter, which represents the index number of each element.
+// Alright now let's continue with the optional parameters. The first one is the "index" parameter, which represents 
+// the index number of each element.
 
 // Basically, we can see the index number of an element if we include it as a second parameter:
 
@@ -60,6 +64,9 @@ numbers.forEach((number, index) => {
 numbers.forEach((number, index, array) => {
     console.log("ex 2:", "by using array para : ", array);
 });
+
+
+
 
 
 
