@@ -189,3 +189,12 @@ leftBtn.addEventListener('click', stepLeft);
 homeBtn.addEventListener('click', home);
 turnClockWiseBtn.addEventListener('click', turnClockWise);
 turnAntiClockWiseBtn.addEventListener('click', turnAntiClockWise);
+
+
+
+// element.addEventListener(event, function) is the correct syntax for executing function when event occurs. 
+// Hence, element.addEventListener(‘change’, onChange) is the correct option.
+
+// element.addEventListener(event, function) is the correct syntax for executing function when event occurs. Hence, element.addEventListener(‘click’, functionName) is the correct option.
+
+// element.style.property is used to change any css property of the element. Hence, to change color, we can use element.style.color.
