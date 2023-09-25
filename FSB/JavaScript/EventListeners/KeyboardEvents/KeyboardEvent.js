@@ -120,11 +120,6 @@ let rotation = 0;
 let xPos = 0;
 let yPos = 0;
 
-const home = () => {
-    yPos = 0;
-    xPos = 0;
-    setTransform();
-};
 const setTransform = () => {
     bug.style.left = `${xPos}px`;
     bug.style.top = `${yPos}px`;
@@ -132,6 +127,11 @@ const setTransform = () => {
 
 
 
+const home = () => {
+    yPos = 0;
+    xPos = 0;
+    setTransform();
+};
 const homeBtn = document.querySelector('#home');
 homeBtn.addEventListener('click', home);
 
