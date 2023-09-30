@@ -54,9 +54,73 @@ const fullnameFld = document.querySelector("input[name='fullname']");
 const merchantFld = document.querySelector("input[name='merchant']");
 const passwordRegEx = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm;
 
+
+
 // For individual form fields we create here a centralised flag named "canSubmit" whcih will set to false as
 // default.
 let canSubmit = false;
+
+
+
+const submitForm = (data) => {
+  console.log(data);
+  //formEl.submit();
+};
+
+
+
+// Email field is the input field of type "email", which means thaqt the form field provides built in validation.
+// To check if valid email address has been typed in or not we can query "event.target.reportValidity()".
+emailFld.addEventListener('keyup', function (event) {
+  event.preventDefault();
+  // if(event.target.reportValidity()) {
+  //   canSubmit = true;
+  //   this.parentElement.classList.remove("form-field-error");
+  // } else {
+  //   canSubmit = false;
+  //   this.parentElement.classList.add("form-field-error");
+  // }
+
+  // In above lines we can replace the logic in the event listeners callback like so...
+
+  validateFld(this, event.target.reportValidity());
+});
+
+
+
+passwordFld.addEventListener('keyup', function (evt) {
+  evt.preventDefault();
+  validateFld(this, passwordRegEx.test(evt.target.value));
+});
+
+
+
+repasswordFld.addEventListener('keyup', function (evt) {
+  evt.preventDefault();
+  validateFld(this, passwordFld.value === evt.target.value);
+});
+
+
+
+fullnameFld.addEventListener('keyup', function (evt) {
+  evt.preventDefault();
+  evt.target.value = evt.target.value.trimLeft();
+  validateFld(this, evt.target.reportValidity());
+});
+
+
+
+const validateFld = (el, condition) => {
+  if (condition) {
+    canSubmit = true;
+    el.parentElement.classList.remove('form-field-error');
+  } else {
+    canSubmit = false;
+    el.parentElement.classList.add('form-field-error');
+  }
+};
+
+
 
 // As long as this is false we ensure that our form is not submitted. Now let's take control of the form and ensure
 // it's fully filled up before we are able to submit it. After we build individual field validators.
@@ -105,7 +169,7 @@ formEl.addEventListener("submit", function (event) {
       };
     });
 
-    // now we can get object in the console.
+  // now we can get object in the console.
   console.log(getFormValues);
 
   const isFilled = getFormValues
@@ -114,41 +178,23 @@ formEl.addEventListener("submit", function (event) {
   return isFilled && canSubmit && submitForm(getFormValues);
 });
 
-const submitForm = (data) => {
-  console.log(data);
-  //formEl.submit();
-};
 
-const validateFld = (el, condition) => {
-  if (condition) {
-    canSubmit = true;
-    el.parentElement.classList.remove('form-field-error');
-  } else {
-    canSubmit = false;
-    el.parentElement.classList.add('form-field-error');
-  }
-};
 
-emailFld.addEventListener('keyup', function (evt) {
-  evt.preventDefault();
-  validateFld(this, evt.target.reportValidity());
-});
+// passwordFld.addEventListener('keyup', function (evt) {
+//   evt.preventDefault();
+//   validateFld(this, passwordRegEx.test(evt.target.value));
+// });
 
-passwordFld.addEventListener('keyup', function (evt) {
-  evt.preventDefault();
-  validateFld(this, passwordRegEx.test(evt.target.value));
-});
+// repasswordFld.addEventListener('keyup', function (evt) {
+//   evt.preventDefault();
+//   validateFld(this, passwordFld.value === evt.target.value);
+// });
 
-repasswordFld.addEventListener('keyup', function (evt) {
-  evt.preventDefault();
-  validateFld(this, passwordFld.value === evt.target.value);
-});
-
-fullnameFld.addEventListener('keyup', function (evt) {
-  evt.preventDefault();
-  evt.target.value = evt.target.value.trimLeft();
-  validateFld(this, evt.target.reportValidity());
-});
+// fullnameFld.addEventListener('keyup', function (evt) {
+//   evt.preventDefault();
+//   evt.target.value = evt.target.value.trimLeft();
+//   validateFld(this, evt.target.reportValidity());
+// });
 
 // formEl.addEventListener('submit', function (evt) {
 //   evt.preventDefault();
