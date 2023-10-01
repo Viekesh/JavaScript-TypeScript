@@ -1,16 +1,13 @@
-import React from 'react'
-import Router from './Tutorials/RouterDOM/Router'
+import React from "react";
+import LandingPage from "./Sections/LandingPage/LandingPage";
 
 const App = () => {
   return (
-    <div>
-      <Router />
-    </div>
+    <LandingPage />
   )
-}
+};
 
-export default App
-
+export default App;
 
 
 
