@@ -1,4 +1,5 @@
 import React from "react";
+import "./RenderMovies.css";
 import MovieCard from "./MovieCard";
 import movies from "./MovieDB";
 
