@@ -6,17 +6,19 @@ import ParentComponent from "../MiniProjects/UserCard/ParentComponent";
 import TypeCheck from "../MiniProjects/PropsTypeCheck/TypeCheck";
 import RenderList from "../MiniProjects/RenderListUsingMap/RenderList";
 import RenderMovies from "../MiniProjects/MovieUsingMapFun/RenderMovies";
+import KeyAttribute from "../MiniProjects/KeyAttribute/KeyAttribute";
 
 const LandingPage = () => {
   return (
     <>
       <div className="landing_page">
-        <ToggleButton />
+        {/* <ToggleButton />
         <ThemeSwitch />
         <ParentComponent />
         <TypeCheck />
         <RenderList />
-        <RenderMovies />
+        <RenderMovies /> */}
+        <KeyAttribute />
       </div>
     </>
   );

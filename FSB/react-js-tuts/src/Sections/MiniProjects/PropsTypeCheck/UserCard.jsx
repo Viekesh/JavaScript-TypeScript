@@ -31,7 +31,7 @@ const UserCard = ({ name, designation, photo, isAdmin }) => (
   </div>
 );
 
-UserCard.prototype = {
+UserCard.propTypes = {
   name: PropTypes.string.isRequired,
   designation: PropTypes.string.isRequired,
   photo: PropTypes.string.isRequired,
