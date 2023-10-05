@@ -49,6 +49,12 @@ class Ex1Lifecycle extends Component {
     // the component always has a joke to display when it is first rendered.
     componentDidMount = () => this.getJoke();
 
+    componentDidUpdate = prevProps => {
+        if (this.props.category !== prevProps.category) {
+            this.getJoke(this.props.category);
+        }
+    };
+
     // This line defines the render() method of the "Ex1Lifecycle" component. The render() method is 
     // responsible for returning the HTML that will be displayed for the component.
     render() {
@@ -76,41 +82,11 @@ class Ex1Lifecycle extends Component {
 
 export default Ex1Lifecycle;
 
-//     const resolveJoke = await callJokeApi.json();
-
-//     this.setState({
-//       joke: resolveJoke,
-//       isLoading: false,
-//     });
-//   };
-//   componentDidMount = () => this.getJoke();
-//   render() {
-//     return (
-//       <div className="container">
-//         <div
-//           className={this.state.isLoading ? "title title-pulse" : "title"}
-//           onClick={this.getJoke}
-//         >
-//           Joke Machine
-//         </div>
-//         <Joke
-//           setup={this.state.joke.setup}
-//           punchline={this.state.joke.punchline}
-//         />
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;
-
-
-
-
-
-
-
 
 
 // It is also important to note that we’re talking about class components for now because they provide a
 // built -in mechanism for customizing behavior through lifecycle methods.
+
+// What do you mean by the lifecycle of a component?
+// Class components go through three stages namely mounting, updating, and unmounting which are
+// collectively referred to as the lifecycle of a component.

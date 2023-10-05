@@ -10,6 +10,7 @@ import "./LandingPage.css";
 // import App from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/end/src/App";
 import SuperTunes from "../MiniProjects/SuperTunesAssignments/SuperTunes";
 import Ex1Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex1Lifecycle";
+import WeatherCard from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/SideEffect/Examples/CompoDidMount/CompoDidMount";
 
 const LandingPage = () => {
   return (
@@ -24,7 +25,8 @@ const LandingPage = () => {
         {/* <KeyAttribute /> */}
         {/* <App /> */}
         {/* <SuperTunes /> */}
-        <Ex1Lifecycle />
+        {/* <Ex1Lifecycle /> */}
+        <WeatherCard />
       </div>
     </>
   );
