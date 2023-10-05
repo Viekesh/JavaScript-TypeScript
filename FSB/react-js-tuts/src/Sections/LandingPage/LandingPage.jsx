@@ -11,6 +11,7 @@ import "./LandingPage.css";
 import SuperTunes from "../MiniProjects/SuperTunesAssignments/SuperTunes";
 import Ex1Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex1Lifecycle";
 import WeatherCard from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/SideEffect/Examples/CompoDidMount/CompoDidMount";
+import Ex2Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex2Lifecycle";
 
 const LandingPage = () => {
   return (
@@ -26,7 +27,8 @@ const LandingPage = () => {
         {/* <App /> */}
         {/* <SuperTunes /> */}
         {/* <Ex1Lifecycle /> */}
-        <WeatherCard />
+        <Ex2Lifecycle />
+        {/* <WeatherCard /> */}
       </div>
     </>
   );
