@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import weatherService from "../weatherService";
+import weatherService from "./weatherService";
 
 class WeatherCard extends Component {
     state = {
