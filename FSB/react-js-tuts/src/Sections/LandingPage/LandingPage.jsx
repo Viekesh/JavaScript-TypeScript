@@ -8,10 +8,11 @@ import "./LandingPage.css";
 // import RenderMovies from "../MiniProjects/MovieUsingMapFun/RenderMovies";
 // import KeyAttribute from "../MiniProjects/KeyAttribute/KeyAttribute";
 // import App from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/end/src/App";
-import SuperTunes from "../MiniProjects/SuperTunesAssignments/SuperTunes";
-import Ex1Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex1Lifecycle";
-import WeatherCard from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/SideEffect/Examples/CompoDidMount/CompoDidMount";
-import Ex2Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex2Lifecycle";
+// import SuperTunes from "../MiniProjects/SuperTunesAssignments/SuperTunes";
+// import Ex1Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex1Lifecycle";
+// import WeatherCard from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/SideEffect/Examples/CompoDidMount/CompoDidMount";
+// import Ex2Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex2Lifecycle";
+import ManageCleanUp from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/SideEffect/Examples/ManagingCleanUp/ManageCleanUp";
 
 const LandingPage = () => {
   return (
@@ -27,8 +28,9 @@ const LandingPage = () => {
         {/* <App /> */}
         {/* <SuperTunes /> */}
         {/* <Ex1Lifecycle /> */}
-        <Ex2Lifecycle />
+        {/* <Ex2Lifecycle /> */}
         {/* <WeatherCard /> */}
+        <ManageCleanUp />
       </div>
     </>
   );
