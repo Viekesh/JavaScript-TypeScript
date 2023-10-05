@@ -9,6 +9,7 @@ import "./LandingPage.css";
 // import KeyAttribute from "../MiniProjects/KeyAttribute/KeyAttribute";
 // import App from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/end/src/App";
 import SuperTunes from "../MiniProjects/SuperTunesAssignments/SuperTunes";
+import Ex1Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex1Lifecycle";
 
 const LandingPage = () => {
   return (
@@ -22,7 +23,8 @@ const LandingPage = () => {
         <RenderMovies /> */}
         {/* <KeyAttribute /> */}
         {/* <App /> */}
-        <SuperTunes />
+        {/* <SuperTunes /> */}
+        <Ex1Lifecycle />
       </div>
     </>
   );
