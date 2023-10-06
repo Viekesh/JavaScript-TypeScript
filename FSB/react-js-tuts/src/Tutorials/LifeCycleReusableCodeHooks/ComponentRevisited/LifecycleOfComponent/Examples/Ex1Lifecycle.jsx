@@ -22,8 +22,8 @@ class Ex1Lifecycle extends Component {
     // and updates the state of the Ex1Lifecycle component with the new joke.
     getJoke = async () => {
 
-        // This line sets the isLoading state of the App component to true. This indicates to the user that 
-        // the component is currently loading a new joke.
+        // This line sets the isLoading state of the Ex1Lifecycle component to true. This indicates to the use
+        // that the component is currently loading a new joke.
         this.setState({
             isLoading: true,
         });
@@ -84,9 +84,66 @@ export default Ex1Lifecycle;
 
 
 
+// Lifecycle methods allow developers to incorporate custom logic at various points during the life of a React
+// component.
+
 // It is also important to note that we’re talking about class components for now because they provide a
 // built -in mechanism for customizing behavior through lifecycle methods.
 
 // What do you mean by the lifecycle of a component?
 // Class components go through three stages namely mounting, updating, and unmounting which are
 // collectively referred to as the lifecycle of a component.
+
+// There are three main phases in the life of a React component:
+
+// Mounting :
+// The Mounting phase begins when a React component instance is created and ends when it is inserted into the
+// DOM. Once the component is rendered into the DOM, the component goes through the next phase where there are
+// changes to state or props.
+
+// Updating :
+// This state is aptly known as the ‘Updating’ phase as changes are made to the state or props. Hence, the
+// component re - renders and updates the changes made.
+
+// Unmounting :
+// The last and final phase is the ‘Unmounting’ phase, following which the component is removed from the DOM.
+// This happens when the data representing a particular component is removed, causing React to remove the
+// associated component.
+
+
+
+// Across these three phases, we get multiple lifecycle methods that are aimed at customizing the behavior of the component at a macro-level.
+
+// Let's have a look at these lifecycle methods to understand their significance.
+
+// Mounting Phase:
+// Constructor:
+// The constructor method is called before the component is mounted into the DOM.
+
+// getDerivedStateFromProps() Method:
+// It is a very rare lifecycle method which is used in very rare cases.
+// This lifecycle hook is used in both in mounting and updating phase. and allows us to perform state changes
+// on the basis of data in the props.
+
+// Remember,  getDerivedStateFromProps() method is invoked every time a parent component re-renders.
+
+// render() Method:
+// The render method specifically is needed only if we’re building class components and its purpose is to
+// return React elements.
+
+// Once the DOM insertion is complete, the componentDidMount() lifecycle method is immediately invoked. This is
+// where we can perform API queries and other side effects which leads to setting the state.
+// Once the state is set, the component re - renders.
+
+
+
+// Updating phase:
+// The ‘Updating’ phase occurs when we interact with the component and it re-renders. This interaction includes
+// receiving updated data through props or an update to the state.
+
+
+
+
+
+
+// .

@@ -1,5 +1,8 @@
 import React from "react";
 import "./LandingPage.css";
+import Ex2EventHandling from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/HandlingEventUsingSyntheticEventSystem/Examples/Ex2EventHandling";
+// import App from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/HandlingEventUsingSyntheticEventSystem/5.4 - Events/54_native_events/end/src/App";
+// import Ex1EventHandling from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/HandlingEventUsingSyntheticEventSystem/Examples/Ex1EventHandling";
 // import ToggleButton from "../MiniProjects/ToggleButton/ToggleButton";
 // import ThemeSwitch from "../MiniProjects/ThemeSwitcher/ThemeSwitch";
 // import ParentComponent from "../MiniProjects/UserCard/ParentComponent";
@@ -12,7 +15,7 @@ import "./LandingPage.css";
 // import Ex1Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex1Lifecycle";
 // import WeatherCard from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/SideEffect/Examples/CompoDidMount/CompoDidMount";
 // import Ex2Lifecycle from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/LifecycleOfComponent/Examples/Ex2Lifecycle";
-import ManageCleanUp from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/SideEffect/Examples/ManagingCleanUp/ManageCleanUp";
+// import ManageCleanUp from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/SideEffect/Examples/ManagingCleanUp/ManageCleanUp";
 
 const LandingPage = () => {
   return (
@@ -30,7 +33,10 @@ const LandingPage = () => {
         {/* <Ex1Lifecycle /> */}
         {/* <Ex2Lifecycle /> */}
         {/* <WeatherCard /> */}
-        <ManageCleanUp />
+        {/* <ManageCleanUp /> */}
+        {/* <Ex1EventHandling /> */}
+        {/* <App /> */}
+        <Ex2EventHandling />
       </div>
     </>
   );
