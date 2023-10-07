@@ -1,6 +1,8 @@
 import React from "react";
 import "./LandingPage.css";
-import MultipleInputs from "../../Tutorials/LifeCycleReusableCodeHooks/BuildingForms/HandleMultipleInputs/Examples/MultipleInputs";
+// import MultipleInputs from "../../Tutorials/LifeCycleReusableCodeHooks/BuildingForms/HandleMultipleInputs/Examples/MultipleInputs";
+// import Bouncing from "../../Tutorials/LifeCycleReusableCodeHooks/BuildingForms/HandleMultipleInputs/Examples/Bouncing";
+import CurrencyConverter from "../MiniProjects/CurrencyConverter/CurrencyConverter";
 // import Ex2EventHandling from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/HandlingEventUsingSyntheticEventSystem/Examples/Ex2EventHandling";
 // import App from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/HandlingEventUsingSyntheticEventSystem/5.4 - Events/54_native_events/end/src/App";
 // import Ex1EventHandling from "../../Tutorials/LifeCycleReusableCodeHooks/ComponentRevisited/HandlingEventUsingSyntheticEventSystem/Examples/Ex1EventHandling";
@@ -38,7 +40,9 @@ const LandingPage = () => {
         {/* <Ex1EventHandling /> */}
         {/* <App /> */}
         {/* <Ex2EventHandling /> */}
-        <MultipleInputs />
+        {/* <MultipleInputs /> */}
+        {/* <Bouncing /> */}
+        <CurrencyConverter />
       </div>
     </>
   );

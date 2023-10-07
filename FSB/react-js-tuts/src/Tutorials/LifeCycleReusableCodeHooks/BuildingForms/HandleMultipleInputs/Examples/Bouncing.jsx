@@ -81,4 +81,54 @@ export default Bouncing;
 
 
 
+// What is the purpose of the given code?
+{/* <div id="root">${ReactDOMServer.renderToString(<App />)}</div> */ }
+
+// server side rendering
+
+
+
+// To enable SEO to React applications, you prefer _________.
+
+// server side rendering
+
+
+
+// hat is the meaning of ref in below code:
+// class FileInput extends React.Component {
+//     constructor(props) {
+//         super(props)
+//         this.file = React.createRef()
+//         this.handleSubmit = this.handleSubmit.bind(this)
+//     }
+//     handleSubmit(event) {
+//         alert(this.file.current.files[0].name)
+//         event.preventDefault()
+//     }
+//     render() {
+//         return (
+//             <form onSubmit={this.handleSubmit}>
+//                 <input type="file" ref={this.file} />
+//                 <input type="submit" value="Submit" />
+//             </form>
+// }
+
+// Get the reference to the field by assigning the ref attribute to a property defined in the constructor with
+// React.createRef(). The given code is used to get the reference to the field by assigning the ref attribute
+// to a property defined in the constructor with React.createRef().
+
+
+
+// What is the meaning of the given code in React?
+// useEffect(
+//     () => {
+//         console.log(`Hi ${name} you clicked ${count} times`)
+//     },
+//     [name, count]
+// )
+
+// In the given code, the useEffect hook is used for invoking Server-Side API and render DOM.
+
+
+
 // .
