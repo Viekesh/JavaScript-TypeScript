@@ -2,6 +2,23 @@
 
 
 
+
+
+// Ex1 :
+
+const userGroup = ["u1", "u2", "u3", "u4"];
+console.log("Ex1 :", userGroup);
+const reverseUserGrop = userGroup.reverse();
+console.log("Ex1 :", reverseUserGrop);
+console.log("\n");
+
+
+
+
+
+
+// Ex2 :
+
 // Here we have an array of objects with sensor data from internet of things devices. It stores the records of minimum 
 // temperature and maximum temperature and if you observe the dates, you can see this data is captured at every 
 // alternate day and is simply appended to this array.
@@ -13,7 +30,6 @@
 // The reverse method on the Array prototype which is available to all arrays such as the sensorData array here 
 // reverses the data in place.
 
-// ex 1 :
 const sensorData = [
 
     {
@@ -43,53 +59,41 @@ const sensorData = [
 
 ];
 
-for (const data of sensorData.reverse()) {
+for(const data of sensorData) {
+    console.log("Ex2 :", `${data.id} || ${data.date} || Max: ${data.maxTemp} || Min: ${data.minTemp}`);
+};
 
-    console.log("ex 1 : ", `${data.date} | MAX: ${data.maxTemp}, MIN: ${data.minTemp}`);
-    
-}
+for(const data of sensorData.reverse()) {
+    console.log("Ex2 Reverse List :", `${data.id} || ${data.date} || Max: ${data.maxTemp} || Min: ${data.minTemp}`);
+};
 
-
-
-
-
-
-
-
-
-// ex 2 :
-
-const another_users = ["u1", "u2", "u3", "u4"];
-console.log("ex 2 : another_users : ", another_users);
-const a_u_result = another_users.reverse();
-console.log("ex2 : ", a_u_result);
+console.log("\n");
 
 
 
 
 
 
+// Ex3 :
 
-
-
-// ex3 :
-
-const isPalindrome = word => {
+const isPalindrome = (word) => {
     let wordArray = [];
     let reverseWord = [];
 
-    for(const w of word) {
-        wordArray.push(w);
-        reverseWord.push(w);
+    for (const getWord of word) {
+        wordArray.push(getWord);
+        reverseWord.push(getWord);
     }
 
     return wordArray.toString() === reverseWord.reverse().toString();
-}
+};
 
-console.log(isPalindrome("opp") ? "Palindrome" : "Not a Palindrome");
+console.log("Ex3 :", isPalindrome("oppo") ? "Palindrome" : "Not Palindrome");
 
-// The function isPalindrome takes a word and tells us if the word is a palindrome or not. A palindrome is a word that 
-// is spelled the same backward as forward.
+console.log("\n");
+
+// The function isPalindrome takes a word and tells us if the word is a palindrome or not. A palindrome is a 
+// word that is spelled the same backward as forward.
 
 
 
