@@ -100,17 +100,15 @@ console.log("\n");
 
 
 
-
-
-
-// ex 4: 
+// Ex4 : 
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
-console.log("ex 4:", fruits.reverse());
+console.log("Ex 4:", fruits.reverse());
+
+console.log("\n");
 
 // The reverse() method reverses the order of the elements in an array.
-
 // The reverse() method overwrites the original array.
 
 
@@ -121,7 +119,7 @@ console.log("ex 4:", fruits.reverse());
 
 
 
-// ex 5:
+// Ex5 :
 
 const weapons = [
     {
@@ -144,14 +142,17 @@ const weapons = [
 
 const displayWeapons = (array) => {
     for(const ele of array) {
-        console.log(`${ele.item}`, "|", `${ele.cost}`);
+        console.log("Ex 5:", `${ele.item}`, "|", `${ele.cost}`);
     }
+
+    for(const ele of array.reverse()) {
+        console.log("Ex 5 Reverse Method:", `${ele.item}`, "|", `${ele.cost}`);
+    }
+
 }
 
-console.log("ex 5:", displayWeapons(weapons.reverse()));
-
-
-
+displayWeapons(weapons);
+console.log("\n");
 
 
 
