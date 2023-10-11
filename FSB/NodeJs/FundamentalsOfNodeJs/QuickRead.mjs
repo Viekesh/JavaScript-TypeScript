@@ -72,3 +72,17 @@
 // V8 is a JavaScript engine that lets you parse and execute JavaScript and it works independantly with the browser's
 // libuv is composed of C++ code for low-level access of the OS.
 // Node.js acts as a midpoint between V8 and libuv and distributes the code from V8 to libuv.
+
+
+
+// Node.js has two main components, Libuv and V8.
+
+// V8 is a JavaScript engine that parses and executes JavaScript independently from the browser. The idea is that when you're running code on Node js, it executes through the Node js server.
+
+// To run code on Node.js, the user does not require a web browser. All the code in your file will still run if you use console.log, but it will do it via the command line rather than the browser. Therefore, V8 enables this by running JavaScript independently of the browser.
+
+// The other key component here is Libuv. Libuv is a library of C++ code. It allows the user to do low-level access to the operating system. So going back to the previous example of console.log, when you do console.log, its V8 will parse and execute that JavaScript. Executing means printing something to the command line of the computer. 
+
+// To print something to the computer's command line, the user needs to interact with the computer's operating system because the command line outputs from that need to be done through operating system requests because the operating system handles these inputs and outputs. 
+
+// The main idea is that V8 will parse everything and figure out what to do. And then it moves to Libuv. If the user needs to print this content to the screen, Libuv takes care of that interaction between the operating system and Node js and sets the way this is generally structured.

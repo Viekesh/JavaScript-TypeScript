@@ -41,3 +41,7 @@ console.log("Done!!!");
 // Asynchronous programming occurs in the time between a function call and a function return.
 
 // A callback uses a function to call when another one completes.
+
+// Asynchronous Execution: A code runs asynchronously with another code.
+
+// Synchronous Execution: You need to wait for one code block to finish before executing the next block.
