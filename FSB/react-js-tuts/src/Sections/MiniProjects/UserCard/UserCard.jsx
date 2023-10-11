@@ -14,8 +14,8 @@ const UserCard = ({ name, designation, photo, isAdmin }) => {
 
 export default UserCard;
 
-// In this hands-on exercise, we will work on a component called UserCard which has to accept data using props. We
-// will implement props in this function component so that it accepts data from a resource.
+// In this hands-on exercise, we will work on a component called UserCard which has to accept data using props.
+// We will implement props in this function component so that it accepts data from a resource.
 
 // We’re rendering instances of the UserCard component here using a map function on a data Array that is being
 // fetched from an external file. However, the three UserCard instances show the same data. We can use props to
@@ -84,4 +84,4 @@ export default UserCard;
 // If we wish to pass dynamic data such as Numbers, an Object, or even functions, then we'll have to use curly
 // braces.
 
-//
+// 
