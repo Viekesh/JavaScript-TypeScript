@@ -1,0 +1,3 @@
+stream data is here
+another line of data
+third line executed
