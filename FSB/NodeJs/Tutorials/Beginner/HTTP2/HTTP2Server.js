@@ -8,6 +8,9 @@
 // type idea in the data collection.
 
 import http2 from "http2";
+import dns from "dns";
+
+process.on("")
 
 const server = http2.createServer();
 
