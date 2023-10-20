@@ -73,7 +73,11 @@ console.log('Start');
 
 console.log('End');
 
-// In this example, the console.log('Promise') statement is executed before the console.log('Start') 
+// In this example, the console.log('Promise') statement is executed before the console.log('Start')
 // statement.This is because the.then() callback is added to the microtask queue before the console.log
-// ('Start') statement is executed.The microtask queue is emptied before the console.log('Start') 
+// ('Start') statement is executed.The microtask queue is emptied before the console.log('Start')
 // statement is executed, so the console.log('Promise') statement is executed first.
+
+// In summary, microtask queues are a mechanism used by the JavaScript engine to manage the execution of 
+// certain types of asynchronous code.Microtasks are executed immediately after the current JavaScript 
+// execution context is finished, but before the next rendering or user input event is processed.
