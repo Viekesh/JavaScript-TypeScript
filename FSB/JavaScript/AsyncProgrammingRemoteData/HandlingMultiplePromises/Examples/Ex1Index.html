@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your JavaScript Playground</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+    <div id="main">
+        <h1>ShoutOut!</h1>
+        <h5 id="error"></h5>
+        <button type="button" id="getMessages">Get Messages</button>
+        <img src="./spinner.gif" alt="Please wait..." id="spinner" />
+        <div id="messages">
+            <div class="message">
+                <p class="user-name">Mycroft Holmes</p>
+                <p class="message-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta qui impedit explicabo nam? Sed odio,
+                    ad quia repellat rerum sunt vitae
+                    perferendis, dolores fugiat, animi laudantium. Qui quam distinctio iusto.
+                </p>
+                <div class="comments">
+                    <div class="comment">
+                        <p class="user-name">Sherlock Holmes</p>
+                        <p class="message-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima reiciendis qui commodi
+                            perspiciatis aliquam dolorem libero sequi,
+                            ullam molestiae laborum voluptatibus quia, ducimus, possimus sapiente obcaecati
+                            reprehenderit odio. Fuga, accusamus!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./Ex1Index.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- The DOCTYPE declaration specifies that the document is an HTML document.
+The html element is the root element of the document.
+The head element contains information about the document, such as the title and meta data.
+The title element specifies the title of the document.
+The link element references a CSS stylesheet.
+The body element contains the visible content of the document.
+The div element with the id of "main" is the main container for the application.
+The h1 element with the text "ShoutOut!" is the heading for the application.
+The h5 element with the id of "error" is used to display error messages.
+The button element with the id of "getMessages" is used to trigger the loading of messages.
+The img element with the id of "spinner" is a spinner image that is displayed while messages are being loaded.
+The div element with the id of "messages" is used to display messages.
+The div element with the class of "message" represents a single message.
+The p element with the class of "user-name" displays the name of the user who posted the message.
+The p element with the class of "message-text" displays the text of the message.
+The div element with the class of "comments" is used to display comments on the message.
+The div element with the class of "comment" represents a single comment.
+The p element with the class of "user-name" displays the name of the user who posted the comment.
+The p element with the class of "message-text" displays the text of the comment.
+The script element with the type of "module" references the JavaScript file for the application.
+When the page is loaded, the JavaScript file is executed. The JavaScript file contains code that does the following:
+
+When the getMessages button is clicked, the getMessages() function is called.
+The getMessages() function makes an AJAX request to the server to get a list of messages.
+When the AJAX request is successful, the getMessages() function adds the messages to the messages element.
+If the AJAX request fails, the getMessages() function displays an error message in the error element.
+In summary, the code is creating a simple message board application. The application allows users to view messages and comments. -->
