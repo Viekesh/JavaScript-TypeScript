@@ -42,52 +42,79 @@
 // contains the next value yielded by the generator function, and the done property is a Boolean value
 // that indicates whether the generator function has finished executing.
 
-// The following example shows a simple generator function that yields a sequence of even numbers:
+
+
+// // Ex. 1:
+// // The following example shows a simple generator function that yields a sequence of even numbers:
+
+// function* generateEvenNumbers() {
+//     let number = 2;
+//     while (true) {
+//         yield number;
+//         number += 2;
+//     }
+// }
+
+// // Create an iterator for the generator function.
+// const iterator = generateEvenNumbers();
+
+// // Iterate over the generator function and print the first 10 even numbers.
+// for (let i = 0; i < 10; i++) {
+//     console.log("Example : ", iterator.next().value);
+// }
+
+
+
+
 
 
 // Ex. 1:
-// The following example shows a simple generator function that generates a sequence of even numbers:
 
-function* generateEvenNumbers() {
+function* generateEvenNumber() {
     let number = 2;
     while (true) {
         yield number;
         number += 2;
+        console.log("yield value :", number);
     }
 }
 
-// Create an iterator for the generator function.
-const iterator = generateEvenNumbers();
+// Create an iterator for the generator function:
+const iterator = generateEvenNumber();
 
 // Iterate over the generator function and print the first 10 even numbers.
-for (let i = 0; i < 10; i++) {
-    console.log(iterator.next().value);
+
+for (i = 0; i < 10; i++) {
+    const { value, done } = iterator.next();
+    
+    if (done) {
+        break;
+    };
+    
+    console.log("value :", value);
+    console.log("done :", done);
 }
-
-
-
-
 
 
 // Ex. 2:
 // The following example shows a more advanced generator function that implements lazy loading:
 
-function* lazyLoadImages() {
-    const images = ["image1.png", "image2.png", "image3.png"];
-    for (const image of images) {
-        yield new Promise((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve(img);
-            img.src = image;
-        });
-    }
-}
+// function* lazyLoadImages() {
+//     const images = ["image1.png", "image2.png", "image3.png"];
+//     for (const image of images) {
+//         yield new Promise((resolve) => {
+//             const img = new Image();
+//             img.onload = () => resolve(img);
+//             img.src = image;
+//         });
+//     }
+// }
 
 // Create an iterator for the generator function.
-const iterator1 = lazyLoadImages();
+// const iterator1 = lazyLoadImages();
 
 // Iterate over the generator function and load the first image.
-const image = await iterator1.next().value;
+// const image =  iterator1.next().value;
 
 // Display the image.
-document.body.appendChild(image);
+// const res = document.body.appendChild(image);

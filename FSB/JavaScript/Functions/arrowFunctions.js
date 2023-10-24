@@ -161,3 +161,18 @@ console.log(result1); // 12
 // Arrow Function with Promises and Callbacks :
 // Arrow functions provide better syntax to write promises and callbacks. For example,
 
+
+
+const num = [1, 2, 3, 4, 5, 6];
+
+const evenNum1 = num.filter(function (number) {
+    return number % 2 === 0;
+});
+
+const evenNum2 = num.filter((number) => number % 2 === 0);
+
+console.log("Example :", evenNum1, evenNum2);
+
+
+
+//
