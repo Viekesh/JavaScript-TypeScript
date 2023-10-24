@@ -115,27 +115,25 @@ console.log("Ex. 4:", squaredValue);
 
 // Ex. 6:
 
-const compose = function (fn1, fn2) {
+const calculate = function (fn1, fn2) {
     return function (...args) {
         return fn2(fn1(...args));
     };
 };
 
-
-const addOne = function (x) {
-    return x + 1;
+const addNum = function (a) {
+    return a + 1;
 };
 
+const multiplyItWithNum = function (b) {
+    return b * 2;
+}
 
-const multiplyByTwo = function (x) {
-    return x * 2;
-};
+const multiplyThenAdd = calculate(multiplyItWithNum, addNum);
 
-const addOneThenMultiplyByTwo = compose(multiplyByTwo, addOne);
+const res = multiplyThenAdd(6);
 
-const result = addOneThenMultiplyByTwo(5);
-
-console.log(`Ex 6: ${result}`);
+console.log("Ex. 6:", res);
 
 
 
