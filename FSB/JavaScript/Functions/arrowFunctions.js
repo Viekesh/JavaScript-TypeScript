@@ -4,23 +4,35 @@
 
 // source : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
 
-// let's see different types of functions
+// Arrow functions are more concise. Arrow functions have a shorter syntax than regular functions, which
+// can make your code more readable and easier to maintain.For example, the following regular function can
+// be rewritten as a more concise arrow function:
 
-// Arrow Functions
+// Ex. 1:
 
-// Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as methods. Arrow functions cannot be used as constructors. Calling them with new throws a TypeError. They also don't have access to the new.target keyword. Arrow functions cannot use yield within their body and cannot be created as generator functions.
+// Regular function
+function add(a, b) {
+    return a + b;
+}
 
+// Arrow function
+const addResult = (a, b) => a + b;
 
-// ex 3:
+console.log("Ex. 1:", addResult(1, 2));
 
-const materials = [
-    'Hydrogen',
-    'Helium',
-    'Lithium',
-    'Beryllium'
-];
+// Arrow functions don't have their own bindings to this, arguments, or super, and should not be used as
+// methods.
 
-console.log(materials.map(material => material.length));
+// Arrow functions cannot be used as constructors. Calling them with new throws a "TypeError". They also
+// don't have access to the new.target keyword.
+
+// Arrow functions cannot use yield within their body and cannot be created as generator functions.
+
+// Ex. 2:
+const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
+
+console.log("Ex. 2:", materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
 
 
 
@@ -46,9 +58,40 @@ console.log(materials.map(material => material.length));
 //     statements
 // }
 
-// let myFunction = (arg1, arg2, ...argN) => {
-    // statement(s)
+
+
+// Rest parameters, default parameters, and destructuring within params are supported, and always require
+// parentheses:
+
+// (a, b, ...r) => expression
+// (a = 400, b = 20, c) => expression
+// ([a, b] = [10, 20]) => expression
+// ({ a, b } = { a: 10, b: 20 }) => expression
+
+
+
+// Arrow functions can be async by prefixing the expression with the async keyword.
+
+// async param => expression
+// async (param1, param2, ...paramN) => {
+//     statements
 // }
+
+
+
+// In an expression body, only a single expression is specified, which becomes the implicit return value.
+// In a block body, you must use an explicit return statement.
+
+const func = (x) => x * x;
+// expression body syntax, implied "return"
+
+const func2 = (x, y) => {
+    return x + y;
+};
+// with block body, explicit "return" needed
+
+
+
 
 
 
@@ -88,8 +131,8 @@ greet1('Hello'); // Hello
 let age = 5;
 
 let welcome = (age < 18) ?
-  () => console.log('individual is an less than 18 years old') :
-  () => console.log('indivudyak is an more than 18 years old');
+    () => console.log('individual is an less than 18 years old') :
+    () => console.log('indivudyak is an more than 18 years old');
 
 welcome(); // Baby
 
@@ -101,7 +144,7 @@ let sum = (a, b) => {
     return result;
 }
 
-let result1 = sum(5,7);
+let result1 = sum(5, 7);
 console.log(result1); // 12
 
 
@@ -110,7 +153,8 @@ console.log(result1); // 12
 
 // Inside a regular function, this keyword refers to the function where it is called.
 
-// However, "this" is not associated with arrow functions. Arrow function does not have its own "this". So whenever you call "this", it refers to its parent scope. For example,
+// However, "this" is not associated with arrow functions. Arrow function does not have its own "this". So
+// whenever you call "this", it refers to its parent scope. For example,
 
 
 

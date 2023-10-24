@@ -100,13 +100,10 @@ const square = function () {
     };
 };
 
-
-
-// Ex. 5:
 const squareFunction = square();
 const squaredValue = squareFunction(5);
 
-console.log("Ex. 5:", squaredValue);
+console.log("Ex. 4:", squaredValue);
 
 
 
