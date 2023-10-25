@@ -1,0 +1,17 @@
+const Logger = (error) => {
+    const date = new Date();
+    const content = `
+    Error Log
+    ---------------
+    Date : ${date.toDateString()}
+    Time : ${date.getHours}:${date.getMinutes}:${date.getSeconds}
+    ------------------------------------------------------------
+    Error : ${error}
+    `;
+
+    console.error(content);
+};
+
+
+
+export default Logger;
