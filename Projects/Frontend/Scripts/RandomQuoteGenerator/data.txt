@@ -1,0 +1,28 @@
+const localdata = [
+    {
+        id: 1,
+        text: 'abc'
+    },
+    {
+        id: 2,
+        text: 'def'
+    },
+    {
+        id: 3,
+        text: 'ghi'
+    }
+];
+
+write a code for a component 'RandomText' in reactJs to get random text from 'localdata' array and render it
+on the 'h1' tag of this component
+
+'import React, { useState } from "react";
+const RandomQuotes = () => {
+
+    return (
+        <>
+            <h1></h1>
+        </>
+    )
+};
+export default RandomQuotes;'
