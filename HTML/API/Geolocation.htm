@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <script>
+        const getLocation = () => {
+                //check whether brrowser supports geolocation API or not.
+                if (navigator.geolocation) {   // Supported
+                    navigator.geolocation.getCurrentPosition(getPosition);
+                } else {   // Not Supported
+                    alert("Oob! This browser does not support HTML Geolocation.");
+                };
+            };
+
+
+
+            const getPosition = (position) => {
+                document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude + "<br />" + "Longitude: " + position.coords.longitude;
+            };
+    </script> -->
+</head>
+<body>
+    <h3>Position by using HTML Geolocation API</h3>
+    <button type="button" onclick="geoLocation()">Where am I?</button>
+    <p id="location"></p>
+
+    <script src="./Geolocation.js"></script>
+</body>
+</html>
