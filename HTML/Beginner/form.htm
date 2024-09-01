@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tell us somthing about yourself</h1>
+    <form action="/" method="POST">
+        <div>
+            <label for="name">My name is</label>
+            <input type="text" name="name" id="name" />
+        </div>
+
+        <div>
+            <label for="email">My email is</label>
+            <input type="email" name="email" id="email" />
+        </div>
+
+        <div>
+            <label for="gender">I am a</label>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female" selected>Female</option>
+            </select>
+        </div>
+
+
+
+        <div>
+            <label for="about">I have worked as</label>
+            <textarea name="about" id="about" cols="50" rows="10" style="vertical-align: top" placeholder="I am a..."
+                minlength="10" maxlength="100"
+            >
+                Rajesh Ramayan Koothrappali, Ph. D. is a fictional character on the CBS television series The Big Bang 
+                Theory, portrayed by British Indian actor Kunal Nayyar. Raj is based on a computer programmer that the 
+                show's co-creator, Bill Prady, knew back when he himself was a programmer.
+            </textarea>
+        </div>
+    </form>
+
+
+
+    <h1>Login</h1>
+    <form action="/" method="javascript:void(0)">
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+        </div>
+
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </div>
+
+        <div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+
+        <div>
+            <button type="submit" style="
+                  background-color: darkgoldenrod;
+                  color: white;
+                  font-size: 24px;
+                  padding: 2px;
+                  margin: 10px;
+                  border: 1px solid black;
+                  ">Submit</button>
+            <button type="reset" style="
+                   background-color: darkgoldenrod;
+                   color: white;
+                   font-size: 24px;
+                   padding: 2px;
+                   margin: 10px;
+                   border: 1px solid black;
+                  ">Reset</button>
+        </div>
+    </form>
+
+
+
+    <h1>Tell us about your favorite brand for shoes</h1>
+    
+    <form action="/" method="POST">
+        <label for="brand">Select a brand</label>
+        <input type="text" name="brand" id="brand" list="brands">
+    
+        <datalist id="brands">
+            <option value="Reebok"></option>
+            <option value="Adidas"></option>
+            <option value="Nike"></option>
+            <option value="Skechers"></option>
+            <option value="DKS"></option>
+        </datalist>
+    </form>
+</body>
+
+</html>

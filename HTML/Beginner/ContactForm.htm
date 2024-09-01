@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" method="GET">
+
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" title="Enter Your Name" placeholder="Enter The Name" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Phone No.:</label></td>
+                    <td><input type="tel" min="10" max="10" title="Enter Your Mobile No." placeholder="Enter The Mobile No."></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" title="Enter An Email" placeholder="Enter An Email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" title="Select The Option" name="gender" id="male"> Male
+                        <input type="radio" title="Select The Option" name="gender" id="Fem"> Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="profession">Profession</label></td>
+                    <td>
+                        <select title="Enter The Profession" name="profession" id="prof">
+                            <option value="govt">Govt. Official</option>
+                            <option value="private">Private Empl</option>
+                            <option value="self">Freelancer</option>
+                            <option value="student">Student</option>
+                            <option value="other">other</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="message">Message</label></td>
+                    <td><textarea name="message" id="message" rows="6" cols="12"></textarea></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" title="Click Here" name="inc" id="inc">
+                        I accept the terms and condition
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><button type="reset" title="Click Here">Reset</button></td>
+                    <td><button type="submit" title="Click Here">Submit</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
