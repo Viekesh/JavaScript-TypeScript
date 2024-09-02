@@ -1,3 +1,8 @@
+// Code starts from here:
+"use strict"
+
+
+
 const geoLocation = () => {
     //check whether brrowser supports geolocation API or not.
     if (navigator.geolocation) {   // Supported
@@ -9,8 +14,17 @@ const geoLocation = () => {
 
 
 
+// Call back function
 const getPosition = (position) => {
-    document.getElementById("location").innerHTML = "Latitude: " + position.coords.latitude + "<br />" + "Longitude: " + position.coords.longitude + "<br />" + "Altitude: " + position.coords.altitude + "<br />" + "Accuracy: " + position.coords.accuracy + "<br />" + "Altitude Accuracy: " + position.coords.altitudeAccuracy + "<br />" + "Heading: " + position.coords.heading + "<br />" + "Speed: " + position.coords.speed + "<br />" + "Timestamp: " + position.timestamp;
+    document.getElementById("location").innerHTML =
+        "Latitude: " + position.coords.latitude + "<br />" +
+        "Longitude: " + position.coords.longitude + "<br />" +
+        "Altitude: " + position.coords.altitude + "<br />" +
+        "Accuracy: " + position.coords.accuracy + "<br />" +
+        "Altitude Accuracy: " + position.coords.altitudeAccuracy + "<br />" +
+        "Heading: " + position.coords.heading + "<br />" +
+        "Speed: " + position.coords.speed + "<br />" +
+        "Timestamp: " + position.timestamp;
 };
 
 
@@ -33,15 +47,15 @@ const catchError = (error) => {
 
 
 
-// The HTML geolocation API has only one object - the navigation.geolacation object. You may like the navigatior.geolocation
-// to a compass on the browser
+// The HTML geolocation API has only one object - the navigator.geolacation object. You may like the navigatior.
+// geolocation to a compass on the browser
 
 // The navigator.geolocation object exposes three methods - getCurrentPosition(), watchPosition(), and clearWatch().
 
 // getCurrentPosition:
-// The getCurrentPosition() method is used to obtain the current location of the user. You have already used this method
-// in its simplest form in the code above.
-// "navigatior.geolocation.getCurrentPosition(getPosition)"
+// The getCurrentPosition() method is used to obtain the current location of the user. You have already used
+// this method in its simplest form in the code above. (navigator.geolocation.getCurrentPosition(getPosition)).
+
 // The getCurrentPosition() takes three parameters:
 // The first parameter is a callback function to called when the call to getCurrentPosition() method is successful.
 // The callback function will be called with a position object consist of 2 properties coords and timestamp.
@@ -58,3 +72,6 @@ const catchError = (error) => {
 // coords.speed: this property returns the speed of the location aware device in meters per second. it will returns null
 // if this information is not available.
 // timestamp: the timestamp property returns the time when the position object was acquired.
+
+
+
