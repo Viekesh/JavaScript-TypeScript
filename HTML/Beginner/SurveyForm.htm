@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Preferences Survey Form</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        label {
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Food Preferences - Survey Form</h1>
+    <h5>Please fill out and submit the survey form earliest.</h5>
+    <hr />
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td>1. Name</td>
+                <td><input type="text" title="name" name="user"></td>
+            </tr>
+
+            <!-- tr>td*2 -->
+            <tr>
+                <td>2. Age</td>
+                <td><input type="number" min="13" max="100" title="age" name="age"></td>
+            </tr>
+
+            <tr>
+                <td>3. Where do you eat most?</td>
+                <td><input type="radio" id="home" title="Where do you eat most?" name="location" value="home"></td>
+                <label for="home">At Home</label>
+
+                <td><input type="radio" id="work_or_school" title="Where do you eat most?" name="location" value="work_or_school"></td>
+                <label for="work_or_school">At Work / School</label>
+
+                <td><input type="radio" id="restaurant" title="Where do you eat most?" name="location" value="restaurant"></td>
+                <label for="restaurant">At Restaurant</label>
+            </tr>
+
+            <tr>
+                <td colspan="2">4. Specify, How often?</td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <table>
+                        <thead>
+                            <th></th>
+                            <th>Every Day</th>
+                            <th>A few times</th>
+                            <th>once a week</th>
+                            <th>several times a month</th>
+                            <th>once a month</th>
+                            <th>less often than once a month</th>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>You prepare your own meal</td>
+                                <td><input title="input" type="radio" name="you_prepare" value="every_day" /></td>
+                                <td><input title="input" type="radio" name="you_prepare" value="a few times a week" /></td>
+                                <td><input title="input" type="radio" name="you_prepare" value="once a week" /></td>
+                                <td><input title="input" type="radio" name="you_prepare" value="several times a month" /></td>
+                                <td><input title="input" type="radio" name="you_prepare" value="once a month" /></td>
+                                <td><input title="input" type="radio" name="you_prepare" value="les often than once a month" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
