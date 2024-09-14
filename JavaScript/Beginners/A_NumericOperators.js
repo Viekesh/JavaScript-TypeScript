@@ -63,6 +63,9 @@ let z = x + y;
 // ++ Increment Ope
 // -- Decrement Ope
 
+// The numbers (in an arithmetic operation) are called operands.
+// The operation (to be performed between the two operands) is defined by operator.
+
 
 
 // Addition
@@ -108,6 +111,13 @@ let a14 = (100 - 50) * a13;
 a14--;
 console.log("a14: ", a14);
 console.log("a14: ", --a14);
+
+
+
+// Operator precedence describes the order in which operations are performed in an arithmetic expression.
+// Multiplication (*) and division (/) have higher precedence than addition (+) and subraction (-).
+// The precedence can be change by using parentheses.
+// When using parentheses, the operations inside the parentheses are computed first.
 
 
 

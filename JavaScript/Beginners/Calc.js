@@ -9,7 +9,7 @@ const clearDisplay = () => {
 };
 
 // Append to display func appends the clicked number to the display.
-const appendTodDisplay = (value) => {
+const appendToDisplay = (value) => {
     currInput += value;
     document.getElementById("display").value = currInput;
 };
@@ -23,7 +23,7 @@ const setOperation = (ope) => {
 
 // Calculate function performs the actual calculation
 const calculate = () => {
-    const [operand1, operand2] = currInput.split("");
+    const [operand1, _, operand2] = currInput.split('');
     let result;
 
     switch (operation) {
