@@ -1,24 +1,57 @@
-// What is data structure?
-// A data structure is a way of storing data for access and modification. Every single data structure that
-// you encounter is going to have a specific use case where it works best.
+// An array is a data structure that can hold a collection of values
+// Arrays can contain a mix of different data types
+// You can store string, booleans, numbers or even objects all in the same array
+// Arrays are resizable
+// You dont have to declare the size of an array before creating it
+// javascript arrays are zero-indexed and the insertion order is maintained
+// Arrays are iterables they can be used with for of loop
 
-// What is algorithm?
-// steps or process to arrange data.
+// Ex :
 
-// The main questions that you should ask while picking a data structure is:
+const arr = [11, 22, 33, "string"];
 
-// i. How quickly the data can  be access?
-// ii. How quickly the data can be modified?
+console.log(arr);
+
+// add element at the beginning of an array :
+arr.unshift(123);
+console.warn(arr);
 
 
-        
-// Reasons to consider different types of data structures :
-// i. May be an algorithm can go through the data sequentially
-// ii. May be the algorithm is constantly searching through the data
+// add element at the ending of an array :
+arr.push(665);
+console.log(arr);
 
-// The main idea of data structures is very simple and straight forward. You are storing data in a way
-// that they can be efficiently worked with. But you'll find that there's a lot of depth behind
-// data structures and it's going to be a very core idea to algorithms, as you continue on
-// with solving these different computer problems.
+
+// remove an element at the beginning :
+arr.shift();
+console.warn(arr, 'removed at the beginning');
+
+
+// remove an element at the ending :
+arr.pop(44);
+console.warn(arr, 'remove at at the ending');
+
+
+
+for (const elements of arr) {
+    console.log(elements);
+};
+
+// If you insert or remove an element at the end of an array the time complexity is constant
+// If you insert or remove an element at the beginning the time complexity is linear
+// This is because the index can be reset for every remaining element in an array
+
+// accessing an element is constant time complexity as fetching the first element is no
+// different from fetching an element at position 100 thousand
+
+// searching an element is linear time complexity as element can be the last one in the array
+
+// now given these time complexities following is a list of common array methods with their
+// time complexity
+// push and pop are constant
+// shift, unshift, concat, slice and splice are linear
+// for each, map, filter and reduce are also linear
+
+
 
 

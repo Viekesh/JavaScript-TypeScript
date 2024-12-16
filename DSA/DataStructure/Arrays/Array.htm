@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+</head>
+
+<body>
+    <h3>Array Traversing And Accessing</h2>
+        <input title="input" type="text" id="arr">
+        <button onclick="getElement()">Click It</button>
+        <br />
+        <br />
+
+        <h3>Insert Element</h3>
+        <input type="text" placeholder="enter position" id="pos">
+        <input type="text" placeholder="enter new element" id="newEl">
+        <button onclick=insertElement() type="button">Insert</button>
+        <p id="dataEl"></p>
+        <br />
+        <br />
+
+        <h3>Remove Element</h3>
+        <input type="text" placeholder="Enter Position" id="pos1" />
+        <button onclick="removeEl()" type="button">Remove Element</button>
+        <p id="rmElement"></p>
+        <br />
+        <br />
+
+
+        <h3>Search Element</h3>
+        <input type="text" placeholder="Enter Value" id="searchEl">
+        <button onclick="searchElement()">Search</button>
+        <p id="searchResult"></p>
+
+        <h3>Merge Array With While Loop</h3>
+        <input type="text" placeholder="Enter Value" id="searchEl">
+        <button type="button">Click</button>
+        <p id="mergeOp"></p>
+
+        <script src="./TraversingAccessing.js"></script>
+        <script src="./Insert.js"></script>
+        <script src="./Delete.js"></script>
+        <script src="./Search.js"></script>
+</body>
+
+</html>
