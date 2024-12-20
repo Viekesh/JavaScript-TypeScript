@@ -65,7 +65,6 @@ console.warn("Colours is now: ", colours);
 
 
 
-
 let history = ["page1", "page2", "page3"];
 console.warn("Before using pop() method: ", history);
 let lastPage = history.pop();
@@ -101,3 +100,61 @@ const removeLastTrade = () => {
 removeLastTrade();
 console.warn("After removing last trade: ", tradeHistory);
 console.warn(".....................");
+
+// Here, "pop()" is used to undo the last executed trade, which is crucial for
+// managing trading decisions.
+
+
+
+
+
+
+// shift()
+// The shift() method removes the first element from an array and return that element.
+// It's handy for processing queues.
+
+const queue = ["first", "second", "third"];
+console.warn("Before use shift() mehtod: ", queue);
+let firstEle = queue.shift();
+console.warn("First element in the array: ", firstEle);
+console.warn("Queue is now: ", queue);
+console.warn(".....................");
+
+
+
+let requests = ["req1", "req2", "req3"];
+console.warn("Before using shift() method: ", requests);
+let firstReq = requests.shift();
+console.warn("First request of an array:- ", firstReq);
+console.warn("After used shift method(): ", requests);
+console.warn(".....................");
+
+
+
+const orderQueue = ["o1", "o2", "o3"];
+console.warn("Before using shift mehltod: ", orderQueue);
+let processNextOrder = () => {
+    const nextOrder = orderQueue.shift();
+    console.log(`Processing: ${nextOrder}. Remaining orders: ${orderQueue.length}`);
+};
+processNextOrder();
+console.warn("After using shift() method: ", orderQueue);
+console.warn(".....................");
+
+// In this ex, "shift()" processes the next order in a queue, simulating an order
+// fulfillment system.
+
+
+
+const pendingOrders = ["Buy AAPL", "Sell GOOGL", "Buy TSLA"];
+console.warn("Before using shift() method: ", pendingOrders);
+const executeNextOrder = () => {
+    const nextOrder = pendingOrders.shift();
+    console.log(`Executing: ${nextOrder}. Remaining orders: ${pendingOrders.length}`);
+};
+
+executeNextOrder();
+console.warn("After using shift() method: ", pendingOrders);
+
+// Here, "shift()" is used to execute the next pending order in a trading application,
+// ensuring timely order processing.
