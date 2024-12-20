@@ -39,9 +39,65 @@ const trades = [];
 const executeTrade = (trade) => {
     trades.push(trade);
     console.log(`Trade executed: ${trade.symbol} at ${trade.price}. Total trades: ${trades.length}`);
+
+    console.warn(".....................");
 };
 
 executeTrade({ symbol: "AAPL", price: 150 });
 
 // Here, "push()" is used to log executed trades in a trading application, keeping track of the
 // total number of trades executed.
+
+
+
+
+
+
+// pop()
+// The pop() method removes the last element from an array and return's that element.
+// This is useful for managing a stack of stuffs/items.
+
+let colours = ["red", "green", "blue"];
+console.warn("Before removing colour: ", colours);
+let lastColor = colours.pop();
+console.warn("Last colour is: ", lastColor);
+console.warn("Colours is now: ", colours);
+
+
+
+
+let history = ["page1", "page2", "page3"];
+console.warn("Before using pop() method: ", history);
+let lastPage = history.pop();
+console.warn("Last page: ", lastPage);
+console.warn("History is now: ", history);
+console.warn(".....................");
+
+
+
+const anotherCart = [{ name: "Laptop" }, { name: "Mouse" }, { name: "Keyboard" }];
+console.warn("Before removing product: ", anotherCart);
+const removeLastProd = () => {
+    let removedProd = anotherCart.pop();
+    console.warn("Removed product: ", removedProd);
+};
+
+removeLastProd();
+console.warn("After removing last product: ", anotherCart);
+console.warn(".....................");
+
+// In this example, "pop()" removes the last item added to the cart, allowing users to manage
+// their selections effectively.
+
+
+
+const tradeHistory = [{ symbol: "AAPL", price: 150 }, { symbol: "GOOGL", price: 2800 }];
+console.warn("Before removing: ", tradeHistory);
+const removeLastTrade = () => {
+    let removedTrade = tradeHistory.pop();
+    console.warn("Removed last trade: ", removedTrade);
+}
+
+removeLastTrade();
+console.warn("After removing last trade: ", tradeHistory);
+console.warn(".....................");
